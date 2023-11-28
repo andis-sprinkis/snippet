@@ -18,5 +18,5 @@ make
 # GNU bash, version 3.2.57(1)-release (armv7l-unknown-linux-gnu)
 # Copyright (C) 2007 Free Software Foundation, Inc.
 ```
- 
+
 The above code is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
