@@ -1,3 +1,5 @@
+# Fetch user interface colors defined in .Xresources
+
 ```sh
 foreground="$(xrdb -get foreground)"
 background="$(xrdb -get background)"

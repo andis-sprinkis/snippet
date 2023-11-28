@@ -1,4 +1,4 @@
-Generate *The Common Desktop Environment (CDE)* style vertical gradient dither background:
+# Generate *The Common Desktop Environment (CDE)* style vertical gradient dither background
 
 ```sh
 resolution="1920x1080"
