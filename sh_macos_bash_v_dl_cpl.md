@@ -5,8 +5,8 @@ As of 2023-11-28.
 From a [Stack Overflow post by the user dimo414](https://stackoverflow.com/a/41554230):
 
 ```sh
-mkdir ~/bash
-cd ~/bash
+mkdir ~/bash_3_2_57
+cd ~/bash_3_2_57
 wget http://ftp.gnu.org/gnu/bash/bash-3.2.57.tar.gz
 tar xvzf bash-3.2.57.tar.gz
 cd bash-3.2.57
