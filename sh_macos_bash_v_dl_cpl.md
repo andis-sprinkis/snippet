@@ -1,4 +1,4 @@
-# Downloading and compiling version of the GNU Bash shipped with Apple macOS
+# Downloading and compiling the version of the GNU Bash shipped with Apple macOS
 
 As of 2023-11-28.
 
