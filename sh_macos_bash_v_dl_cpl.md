@@ -2,7 +2,7 @@
 
 As of 2023-11-28.
 
-[From Stack Overflow post by user dimo414](https://stackoverflow.com/a/41554230):
+From a [Stack Overflow post by the user dimo414](https://stackoverflow.com/a/41554230):
 
 ```sh
 mkdir ~/bash
