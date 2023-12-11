@@ -1,3 +1,5 @@
+# GPG key operations
+
 To generate a GPG key:
 
 ```sh
