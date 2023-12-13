@@ -69,4 +69,4 @@ Answers from https://stackoverflow.com/questions/6316987/should-struct-definitio
    >
    > So, the "definition in implementation" version protects against accidental or deliberate misuse of private implementation details.
 
-The answers from stack overflow are licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
+The answers from StackOverflow are licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
