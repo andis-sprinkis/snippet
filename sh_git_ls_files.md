@@ -1,3 +1,5 @@
+# Listing files in a Git repository
+
 List files that are in the index:
 
 ```sh
