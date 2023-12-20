@@ -1,4 +1,4 @@
-# Setting the VFAT volume labels in Linux
+# Setting the VFAT volume labels on Linux
 
 Label an existing volume:
 
