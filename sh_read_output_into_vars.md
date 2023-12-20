@@ -1,4 +1,4 @@
-# Reading *nix shell command output into variables
+# Reading a *nix shell command output into variables
 
 ```sh
 { read first_word second_word; } < <(echo "hello world")
