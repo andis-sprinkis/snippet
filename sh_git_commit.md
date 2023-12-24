@@ -1,6 +1,5 @@
 # Creating Git commits
 
-
 Quick commit, with a single line message:
 
 ```sh
