@@ -57,7 +57,7 @@ systemctl status nut-monitor
 To view the `nut-monitor` logs:
 
 ```sh
-journalctl -u nut-monitor.service
+journalctl -u nut-monitor
 ```
 
 ## Resources
