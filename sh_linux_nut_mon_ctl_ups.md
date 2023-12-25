@@ -9,31 +9,31 @@ upsc -L
 To view device details of a connected device:
 
 ```sh
-upsc $ups_device | $PAGER
+upsc "$ups_device" | $PAGER
 ```
 
 To view a single variable:
 
 ```sh
-upsc $ups_device $ups_var_name
+upsc "$ups_device" "$ups_var_name"
 ```
 
 To watch periodic change in a single variable:
 
 ```sh
-watch "upsc ${ups_device} battery.charge"
+watch -n "5" "upsc ${ups_device} battery.charge"
 ```
 
 To list the available UPS device commands:
 
 ```sh
-upscmd -l $ups_device
+upscmd -l "$ups_device"
 ```
 
 To issue a command to a UPS device:
 
 ```sh
-upscmd -l $ups_device beeper.toggle
+upscmd -l "$ups_device" "beeper.toggle"
 ```
 
 To view the UPS devices configured to be monitored by the system directly, see `/etc/nut/ups.conf`.
