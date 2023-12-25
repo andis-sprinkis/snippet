@@ -36,6 +36,11 @@ To issue a command to a UPS device:
 upscmd -l $ups_device beeper.toggle
 ```
 
+To view the UPS devices configured to be monitored by the system directly, see `/etc/nut/ups.conf`.
+```sh
+cat "/etc/nut/ups.conf" | $PAGER
+```
+
 To view the configured UPS `upsd` users, see `/etc/nut/upsd.users`.
 
 ```sh
