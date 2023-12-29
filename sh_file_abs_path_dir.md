@@ -1,18 +1,18 @@
 # Getting file name and path values
 
-Get file full path:
+Get the file absolute path:
 
 ```sh
 readlink -f "$file_path"
 ```
 
-Get file name:
+Get the file name:
 
 ```sh
 basename "$(readlink -f "$file_path")"
 ```
 
-Get file directory path:
+Get the file absolute directory path:
 
 ```sh
 dirname "$(readlink -f "$file_path")"
