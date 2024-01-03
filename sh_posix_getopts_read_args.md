@@ -55,7 +55,9 @@ done
 
 `-a` is treated as a required option.
 
-Options `-a` and `-b` expect an argument. When calling the script, if any of these options is specified without an argument, the `?` case gets invoked.
+Options `-a` and `-b` expect an argument.
+
+When calling the script, if any of these options is specified without an argument, or if an unknown argument gets passed, the `?` case gets invoked.
 
 ## Sources
 
