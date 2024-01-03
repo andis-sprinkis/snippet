@@ -59,6 +59,6 @@ Options `-a` and `-b` expect an argument.
 
 When calling the script, if any of these options is specified without an argument, or if an unknown argument gets passed, the `?` case gets invoked.
 
-## Sources
+## Resources
 
 -   [getopts](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/getopts.html)
