@@ -1,5 +1,7 @@
 # Netscape bookmark export and import file format
 
+`bookmarks.html`:
+
 ```html
 <!DOCTYPE NETSCAPE-Bookmark-file-1>
 <!-- This is an automatically generated file.
@@ -22,6 +24,8 @@
     </DL><p>
     <DT><H3>Another directory</H3>
     <DL><p>
+        <DT><A HREF="https://example.com/">Example Domain</A>
+        <DT><A HREF="https://example.com/">Example Domain</A>
     </DL><p>
     <DT><A HREF="https://example.com/">Example Domain</A>
 </DL>
@@ -31,4 +35,4 @@ The `A` elements also support `ADD_DATE` and `LAST_MODIFIED` attributes, that ar
 
 ## Resources
 
-- [Netscape Bookmark File Format (Internet Explorer) | Microsoft Learn](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753582(v=vs.85))
+-   [Netscape Bookmark File Format (Internet Explorer) | Microsoft Learn](<https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753582(v=vs.85)>)
