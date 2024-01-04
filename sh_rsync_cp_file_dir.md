@@ -111,7 +111,7 @@ rsync username@host:/src/ /dest
 
 The above can be considered a 'pull' operation.
 
-Copy contents of remote host directory `/src` to local directory `/dest`, over SSH, in archive mode, with compression during data transfer and allow partial transfers, that can be resumed later:
+Copy contents of remote host directory `/src` to local directory `/dest` over SSH, in archive mode, with compression during data transfer and allow partial transfers, that can be resumed later:
 
 ```sh
 rsync -az --partial username@host:/src/ /dest
