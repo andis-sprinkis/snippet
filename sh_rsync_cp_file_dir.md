@@ -27,7 +27,7 @@ rsync /src /dest/
 Copy contents of directory `/src` to directory `/dest`, including symlinks and directories:
 
 ```sh
-rsync -l –r /src/ /dest/
+rsync -lr /src/ /dest/
 ```
 
 Copy contents of directory `/src` to directory `/dest` using the archive mode:
@@ -77,3 +77,46 @@ Copy contents of directory `/src` to directory `/dest`, while showing only the o
 ```sh
 rsync --info=progress2 /src/ /dest/
 ```
+
+Copy contents of directory `/src` to remote host directory `/dest` over SSH:
+
+```sh
+rsync /src username@host:dest
+```
+
+For 'dry run' of the above:
+
+```sh
+rsync -n --delete /src username@host:dest
+```
+
+Copy contents of directory `/src` to remote host directory `/dest` over SSH, deleting the existing files at destination:
+
+```sh
+rsync --delete /src username@host:dest
+```
+
+Copy contents of directory `/src` to remote host directory `/dest` over SSH, deleting the existing files at destination,
+but storing their backups in `/rsync_backup` on the destination machine:
+
+```sh
+rsync --delete -b --backup-dir="/rsync_backup" /src username@host:dest
+```
+
+Copy contents of remote host directory `/src` to local directory `/dest` over SSH:
+
+```sh
+rsync username@host:src /dest
+```
+
+The above can be considered a 'pull' operation.
+
+Copy contents of remote host directory `/src` to local directory `/dest`, over SSH, in archive mode, with compression during data transfer and allow partial transfers, that can be resumed later:
+
+```sh
+rsync -az --partial username@host:src /dest
+```
+
+The above can be considered a 'push' operation.
+
+Repeated rsync transfers only update the newer files.
