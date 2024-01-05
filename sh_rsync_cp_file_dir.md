@@ -1,12 +1,12 @@
 # Copying files and directories using rsync
 
-Copy `/src/filename.zip` to `/dest/`:
+Copy file `/src/filename.zip` to directory `/dest`:
 
 ```sh
 rsync /src/filename.zip /dest/
 ```
 
-Copy `/src/filename.zip` to `/dest` as `/dest/newfilename.zip`:
+Copy file `/src/filename.zip` to directory `/dest` as `/dest/newfilename.zip`:
 
 ```sh
 rsync /src/filename.zip /dest/newfilename.zip
