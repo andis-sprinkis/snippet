@@ -15,3 +15,11 @@ pacman -Sy
 # or
 yay -Sy
 ```
+
+Show specific package information:
+
+```sh
+pacman -Si gimp
+# or
+yay -Si gimp
+```
