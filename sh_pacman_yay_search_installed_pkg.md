@@ -1,4 +1,4 @@
-# Query and inspect local packages with pacman or yay (AUR helper)
+# Query and inspect the installed packages with pacman or yay (AUR helper)
 
 List installed packages and versions:
 
@@ -55,7 +55,8 @@ pacman -Qlk package_name
 # or
 yay -Qlk package_name
 ```
-Search each locally-installed package for names or descriptions that match regexp.:
+
+Search for installed package by name or description that match regexp.:
 
 ```sh
 pacman -Qs package_name or description search terms
