@@ -55,7 +55,6 @@ pacman -Qlk package_name
 # or
 yay -Qlk package_name
 ```
-
 Search each locally-installed package for names or descriptions that match regexp.:
 
 ```sh
