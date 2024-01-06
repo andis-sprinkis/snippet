@@ -1,4 +1,4 @@
-# Finding line numbers of a string and printing the line at a line number in a file processed with a shell script
+# Finding line numbers of a string and printing the line at a line number in file, via shell script
 
 Print line numbers of the exactly matching lines (2 and 3):
 
