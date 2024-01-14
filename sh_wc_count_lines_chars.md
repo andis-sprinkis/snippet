@@ -26,3 +26,9 @@ world"
 
 echo "$file" | wc -m
 ```
+
+Print count lines in each file and all files in the current directory:
+
+```sh
+wc -l *
+```
