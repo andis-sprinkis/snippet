@@ -1,6 +1,6 @@
 # Switching between case sensitive and case insentivive search and substitutions in VIM
 
-Case sensitive search and substitutions:
+Case insensitive search and substitutions:
 
 ```vim
 set ic
@@ -8,7 +8,7 @@ set ic
 set ignorecase
 ```
 
-Case insensitive search and substitutions:
+Case sensitive search and substitutions:
 
 ```vim
 set noic
