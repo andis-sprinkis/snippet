@@ -3,3 +3,5 @@
 ```sh
 tree | sed 's/ \|├\|─\|│\|└/ /g'
 ```
+
+The regular expression option probably doesn't work in the macOS distribution of `sed`.
