@@ -19,4 +19,4 @@ make
 # Copyright (C) 2007 Free Software Foundation, Inc.
 ```
 
-The above code is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+The original answers from StackOverflow are licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
