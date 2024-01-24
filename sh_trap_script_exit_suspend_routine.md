@@ -1,11 +1,5 @@
 # Using `trap` to run an exit routine (log, clean up etc.) on shell script exit, preventing exiting and suspending the script
 
-Exit on error:
-
-```sh
-set -e
-```
-
 Call script command `log` only on signals INT (2, C-c), QUIT (3, C-\\), TERM (15), STOP (23, C-s) and the normal EXIT (0):
 
 ```sh
