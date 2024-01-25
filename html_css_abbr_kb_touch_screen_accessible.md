@@ -1,4 +1,4 @@
-# Keyboard and touch accessible `<abbr />` element
+# Keyboard and touch screen accessible `<abbr />` element
 
 ```html
 <style>
