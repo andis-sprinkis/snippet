@@ -1,4 +1,4 @@
-# Piping `piper` TTS audio ouput to the `mpv` media player
+# Piping the `piper` TTS audio ouput to `mpv` media player
 
 ```sh
  cat ./input.txt | piper --model ./piper-voices/en/en_US/lessac/medium/en_US-lessac-medium.onnx --output-raw | mpv --demuxer=rawaudio --demuxer-rawaudio-rate=22050 --demuxer-rawaudio-channels=1 -
