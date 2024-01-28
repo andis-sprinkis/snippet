@@ -4,7 +4,7 @@
 \tree -F | sed 's/ \|├\|─\|│\|└/ /g'
 ```
 
-Assign the result to X11 CLIPBOARD selection:
+Assign the result to the X11 CLIPBOARD selection:
 
 ```sh
 \tree -F | sed 's/ \|├\|─\|│\|└/ /g' | xclip -selection clipboard
