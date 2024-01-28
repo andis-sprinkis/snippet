@@ -7,7 +7,7 @@
 Assign the result to X11 CLIPBOARD selection:
 
 ```sh
-\tree -F -L 2 | sed 's/ \|├\|─\|│\|└/ /g' | xclip -selection clipboard
+\tree -F | sed 's/ \|├\|─\|│\|└/ /g' | xclip -selection clipboard
 ```
 
 ---
