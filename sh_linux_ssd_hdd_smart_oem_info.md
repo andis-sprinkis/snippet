@@ -1,6 +1,6 @@
 # Viewing storage device S.M.A.R.T. and OEM information on Linux
 
-Scan for SSD devices:
+Scan for storage devices:
 
 ```sh
 sudo smartctl --scan
