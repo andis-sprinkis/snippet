@@ -1,4 +1,4 @@
-# Mount a VFAT volume with user file read and write permissions
+# Mounting a VFAT volume with user file read and write permissions
 
 Mount volume with read and write permissions according to user ID `1000` and group ID `1000`:
 
