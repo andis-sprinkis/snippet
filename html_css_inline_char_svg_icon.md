@@ -56,3 +56,9 @@ Values `mix-x min-y width height` for attribute `viewBox` of element `<svg>` are
 ```
 -50 ceil((CSS line-height * 10) / 2) 100 (CSS line-height * 10)
 ```
+
+Accordingly:
+
+```
+-50 (ceil((1.75 * 10) / 2) = 88) 100 (ceil((1.75 * 10) = 175)
+```
