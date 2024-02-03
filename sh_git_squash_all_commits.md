@@ -1,18 +1,18 @@
 # Squash the entire commit history in a Git respository
 
-There are several ways to squash the entire commit history in Git.
+There are multiple ways to do this.
 
--   ```sh
+1.  ```sh
     git checkout --orphan new-master master
     git commit -m "Squash"
     git branch -M new-master master
     ```
--   ```sh
+1.  ```sh
     git branch beforeReset
     git reset --soft $root_commit
     git commit --amend
     ```
--   Initiate rebase of all commits:
+1.  Initiate rebase of all commits:
 
     ```sh
     git rebase --root -i

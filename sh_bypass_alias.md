@@ -1,6 +1,8 @@
 # Running a shell command shadowed by an alias
 
-There are several ways of doing this running a shell command shadowed by an alias. Let us say that the aliased command is `ls`.
+There are multiple ways to do this.
+
+Let us say that the aliased command is `ls`.
 
 1.  Prefix the command with `\`, e.g.
     ```sh
