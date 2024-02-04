@@ -62,3 +62,17 @@ officia   | pariatur-ut       | officia |        |           |
 esse      | ea-nulla          | sunt    | ex     | occaecat  | reprehenderit
 excepteur | duis-sunt         | velit   | enim   | voluptate | laboris
 ```
+
+Swap columns no. 2 and no. 1, align columns no. 1 and no. 3 to right, limit the column count to 3 (left to right):
+
+```sh
+echo "$text" | column -t -O "2,1" -R "1,3" -l "3"
+```
+
+```
+adipisicing-minim     labore      sint cillum sint cupidatat
+dolor-minim        voluptate      nulla est proident nostrud
+pariatur-ut          officia                         officia
+ea-nulla                esse  sunt ex occaecat reprehenderit
+duis-sunt          excepteur    velit enim voluptate laboris
+```
