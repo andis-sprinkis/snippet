@@ -24,7 +24,7 @@ If possible, do not use `conv="noerror,sync"` for preserving data from bad disks
 
 Use purpose-made tools, like `ddrescure` instead.
 
-If those are not available, the `iflag=fullblock` available in GNU Coreutils `dd` implementation [may be used](https://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html):
+If those tools are not available, the `iflag=fullblock` available in GNU Coreutils `dd` implementation [may be used](https://www.gnu.org/software/coreutils/manual/html_node/dd-invocation.html):
 
 ```sh
 dd conv="noerror,sync" iflag="fullblock" < "/dev/sda1" > "/mnt/rescue.img"
