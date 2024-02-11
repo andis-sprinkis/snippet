@@ -15,7 +15,7 @@ echo "hello world" | base64 --wrap=0
 Encode `/src.txt` contents as base64, write to stdout:
 
 ```sh
-base64 /src.txt
+base64 "/src.txt"
 ```
 
 Decode stdout of echo, write to stdout:
