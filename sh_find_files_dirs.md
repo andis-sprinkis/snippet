@@ -1,5 +1,21 @@
 # Finding and processing file and directory paths using `find`
 
+Find all files or directories:
+
+```sh
+find
+# or
+find "./"
+```
+
+Find files or directories on depth level of the path:
+
+```sh
+find -maxdepth "1"
+# or
+find "./" -maxdepth "1"
+```
+
 Find files or directories by name:
 
 ```sh
@@ -18,10 +34,16 @@ Find files or directories by path:
 find -path '**/HELLO/**/*.md'
 ```
 
+Find files or directories by name AND path:
+
+```sh
+find -name '*.md' -path '**/HELLO/**/*.md'
+```
+
 Find files or directories by name OR path:
 
 ```sh
-find -name '*.md' -or- -path '**/HELLO/**/*.md'
+find -name '*.md' -or -path '**/HELLO/**/*.md'
 ```
 
 Find files by name:
