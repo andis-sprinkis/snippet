@@ -1,3 +1,5 @@
+# Finding and processing file and directory paths using `find`
+
 Find files or directories by name:
 
 ```sh
@@ -34,7 +36,7 @@ Find directories by name:
 find -type "d" -name 'doc'
 ```
 
-Find files by name, loop through the list, printing the line count of each file:
+Find files by name, loop through the list and print the line count of each file:
 
 -   Using the option `-exec`:
     ```sh
