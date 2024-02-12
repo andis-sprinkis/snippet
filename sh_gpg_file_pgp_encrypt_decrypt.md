@@ -26,7 +26,7 @@ gpg --recipient KEY_ID ANOTHER_KEY_ID --encrypt-files secret_0.zip secret_1.zip
 gpg --recipient KEY_ID ANOTHER_KEY_ID --encrypt --multifile secret_0.zip secret_1.zip
 ```
 
-Decrypts files `secret_0.zip.gpg` as `secret_0.zip`, `secret_1.zip.gpg` as `secret_1.zip`, encrypted using asymmetric encryption:
+Decrypts files `secret_0.zip.gpg` as `secret_0.zip`, `secret_1.zip.gpg` as `secret_1.zip`:
 
 ```sh
 gpg --decrypt-files secret_0.zip.gpg secret_1.zip.gpg
