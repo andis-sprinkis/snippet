@@ -1,4 +1,4 @@
-# Encrypting and decrypting PGP encrypted files using GPG
+# PGP encrypting and decrypting files using GPG
 
 Encrypt file `secret.zip` as `secret.zip.gpg` using asymmetric encryption (separate encryption and decryption keys):
 
