@@ -90,7 +90,7 @@ Verify signed file's `./message.zip` detached signature file `./message.zip.sig`
 gpg --verify "./message.zip.sig"
 ```
 
-Sign and encrypt file `message.zip` as `message.zip.gpg` with a detached signature and using asymmetric encryption:
+Sign and encrypt file `message.zip` as `message.zip.gpg` using asymmetric encryption:
 
 ```sh
 gpg --default-key "SENDER_KEY_ID" --encrypt --recipient "RECIPIENT_KEY_ID" --sign "message.zip"
