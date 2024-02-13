@@ -67,3 +67,7 @@ Receive a key in the keychain from a custom keyserver:
 ```sh
 gpg --keyserver pgpkeys.eu --receive-keys KEY_ID
 ```
+
+## Resources
+
+-   [The State of the Keyservers in 2024 | blog.pgpkeys.eu](https://blog.pgpkeys.eu/state-keyservers-2024.html) ([archived](https://archive.is/UMjC3))
