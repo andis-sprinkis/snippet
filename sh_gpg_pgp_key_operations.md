@@ -30,6 +30,12 @@ To export a private PGP key from the keychain to a file:
 gpg --armor --export-secret-keys KEY_ID > key.asc
 ```
 
+Inspect a PGP keyfile:
+
+```sh
+gpg --show-keys key.asc
+```
+
 Import a key from a local PGP keyfile in the keychain:
 
 ```sh
