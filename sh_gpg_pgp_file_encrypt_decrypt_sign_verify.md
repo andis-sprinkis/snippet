@@ -60,6 +60,12 @@ Sign file `message.zip` as `message.zip.asc` with an embedded signature, output 
 gpg --armor --default-key "KEY_ID" --sign "message.zip"
 ```
 
+Sign file `message.txt` as a clear text file `message.txt.asc` with an embedded signature:
+
+```sh
+gpg --default-key "KEY_ID" --sign "message.zip"
+```
+
 Verify signed file `message.zip.gpg` signature information:
 
 ```sh
