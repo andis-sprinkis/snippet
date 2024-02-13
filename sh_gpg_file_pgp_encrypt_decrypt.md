@@ -10,6 +10,8 @@ Decrypt file encrypted with asymmetric encryption `secret.zip.gpg` as `secret_de
 
 ```sh
 gpg --decrypt secret.zip.gpg > secret_decrypted.zip
+# or
+gpg --decrypt secret.zip.gpg --output secret_decrypted.zip
 ```
 
 Encrypt file `secret.zip` as `secret.zip.asc` using asymmetric encryption, in ASCII text format:
