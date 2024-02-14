@@ -137,3 +137,7 @@ sudo visudo
 -   `chown`, `chgrp`: change individual or group ownership of a file or directory
 -   `visudo`: edit file `/etc/sudoers` in the visual editor with a file access lock and validate the result, to specify
     which users and groups can use the `sudo` command
+
+## Resources
+
+-   [User/Group Name Syntax](https://systemd.io/USER_NAMES/) ([archived](https://archive.is/O2q8G))
