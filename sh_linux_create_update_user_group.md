@@ -1,47 +1,47 @@
 # Adding and updating users and groups in Linux
 
-Create a new user `user0`:
+Create a new user `usr0`:
 
 ```sh
-sudo useradd "user0"
+sudo useradd "usr0"
 ```
 
-Create a new user `user0` and initialize the home directory `/home/user0`:
+Create a new user `usr0` and initialize the home directory `/home/usr0`:
 
 ```sh
-sudo useradd --create-home "user0"
+sudo useradd --create-home "usr0"
 ```
 
-Create a home directory `/home/user0` for an existing user `user0`:
+Create a home directory `/home/usr0` for an existing user `usr0`:
 
 ```sh
-sudo mkhomedir_helper "user0"
+sudo mkhomedir_helper "usr0"
 ```
 
-Create a new user `user0` with specific user ID `1500`:
+Create a new user `usr0` with specific user ID `1500`:
 
 ```sh
-sudo useradd -u "1500" "user0"
+sudo useradd -u "1500" "usr0"
 ```
 
-Set password for `user0`:
+Set password for `usr0`:
 
 ```sh
-sudo passwd "user0"
+sudo passwd "usr0"
 ```
 
-Create a new user `user0` with group `somegroup` as the primary group and `wheel`, `docker` as secondary groups:
+Create a new user `usr0` with group `somegroup` as the primary group and `wheel`, `docker` as secondary groups:
 
 ```sh
-sudo useradd -g "somegroup" -G "wheel,docker" "user0"
+sudo useradd -g "somegroup" -G "wheel,docker" "usr0"
 ```
 
 The primary group is used by default when creating new files (or directories), modifying files, or executing commands. The secondary (supplementary) groups are for the other file and application permissions purposes.
 
-Change the user's `user0` primary group to `anothergroup`:
+Change the user's `usr0` primary group to `anothergroup`:
 
 ```sh
-sudo usermod -g "another-group" "user0"
+sudo usermod -g "another-group" "usr0"
 ```
 
 Create user group `hello`:
@@ -56,28 +56,28 @@ Delete user group `hello` and remove the user memberships:
 sudo groupdel "hello"
 ```
 
-Add user `user0` to secondary group `hello`:
+Add user `usr0` to secondary group `hello`:
 
 ```sh
-sudo usermod -Ga "hello" "user0"
+sudo usermod -Ga "hello" "usr0"
 ```
 
-Add user `user0` to secondary groups `foo`, `bar`:
+Add user `usr0` to secondary groups `foo`, `bar`:
 
 ```sh
-sudo usermod -Ga "foo,bar" "user0"
+sudo usermod -Ga "foo,bar" "usr0"
 ```
 
-Remove `user0` from a group `bar`:
+Remove `usr0` from a group `bar`:
 
 ```sh
-sudo gpasswd --delete "user0" "bar"
+sudo gpasswd --delete "usr0" "bar"
 ```
 
 Alternatively, remove the user name from the relevant line in file `/etc/group`, e.g.:
 
 ```group
-bar:x:XXX:user0
+bar:x:XXX:usr0
 ```
 
 to
@@ -94,12 +94,12 @@ groups
 id
 ```
 
-List which groups user `user0` belongs to:
+List which groups user `usr0` belongs to:
 
 ```sh
-groups "user0"
+groups "usr0"
 # or
-id "user0"
+id "usr0"
 ```
 
 List all groups and the users within them:
@@ -108,10 +108,10 @@ List all groups and the users within them:
 sudo cat "/etc/group" | $PAGER
 ```
 
-Check `sudo` privileges for user `user0`:
+Check `sudo` privileges for user `usr0`:
 
 ```sh
-sudo -lU "user0"
+sudo -lU "usr0"
 ```
 
 View and update `sudo` privileges for users and groups:
