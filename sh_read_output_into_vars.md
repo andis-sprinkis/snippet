@@ -11,3 +11,5 @@ For `,` delimeted values use:
 ```sh
 { IFS="," read first_word second_word; } < <(echo "hello,world")
 ```
+
+⚠️ The process subtitution `<(...)` is not POSIX compatible.
