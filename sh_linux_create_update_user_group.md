@@ -59,13 +59,13 @@ sudo groupdel "hello"
 Add user `usr0` to secondary group `hello`:
 
 ```sh
-sudo usermod -Ga "hello" "usr0"
+sudo usermod -aG "hello" "usr0"
 ```
 
 Add user `usr0` to secondary groups `foo`, `bar`:
 
 ```sh
-sudo usermod -Ga "foo,bar" "usr0"
+sudo usermod -aG "foo,bar" "usr0"
 ```
 
 Remove `usr0` from a group `bar`:
