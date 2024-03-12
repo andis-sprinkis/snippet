@@ -1,6 +1,6 @@
 # Setting per-monitor gamma level in X11
 
-Setting the gamma value to `1.37` for the display with ID `eDP1`:
+Setting the gamma level value to `1.37` for the display with ID `eDP1`:
 
 -   Temporarily:
     ```sh
