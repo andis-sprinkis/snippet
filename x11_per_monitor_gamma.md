@@ -18,4 +18,4 @@ Setting the gamma level value to `1.37` for the display with ID `eDP1`:
           # Gamma 1.37 1.37 1.37
         EndSection
         ```
-    2. Restart the X11 session:
+    2. Restart the X11 session.
