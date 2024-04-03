@@ -26,7 +26,7 @@ NOTE:Wife is Wilma
 END:VCARD
 ```
 
-The example above is from comment by Gary on article [The sad story of the vCard format and its lack of interoperability – Alessandro Rossini](https://alessandrorossini.org/the-sad-story-of-the-vcard-format-and-its-lack-of-interoperability/) ([archived](https://archive.is/20161209103053/https://alessandrorossini.org/the-sad-story-of-the-vcard-format-and-its-lack-of-interoperability/)):
+The example above is from a comment by *Gary* on article [The sad story of the vCard format and its lack of interoperability – Alessandro Rossini](https://alessandrorossini.org/the-sad-story-of-the-vcard-format-and-its-lack-of-interoperability/) ([archived](https://archive.is/20161209103053/https://alessandrorossini.org/the-sad-story-of-the-vcard-format-and-its-lack-of-interoperability/)):
 
 > Here is the format that was settled on. It seems deceptively simple looking back at it, but it’s the result of a lot of trial and error, exporting and importing to get the information across multiple devices (Tested between Google Contacts, iPhone, Android, Outlook and Apple Contacts). Treat any social media as URIs. Annotate them with itemX. Avoid any vendor X- extensions, eg X-SOCIALPROFILE, X-SKYPE, etc.
 
