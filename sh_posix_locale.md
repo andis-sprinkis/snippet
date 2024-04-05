@@ -2,6 +2,8 @@
 
 ```sh
 export LC_ALL="C"
+# or
+export LC_ALL="POSIX"
 ```
 
 With the variable `LC_ALL` set to value `C`, the succesive shell commands should prioritise POSIX locale configuration over the set values of the locale environment variables `LC_*`, `LANG`, `LANGUAGE`.
