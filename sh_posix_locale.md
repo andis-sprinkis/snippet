@@ -1,4 +1,4 @@
-# Instructing shell runtime commands to use the POSIX locale
+# Instructing the shell runtime commands to use the POSIX locale
 
 ```sh
 export LC_ALL="C"
@@ -7,6 +7,12 @@ export LC_ALL="POSIX"
 ```
 
 With the variable `LC_ALL` set to value `C`, the succesive shell commands should prioritise POSIX locale configuration over the set values of the locale environment variables `LC_*`, `LANG`, `LANGUAGE`.
+
+Unsetting the above instruction:
+
+```sh
+export LC_ALL=""
+```
 
 Running `date` command with the POSIX locale:
 
