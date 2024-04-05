@@ -11,3 +11,8 @@ Running `date` command with the POSIX locale:
 ```sh
 LC_ALL="C" date
 ```
+
+## Resources
+
+-   [Locale (OpenGroup)](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap07.html#tag_07_02)
+-   [Standard Locales (The GNU C Library)](https://www.gnu.org/software/libc/manual/html_node/Standard-Locales.html)
