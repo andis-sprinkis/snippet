@@ -1,4 +1,4 @@
-# Exiting a shell script on error and referencing an underfined variable
+# Exiting a shell script on error or referencing an undefined variable
 
 ```sh
 #!/usr/bin/env sh
