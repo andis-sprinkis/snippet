@@ -62,6 +62,18 @@ Checking if a unit is enabled:
 systemctl is-enabled firewalld
 ```
 
+Checking if a unit is active:
+
+```sh
+systemctl is-active firewalld
+```
+
+Checking if a unit is active, with no printed output:
+
+```sh
+systemctl is-active --quiet firewalld
+```
+
 Restarting a unit service:
 
 ```sh
