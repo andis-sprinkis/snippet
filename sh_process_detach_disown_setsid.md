@@ -6,7 +6,7 @@
     nohup httpd 0</dev/null 1>/dev/null 2>/dev/null &
     ```
 
-    `0</dev/null` instructs the non-Linux systems to immediately close the stdin file.
+    `0</dev/null` instructs the non-Linux system shell to immediately close the stdin file.
 
     `1>/dev/null` and `2>/dev/null` redirect the stdout and stderr streams to `/dev/null`.
 
