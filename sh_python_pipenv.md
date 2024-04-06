@@ -59,3 +59,7 @@ Running a command in the virtualenv shell:
 ```sh
 pipenv run jupyter-lab
 ```
+
+## Resources
+
+-   [Pipenv: Python Dev Workflow for Humans — pipenv documentation](https://pipenv.pypa.io/en/latest/)
