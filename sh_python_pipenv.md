@@ -72,6 +72,12 @@ Viewing the `Pipfile` / `Pipfile.lock` / installed dependency graph:
 pipenv graph | $PAGER
 ```
 
+Opening an installed package in the text editor:
+
+```sh
+pipenv open numpy
+```
+
 Running the virtualenv shell:
 
 ```sh
