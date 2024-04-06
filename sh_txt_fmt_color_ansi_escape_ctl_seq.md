@@ -58,3 +58,4 @@ echo "\x1b[0;35mHello world\!"
 
 -   [Everything you never wanted to know about ANSI escape codes](https://notes.burke.libbey.me/ansi-escape-codes/)
     ([archived](https://archive.is/20210203094825/https://notes.burke.libbey.me/ansi-escape-codes/))
+-   [ANSI code generator](https://ansi.gabebanks.net/)
