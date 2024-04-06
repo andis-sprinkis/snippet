@@ -48,6 +48,12 @@ Verifying that `Pipfile.lock` is aligned with `Pipfile`:
 pipenv verify
 ```
 
+Viewing the `Pipfile` / `Pipfile.lock` / installed dependency graph:
+
+```sh
+pipenv graph
+```
+
 Running the virtualenv shell:
 
 ```sh
