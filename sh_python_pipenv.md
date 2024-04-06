@@ -6,6 +6,12 @@ Installing a package:
 pipenv install numpy
 ```
 
+Installing a development environment package:
+
+```sh
+pipenv install pytest --dev
+```
+
 Uninstalling a package:
 
 ```sh
@@ -24,17 +30,29 @@ Installing all packages from `Pipfile`:
 pipenv install
 ```
 
-Installing all packages from `Pipfile.lock`:
+This command re-locks the lockfile.
+
+Generating `Pipfile.lock` from `Pipfile`:
 
 ```sh
 pipenv lock
 ```
 
-Generating `Pipfile.lock` from `Pipfile`:
+Installing all packages from `Pipfile.lock`:
 
 ```sh
 pipenv sync
 ```
+
+This command does not re-lock the lockfile.
+
+Installing all packages from `Pipfile.lock`:
+
+```sh
+pipenv install --ignore-pipfile
+```
+
+This command re-locks the lockfile.
 
 Generating `Pipfile.lock` from `Pipfile`, then installing all packages from `Pipfile.lock`:
 
