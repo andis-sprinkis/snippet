@@ -34,6 +34,8 @@
 
     ⚠️ In macOS, `setsid` is not supported.
 
+    This does not include the process in the shell process group.
+
 # Resources
 
 -   [unix - How do I use the nohup command without getting nohup.out? - Stack Overflow answer by Mark Reed](https://stackoverflow.com/questions/10408816/how-do-i-use-the-nohup-command-without-getting-nohup-out/10408906#10408906)
