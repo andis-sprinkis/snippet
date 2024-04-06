@@ -51,7 +51,7 @@ pipenv verify
 Viewing the `Pipfile` / `Pipfile.lock` / installed dependency graph:
 
 ```sh
-pipenv graph
+pipenv graph | $PAGER
 ```
 
 Running the virtualenv shell:
