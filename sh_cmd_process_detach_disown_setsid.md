@@ -1,6 +1,6 @@
 # Run a command process detached from the current shell instance
 
--   Using `nohup`
+-   Using `nohup`:
 
     ```sh
     nohup httpd 0</dev/null 1>/dev/null 2>/dev/null &
