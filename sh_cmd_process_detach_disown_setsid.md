@@ -1,4 +1,4 @@
-# Run a command detached from the current shell instance
+# Run a command process detached from the current shell instance
 
 -   Using `nohup`
 
