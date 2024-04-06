@@ -18,6 +18,18 @@ Uninstalling a package:
 pipenv uninstall numpy
 ```
 
+Uninstalling all packages:
+
+```sh
+pipenv uninstall --all
+```
+
+Uninstalling all development environment packages:
+
+```sh
+pipenv uninstall --all-dev
+```
+
 Installing a specific Python version:
 
 ```sh
@@ -42,6 +54,8 @@ Installing all packages from `Pipfile.lock`:
 
 ```sh
 pipenv sync
+# or
+pipenv install --ignore-pipfile --deploy
 ```
 
 This command does not re-lock the lockfile.
@@ -70,6 +84,18 @@ Viewing the `Pipfile` / `Pipfile.lock` / installed dependency graph:
 
 ```sh
 pipenv graph | $PAGER
+```
+
+Viewing the virtualenv directory location path:
+
+```sh
+pipenv --venv
+```
+
+Viewing the project directory location path:
+
+```sh
+pipenv --where
 ```
 
 Opening an installed package in the text editor:
