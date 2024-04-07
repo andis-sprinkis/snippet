@@ -80,7 +80,7 @@ gpg --generate-revocation KEY_ID
 
 Revoking a PGP key:
 
-1. The revocation certificate files need to be prepared for their use:
+1. The revocation certificate file needs to be prepared for it's use:
 
     > To avoid an accidental use of this file, a colon has been inserted
     > before the 5 dashes below. Remove this colon with a text editor
