@@ -87,9 +87,9 @@ Revoking a PGP key:
     > before importing and publishing this revocation certificate.
 
 1. ```sh
-   gpg --import revocation_key.rev
+   gpg --import "$HOME/.gnupg/openpgp-revocs.d/REVOCATION_KEY.rev"
    # or
-   gpg --import < revocation_key.rev
+   gpg --import < "$HOME/.gnupg/openpgp-revocs.d/REVOCATION_KEY.rev"
 
    gpg --list-keys
 
