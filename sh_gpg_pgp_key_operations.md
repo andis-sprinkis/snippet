@@ -88,8 +88,6 @@ Revoking a PGP key:
 
 1. ```sh
    gpg --import "$HOME/.gnupg/openpgp-revocs.d/REVOCATION_KEY.rev"
-   # or
-   gpg --import < "$HOME/.gnupg/openpgp-revocs.d/REVOCATION_KEY.rev"
 
    gpg --list-keys
 
