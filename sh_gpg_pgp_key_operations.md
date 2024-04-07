@@ -97,12 +97,12 @@ Revoking a PGP key:
    # Key fingerprint = REVOKED_KEY_FINGERPRINT
    # uid                 [ revoked] Test user (Test key) <test@example.com>
 
-   # Sending the revoked key to the keyserver
+   # Sending the revoked key to the keyserver:
    gpg --send-keys REVOKED_KEY_ID
    # or
    gpg --keyserver pgpkeys.eu --send-keys REVOKED_KEY_ID
 
-   # Exporting a revoked key to send to the immediate contacts.
+   # Exporting a revoked key to send to the immediate contacts:
    gpg --armor --export REVOKED_KEY_ID > revoked_key.pub
    ```
 
