@@ -2,7 +2,7 @@
 
 The control sequence consists of the _Control sequence introducer_ (CSI) and the _Set graphics mode_ (SGR) function.
 
-The CSI for calling a function is composed of one of the `byte 27 0x1b ESC` representations and `[` - as `\x1b[` or `\033[` or `\e[`.
+The CSI for calling a function is composed of one of the `byte 27 0x1b ESC` representations and `[` - as `\x1b[`, `\033[` or `\e[`.
 
 The SGR function - `m`.
 
