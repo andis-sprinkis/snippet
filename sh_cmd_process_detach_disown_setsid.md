@@ -32,7 +32,7 @@
     setsid httpd 1>/dev/null 2>/dev/null
     ```
 
-    ⚠️ In macOS, `setsid` is not supported.
+    ⚠️ macOS does not include `setsid`.
 
     This does not include the process in the shell process group.
 
