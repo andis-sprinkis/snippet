@@ -6,7 +6,7 @@ The CSI for calling a function is composed of one of the `byte 27 0x1b ESC` repr
 
 The SGR function - `m`, prefixed with one or more of it's arguments - formatting codes, separated with `;`.
 
-Formatting codes:
+The formatting codes:
 
 | Format                    | Code |
 | ------------------------- | ---: |
