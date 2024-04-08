@@ -1,6 +1,6 @@
 # Terminal text formatting using the ANSI control sequences
 
-The _Control sequence introducer_ (CSI) for calling a function is composed of the `byte 27 0x1b ESC` and `[` - `\x1b[` or `\033[` or `\e[`.
+The _Control sequence introducer_ (CSI) for calling a function is composed of one of the `byte 27 0x1b ESC` representations and `[` - as `\x1b[` or `\033[` or `\e[`.
 
 The _Set graphics mode_ (SGR) function - `m`.
 
