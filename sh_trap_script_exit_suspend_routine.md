@@ -1,9 +1,9 @@
 # Using `trap` to run an exit routine (log, clean up etc.) on shell script exit, preventing exiting and suspending the script
 
-Call script command `log` only on signals INT (2, C-c), QUIT (3, C-\\), TERM (15), STOP (23, C-s) and the normal EXIT (0):
+Call script command `log` only on signals INT (2, C-c), QUIT (3, C-\\), TERM (15), STOP (23, C-s):
 
 ```sh
-trap "log" INT QUIT TERM STOP EXIT
+trap "log" INT QUIT TERM STOP
 ```
 
 Prevent signals INT (2, C-c), QUIT (3, C-\\), TERM (15), STOP (23, C-s) exiting and TSTP (24, C-z) from suspending the script:
