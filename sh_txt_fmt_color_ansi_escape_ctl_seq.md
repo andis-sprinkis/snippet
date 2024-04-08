@@ -4,7 +4,7 @@ The control sequence consists of the _Control sequence introducer_ (CSI) and the
 
 The CSI for calling a function is composed of one of the `byte 27 0x1b ESC` representations and `[` - as `\x1b[`, `\033[` or `\e[`.
 
-The SGR function - `m`.
+The SGR function - `m`, prefixed with one or more of it's arguments, separated with `;`.
 
 Formatting codes:
 
