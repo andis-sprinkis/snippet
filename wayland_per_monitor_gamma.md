@@ -1,4 +1,4 @@
-# Setting a different gamma value per monitor on Wayland
+# Setting per-monitor gamma level in Wayland
 
 Setting different gamma values on monitors eDP-1 and eDP-2 using [`wlsunset`](https://github.com/kennylevinsen/wlsunset):
 
