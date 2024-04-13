@@ -3,9 +3,9 @@
 Some answers from [header - Should struct definitions go in .h or .c file? - Stack Overflow](https://stackoverflow.com/questions/6316987/should-struct-definitions-go-in-h-or-c-file) ([archived](https://archive.is/FGcC6)):
 
 1. According to StackOverflow user τεκ:
-   > Private structures for that file should go in the .c file, with a declaration in the .h file if they are used by any functions in the .h .
-   >
-   > Public structures should go in the .h file.
+    > Private structures for that file should go in the .c file, with a declaration in the .h file if they are used by any functions in the .h .
+    >
+    > Public structures should go in the .h file.
 1. According to StackOverflow user Matthew Slattery:
     > > Both should result in the same usability, even if one is by linkage, shouldn't they?
     >
@@ -71,3 +71,7 @@ Some answers from [header - Should struct definitions go in .h or .c file? - Sta
     > So, the "definition in implementation" version protects against accidental or deliberate misuse of private implementation details.
 
 The original answers from StackOverflow are licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
+
+# Resources
+
+-   [comp.lang.c FAQ list · Question 2.4 - How can I implement opaque (abstract) data types in C?](https://www.c-faq.com/struct/opaquetypes.html) and [one of the examples](https://www.c-faq.com/struct/opaque.examp.html)
