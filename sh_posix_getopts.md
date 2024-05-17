@@ -48,7 +48,7 @@ while getopts a:b:ch name; do
 done
 
 [ ! "$opt_a" ] && {
-  echo "$(basename "$0"): Option -a STRING is required." 1>&2
+  echo "${script}: Option -a STRING is required." 1>&2
   exit 1
 }
 ```
