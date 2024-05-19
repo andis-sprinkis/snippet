@@ -10,5 +10,4 @@ or
 # vim: ft=i3config
 ```
 
-
-<!-- vim: :set ft=markdown -->
+<!-- vim: set ft=markdown -->
