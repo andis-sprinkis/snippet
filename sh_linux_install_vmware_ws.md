@@ -15,6 +15,7 @@
 
 1. ```sh
    sudo modprobe -a vmw_vmci vmmon
+   sudo systemctl start vmware-networks-configuration.service
    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
    vmware
    pkill polkit-gnome-au
