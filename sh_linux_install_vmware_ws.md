@@ -1,4 +1,4 @@
-# Installing VMware Workstation on Arch Linux host
+# Installing the VMware Workstation on an Arch Linux host
 
 1. Ensure that the necessary packages are installed.
 
