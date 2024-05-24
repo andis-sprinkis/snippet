@@ -25,3 +25,5 @@ View device information by the `/dev/disk/` device ID link:
 ```sh
 sudo smartctl -x /dev/disk/by-id/DEVICE_NAME | $PAGER
 ```
+
+TODO: `dmenu`/`wmenu`/`fzf` script
