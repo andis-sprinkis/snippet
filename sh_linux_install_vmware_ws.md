@@ -16,6 +16,8 @@
 1. ```sh
    sudo modprobe -a vmw_vmci vmmon
    sudo systemctl start vmware-networks-configuration.service
+   sudo systemctl enable --now vmware-usbarbitrator.service
+   sudo systemctl enable --now vmware-networks.service
    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
    vmware
    pkill polkit-gnome-au
