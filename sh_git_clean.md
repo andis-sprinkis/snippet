@@ -7,6 +7,8 @@ Remove untracked and ignored files:
 git clean -dfx PATH
 ```
 
+TODO: explain the shell opts.
+
 ## Sources
 
 -   [Git cheat sheet](https://steinbaugh.com/posts/git.html)
