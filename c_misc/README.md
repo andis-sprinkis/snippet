@@ -1,6 +1,6 @@
 Miscellaneous bits of the C programming language usage.
 
-Some borrowed or inspired by the source code of *Quell Solaar* and a video lecture on C programming by Eskil Steenberg:
+Some borrowed from or inspired by the source code of *Quell Solaar* and a video lecture on C programming by Eskil Steenberg:
 
 -   [How I program C - YouTube](https://www.youtube.com/watch?v=443UNeGrFoM)
 -   [Quel Solaar](https://www.quelsolaar.com/)
