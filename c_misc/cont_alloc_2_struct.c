@@ -1,3 +1,4 @@
+#include <bits/stdint-uintn.h>
 #include <stdlib.h>
 
 /* A continious memory allocation of 2 struct. */
@@ -8,13 +9,13 @@
  * assignment will be incorrect. */
 
 typedef struct {
-  int a;
+  uint64_t a;
   float b;
 } MyStructA; /* To be overallocated */
 
 typedef struct {
   float x;
-  int y;
+  uint8_t y;
   double z;
 } MyStructB;
 
@@ -27,3 +28,5 @@ int main(int argc, char *argv[]) {
 
   return 0;
 }
+
+/* uint*_t are GNU C specific - https://www.gnu.org/software/libc/manual/html_node/Integers.html */

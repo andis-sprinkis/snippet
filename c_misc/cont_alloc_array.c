@@ -1,5 +1,6 @@
 #include <stdint.h>
 #include <stdlib.h>
+#include <bits/stdint-uintn.h>
 
 /* Array length and data stored in one continious allocation. */
 /* 'malloc' can be used to allocate a pointer to a different size of it's
@@ -7,7 +8,7 @@
 
 typedef struct {
   unsigned int length;
-  unsigned int data[1]; /* To be overallocated. */
+  uint8_t data[1]; /* To be overallocated. */
 } MyArrayOfBytes;
 
 int main(int argc, char *argv[]) {
@@ -23,3 +24,5 @@ int main(int argc, char *argv[]) {
 
   return 0;
 }
+
+/* uint*_t are GNU C specific - https://www.gnu.org/software/libc/manual/html_node/Integers.html */
