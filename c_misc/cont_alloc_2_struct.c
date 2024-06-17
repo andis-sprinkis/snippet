@@ -1,4 +1,4 @@
-#include <bits/stdint-uintn.h>
+#include <stdint.h>
 #include <stdlib.h>
 
 /* A continious memory allocation of 2 struct. */

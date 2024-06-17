@@ -1,6 +1,5 @@
 #include <stdint.h>
 #include <stdlib.h>
-#include <bits/stdint-uintn.h>
 
 /* Array length and data stored in one continious allocation. */
 /* 'malloc' can be used to allocate a pointer to a different size of it's
