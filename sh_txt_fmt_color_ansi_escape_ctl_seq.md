@@ -2,11 +2,16 @@
 
 The control sequence consists of the _Control sequence introducer_ (CSI) and the _Set graphics mode_ (SGR) function.
 
-The CSI for calling a function is composed of one of the `byte 27 0x1b ESC` representations and the `[` - as `\x1b[`, `\033[` or `\e[`.
+-   The _CSI_ for calling a function is made of one the byte `27 0x1b ESC` escape sequence representations and the
+    character `[`.
 
-The SGR function - `m`, prefixed with one or more of it's arguments - formatting codes, separated with `;`.
+    Either `\x1b[`, `\033[` or `\e[`.
 
-The formatting codes:
+-   The _SGR_ function - `m`, prefixed with one or more of it's arguments - formatting codes, separated with `;`.
+
+    For example - `0;35m`.
+
+## The formatting codes
 
 | Format                         | Code |
 | ------------------------------ | ---: |
@@ -54,11 +59,21 @@ The formatting codes:
 | White bright background        |  107 |
 | Yellow bright background       |  103 |
 
-Resetting the current formatting and setting the following text foreground to magenta using the control sequence `\x1b[0;35m`:
+## An example
 
 ```sh
 echo "\x1b[0;35mHello world\!"
 ```
+
+Using the control sequence `\x1b[0;35m`:
+
+|   Token | Action                                                           |
+| ------: | ---------------------------------------------------------------- |
+| `\x1b[` | CSI                                                              |
+|     `0` | SGR f. param. - resetting the current formatting                 |
+|     `;` | SGR f. param. separator                                          |
+|    `35` | SGR f. param. - setting the following text foreground to magenta |
+|     `m` | SGR function call                                                |
 
 ## Resources
 
