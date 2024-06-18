@@ -26,4 +26,6 @@ for f in {0..5}; do
 done
 ```
 
+`OSXFileSize` call should be `stat --format="%s"` on Linux.
+
 The original answers from StackOverflow are licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
