@@ -1,4 +1,4 @@
-# Add an SSH public key to `authorized_keys` file on a remote machine
+# Adding an SSH public key to `authorized_keys` file on a remote machine
 
 Copy the given public key to the remote:
 ```sh
