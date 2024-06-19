@@ -21,5 +21,6 @@ make
 
 ## Resources
 
+-   [make (POSIX)](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html)
 -   [GNU make](https://www.gnu.org/software/make/manual/make.html)
 -   [Makefile - Quick Guide](https://www.tutorialspoint.com/makefile/makefile_quick_guide.htm)
