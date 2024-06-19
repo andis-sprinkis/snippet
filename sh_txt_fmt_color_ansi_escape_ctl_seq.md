@@ -67,13 +67,13 @@ echo "\x1b[0;35mHello world\!"
 
 Using the control sequence `\x1b[0;35m`:
 
-|   Token | Type                | Action                                           |
-| ------: | ------------------- | ------------------------------------------------ |
-| `\x1b[` | CSI                 | Introducing control sequence                     |
-|     `0` | SGR function param. | Resetting the formatting for following text      |
-|     `;` | SGR function param. | Separator                                        |
-|    `35` | SGR function param. | Setting the following text foreground to magenta |
-|     `m` | SGR                 | Function call                                    |
+|   Token | Type                     | Action                                           |
+| ------: | ------------------------ | ------------------------------------------------ |
+| `\x1b[` | CSI                      | Introducing control sequence                     |
+|     `0` | SGR function param. list | Resetting the formatting for following text      |
+|     `;` | SGR function param. list | Delimiter                                        |
+|    `35` | SGR function param. list | Setting the following text foreground to magenta |
+|     `m` | SGR function             | Function call                                    |
 
 ## Resources
 
