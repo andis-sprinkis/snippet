@@ -32,7 +32,7 @@ a[href^="tel:"]::after {
 }
 ```
 
-In `::after` we use a linked SVG image value of `conent`, instead of a direct character value `content: '↗'`, for the accessibility reason, that is – using `content: '↗'`, the name of the character is read out by screen readers and we want to avoid that.
+In `::after` we use a linked SVG image value of `conent`, instead of a direct character value `content: '↗'`, for the accessibility reason, that is – using `content: '↗'`, the name or the sound of the character is read out by screen readers and we want to avoid that.
 
 `icon.svg`:
 
