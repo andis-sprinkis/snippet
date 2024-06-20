@@ -28,15 +28,15 @@
 1.  Fix the local `~/.ssh` directory file permissions.
 
     ```sh
-    chmod 700 "~/.ssh"
-    chmod 600 "~/.ssh/"*
-    chmod 644 -f "~/.ssh/"*".pub" "~/.ssh/authorized_keys" "~/.ssh/known_hosts"
+    chmod 700 "${HOME}/.ssh"
+    chmod 600 "${HOME}/.ssh/"*
+    chmod 644 -f "${HOME}/.ssh/"*".pub" "${HOME}/.ssh/authorized_keys" "${HOME}/.ssh/known_hosts"
     ```
 
 1.  Add the authentication public key to `/home/usr0/.ssh/authorized_keys` file on the host.
 
     ```sh
-    ssh-copy-id -i "~/ssh/hostalias0.pub" "usr0@host.alias"
+    ssh-copy-id -i "~/.ssh/hostalias0.pub" "usr0@host.alias"
     ```
 
     (If an existing authentication method to host machine, like the password or another SSH key is already present.)
