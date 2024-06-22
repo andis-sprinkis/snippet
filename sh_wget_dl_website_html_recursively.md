@@ -16,7 +16,7 @@ wget \
 The options explained (from the `wget(1)` manpage):
 
 | Option                        | Explanation                                                                                                                                                                                                      |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `-E` `--adjust-extension`     | If a file of type application/xhtml+xml or text/html is downloaded and the URL does not end with the regexp `\.[Hh][Tt][Mm][Ll]?`, this option will cause the suffix .html to be appended to the local filename. |
 | `-k` `--convert-links`        | After the download is complete, convert the links in the document to make them suitable for local viewing.                                                                                                       |
 | `-m` `--mirror`               | This option turns on recursion and time-stamping, sets infinite recursion depth and keeps FTP directory listings. It is currently equivalent to -r -N -l inf --no-remove-listing.                                |
