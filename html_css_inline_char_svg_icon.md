@@ -1,6 +1,6 @@
 # Defining an inline character SVG icon and using it as CSS pseudo-element with a correct line height
 
-The goal of this technique is to render line-height-adjusted character icons using CSS, for benefit of sighted users, that, to avoid the screen reader user confusion, not read out by the screen reader sofware which parses the DOM.
+The goal of this technique is to render line-height-adjusted character icons using CSS, for benefit of sighted users, that, to avoid the screen reader user confusion, are not read out by the screen reader sofware which parses the DOM.
 
 ---
 
