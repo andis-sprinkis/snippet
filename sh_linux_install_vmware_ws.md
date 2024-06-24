@@ -10,7 +10,7 @@
 
     1. From AUR:
         ```sh
-        yay vmware-workstation vmware-keymaps
+        yay vmware-workstation
         ```
 
 1. ```sh
