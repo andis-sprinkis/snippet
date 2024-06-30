@@ -1,13 +1,17 @@
 # Terminal text formatting using the ANSI control sequences
 
-The control sequence consists of the _Control sequence introducer_ (CSI) and the _Set graphics mode_ (SGR) function.
+The control sequence consists of:
 
--   The _CSI_ for calling a function is made of one the byte `27 0x1b ESC` escape sequence representations and the
+-   _Control sequence introducer_ (CSI)
+
+    The _CSI_ for calling a function is made of one the byte `27 0x1b ESC` escape sequences and the
     character `[`.
 
-    Either `\x1b[`, `\033[` or `\e[`.
+    Either - `\x1b[`, `\033[`, `\e[`.
 
--   The _SGR_ function - `m`, prefixed with one or more of it's arguments - formatting codes, separated with `;`.
+-   _Set graphics mode_ (SGR) function
+
+    The _SGR_ function - `m`, prefixed with one or more of it's arguments - formatting codes, separated with `;`.
 
     For example - `0;35m`.
 
