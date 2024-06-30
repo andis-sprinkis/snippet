@@ -11,7 +11,7 @@ The control sequence consists of:
 
 -   _Set graphics mode_ (SGR) function
 
-    The _SGR_ function - `m`, prefixed with one or more of it's arguments - formatting codes, separated with `;`.
+    The _SGR_ function - `m`, prefixed with one or more of it's arguments - the formatting codes, separated with `;`.
 
     For example - `0;35m`.
 
@@ -66,18 +66,20 @@ The control sequence consists of:
 ## An example
 
 ```sh
-printf "\x1b[0;35mHello world\!"
+printf "\x1b[0;35mHello world\x1b[0m"
 ```
 
-Using the control sequence `\x1b[0;35m`:
-
-|   Token | Type                     | Action                                           |
-| ------: | ------------------------ | ------------------------------------------------ |
-| `\x1b[` | CSI                      | Introducing control sequence                     |
-|     `0` | SGR function param. list | Resetting the formatting for following text      |
-|     `;` | SGR function param. list | Delimiter                                        |
-|    `35` | SGR function param. list | Setting the following text foreground to magenta |
-|     `m` | SGR function             | Function call                                    |
+|         Token | Type                     | Action                                           |
+| ------------: | ------------------------ | ------------------------------------------------ |
+|       `\x1b[` | CSI                      | Introducing a control sequence                   |
+|           `0` | SGR function param. list | Resetting the formatting for following text      |
+|           `;` | SGR function param. list | Delimiter                                        |
+|          `35` | SGR function param. list | Setting the following text foreground to magenta |
+|           `m` | SGR function             | Function call                                    |
+| `Hello world` |                          |                                                  |
+|       `\x1b[` | CSI                      | Introducing a control sequence                   |
+|           `0` | SGR function param. list | Resetting the formatting for following text      |
+|           `m` | SGR function             | Function call                                    |
 
 ## Resources
 
