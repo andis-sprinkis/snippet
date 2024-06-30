@@ -62,7 +62,7 @@ The control sequence consists of the _Control sequence introducer_ (CSI) and the
 ## An example
 
 ```sh
-echo "\x1b[0;35mHello world\!"
+printf "\x1b[0;35mHello world\!"
 ```
 
 Using the control sequence `\x1b[0;35m`:
