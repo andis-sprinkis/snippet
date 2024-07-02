@@ -1,13 +1,13 @@
-# Access JSON array and object elements with jq
+# Accessing JSON array and object elements with jq
 
-Print a colored and formatted output:
+Print a formatted and colored output from JSON input:
 
 ```sh
-example='{ "lorem": [ { "ipsum": "hello world" } ] }'
+json='{ "lorem": [ { "ipsum": "hello world" } ] }'
 
-echo "$example" | jq
+echo "$json" | jq
 # or
-echo "$example" | jq "."
+echo "$json" | jq "."
 ```
 
 ```json
@@ -20,14 +20,28 @@ echo "$example" | jq "."
 }
 ```
 
-Select and ouput value `lorem[0].ipsum`:
+Return value at `lorem[0].ipsum`:
 
 ```sh
-example='{ "lorem": [ { "ipsum": "hello world" } ] }'
+json='{ "lorem": [ { "ipsum": "hello world" } ] }'
 
-echo "$example" | jq ".lorem[0].ipsum"
+echo "$json" | jq ".lorem[0].ipsum"
 ```
 
 ```json
 "hello world"
+```
+
+Return element with entry `ipsum` value `bye`:
+
+```sh
+json='[ { "ipsum": "hello" }, { "ipsum": "bye" } ]'
+
+echo "$json" | jq '.[] | select(.ipsum == "bye")'
+```
+
+```json
+{
+  "ipsum": "bye"
+}
 ```
