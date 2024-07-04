@@ -1,6 +1,6 @@
 # Terminal text formatting using the ANSI control sequences
 
-The control sequence consists of:
+The control sequence for formatting text in \*nix terminal consists of:
 
 -   _Control sequence introducer_ (CSI)
 
