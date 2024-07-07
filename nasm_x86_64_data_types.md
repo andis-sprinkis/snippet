@@ -1,11 +1,11 @@
 # NASM x86-64 data type pseudo-instructions
 
-| `.data` | `.bss` | Size, bits |        Name |
-| ------- | ------ | ---------: | ----------: |
-| db      | resb   |          8 |        Byte |
-| dw      | resw   |         16 |        Word |
-| dd      | resd   |         32 | Double word |
-| dq      | resq   |         64 |    Quadword |
+| `.data` | `.bss` | Bits |        Name |
+| ------: | -----: | ---: | ----------: |
+|      db |   resb |    8 |        Byte |
+|      dw |   resw |   16 |        Word |
+|      dd |   resd |   32 | Double word |
+|      dq |   resq |   64 |    Quadword |
 
 ## Resources
 
