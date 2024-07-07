@@ -183,4 +183,4 @@ Generate a list with 6 items, incremented by 5 and -25 as the starting number:
 
 ## Resources
 
--   [Making a list of numbers | Vim Tips Wiki | Fandom](https://vim.fandom.com/wiki/Making_a_list_of_numbers)
+-   [Making a list of numbers | Vim Tips Wiki | Fandom](https://vim.fandom.com/wiki/Making_a_list_of_numbers) ([archived](https://archive.ph/O410L))
