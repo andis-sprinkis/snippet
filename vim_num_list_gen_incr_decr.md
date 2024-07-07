@@ -1,4 +1,4 @@
-# Generating and modifying an incremental or decremental numerical range in Vim
+# Generating and modifying an incremental or decremental numerical range list in Vim
 
 ## Using `<C-a>`, `<C-x>`
 
