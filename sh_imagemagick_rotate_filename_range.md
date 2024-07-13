@@ -1,6 +1,8 @@
 # Use Imagemagick in shell to rotate images specified by an integer range of file names
 
 ```sh
+mkdir -p "./rotated"
+
 for img in ./ADFE{0019..0293}.JPG; do
   echo "$img"
   convert $img -rotate "-90" "./rotated/${img%.JPG}.JPG"
