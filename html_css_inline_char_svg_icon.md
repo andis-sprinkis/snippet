@@ -39,7 +39,7 @@ In `::after` we use a linked SVG image value of `conent`, instead of a direct ch
 ```xml
 <!--
 Values "mix-x min-y width height" for attribute "viewBox" of element <svg> are calculated as:
--50 ceil((CSS line-height * 10) / 2) 100 (CSS line-height * 10)
+-50 ceil((CSS line-height * 10) / 2) 100 (CSS line-height * 100)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -88 100 175">
   <style>
