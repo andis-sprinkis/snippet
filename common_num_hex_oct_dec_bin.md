@@ -2,7 +2,7 @@
 
 TODO:
 
--   Multiples of 2, resolutions, 24bit RGB & RGBA ?
+-   Multiples of 2, resolutions, ratios ?, 24bit RGB & RGBA ?
 -   Parameters
     -   Unsigned, int, float, signed (2c), BE, LE
 
