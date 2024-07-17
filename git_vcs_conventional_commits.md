@@ -2,9 +2,7 @@ This file is a mirror of the ConventionalCommits.org document `content/v1.0.0/in
 
 The source on GitHub: [conventionalcommits.org/content/v1.0.0/index.md at 4b4661af6501b5277e4d574764caef2a322af22f · conventional-commits/conventionalcommits.org](https://github.com/conventional-commits/conventionalcommits.org/blob/4b4661af6501b5277e4d574764caef2a322af22f/content/v1.0.0/index.md)
 
-The mirrored document is licenced under the MIT License.
-
-Copyright (c) 2018 Conventional Changelog.
+The mirrored document is licenced under the MIT License. Copyright (c) 2018 Conventional Changelog.
 
 ---
 
