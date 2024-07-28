@@ -3,7 +3,7 @@
 Using `awk`:
 
 ```sh
-awk 'BEGIN{ printf "%.20f\n", 1 / 3 }'
+awk 'BEGIN { printf "%.20f\n", 1 / 3 }'
 ```
 
 ```
