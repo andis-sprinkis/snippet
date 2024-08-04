@@ -35,3 +35,26 @@ Print (*at most* - exhaustive, non-repeating) 5 unsigned decimal integers in the
 ```sh
 shuf --random-source="/dev/urandom" -n "5" -i "55-359"
 ```
+
+Print 1 unsigned decimal integers in the range of 1 to 100:
+
+```sh
+awk 'BEGIN {
+  srand()
+  print int(1 + rand() * 100)
+}'
+```
+
+`srand()` accepts a single argument of any valid AWK expression as a seed.
+
+Print 5 unsigned decimal integers in the range of 1 to 100 with a seed of the string `hello world`:
+
+```sh
+awk 'BEGIN {
+  srand("hello world")
+
+  for (i = 1; i <= 5; i++) {
+    print int(1 + rand() * 100)
+  }
+}'
+```
