@@ -24,13 +24,13 @@ Print a 1 byte signed decimal integer:
 od -vAn -N1 -td1 < "/dev/urandom" | tr -d ' '
 ```
 
-Print an unsigned decimal integer in the range 55 to 359:
+Print an unsigned decimal integer in the range of 55 to 359:
 
 ```sh
 shuf --random-source="/dev/urandom" -n "5" -i "55-359"
 ```
 
-Print (*at most* - exhaustive, non-repeating) 5 unsigned decimal integers in the range 55 to 359:
+Print (*at most* - exhaustive, non-repeating) 5 unsigned decimal integers in the range of 55 to 359:
 
 ```sh
 shuf --random-source="/dev/urandom" -n "5" -i "55-359"
