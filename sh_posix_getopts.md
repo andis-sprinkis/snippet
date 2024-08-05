@@ -34,7 +34,7 @@ while getopts a:b:ch name; do
        arg_opt_a="$OPTARG"
        ;;
     b) opt_b="1"
-       arg_opt_c="$OPTARG"
+       arg_opt_b="$OPTARG"
        ;;
     c) opt_c="1"
        ;;
