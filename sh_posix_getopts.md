@@ -29,21 +29,26 @@ opt_a=
 opt_b=
 opt_c=
 while getopts a:b:ch name; do
-  case $name in
-    a) opt_a="1"
-       arg_opt_a="$OPTARG"
-       ;;
-    b) opt_b="1"
-       arg_opt_b="$OPTARG"
-       ;;
-    c) opt_c="1"
-       ;;
-    h) echo "$help_info"
-       exit
-      ;;
-    ?) echo "$help_info" 1>&2
-       exit "2"
-       ;;
+  case "$name" in
+    "a")
+      opt_a="1"
+      arg_opt_a="$OPTARG"
+    ;;
+    "b")
+      opt_b="1"
+      arg_opt_b="$OPTARG"
+    ;;
+    "c") 
+      opt_c="1"
+    ;;
+    "h")
+      echo "$help_info"
+      exit
+    ;;
+    "?")
+      echo "$help_info" 1>&2
+      exit "2"
+    ;;
   esac
 done
 
