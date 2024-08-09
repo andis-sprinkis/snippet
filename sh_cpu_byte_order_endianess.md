@@ -3,7 +3,7 @@
 Using `od` and `awk`:
 
 ```sh
-echo I | od -to2 | awk '{ print substr($2,6,1); exit}'
+echo "I" | od -to2 | awk '{ print substr($2,6,1); exit}'
 ```
 
 Output:
