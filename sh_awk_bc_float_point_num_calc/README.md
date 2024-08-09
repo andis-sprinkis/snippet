@@ -22,7 +22,7 @@ echo 'scale=20; 1 / 3' | bc | sed -e 's/^-\./-0./g' -e 's/^\./0./g'
 
 `bc`, unlike `awk`, retains the right hand side decimal precision via the arbitrary-precision arithmetic means.
 
-## Floating point regular and conditional expressions using `bc`
+## The regular and conditional expressions using `bc`
 
 From [Floating Point Math in Bash | Linux Journal](https://www.linuxjournal.com/content/floating-point-math-bash) ([archived](https://archive.is/20201104222335/https://www.linuxjournal.com/content/floating-point-math-bash)).
 
