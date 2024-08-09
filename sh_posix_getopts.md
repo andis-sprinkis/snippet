@@ -25,21 +25,21 @@ DESCRIPTION
         Prints this message.
 "
 
-opt_a=
-opt_b=
-opt_c=
+opt_has_a="0" opt_arg_a=""
+opt_has_b="0" opt_arg_b=""
+opt_has_c="0" opt_arg_c=""
 while getopts a:b:ch name; do
   case "$name" in
     "a")
-      opt_a="1"
-      arg_opt_a="$OPTARG"
+      opt_has_a="1"
+      opt_arg_a="$OPTARG"
     ;;
     "b")
-      opt_b="1"
-      arg_opt_b="$OPTARG"
+      opt_has_b="1"
+      opt_arg_b="$OPTARG"
     ;;
     "c") 
-      opt_c="1"
+      opt_has_c="1"
     ;;
     "h")
       echo "$help_info"
@@ -52,7 +52,7 @@ while getopts a:b:ch name; do
   esac
 done
 
-[ ! "$opt_a" ] && {
+[ "$opt_has_a" = "0" ] && {
   echo "${script}: Option -a STRING is required." 1>&2
   exit 1
 }
