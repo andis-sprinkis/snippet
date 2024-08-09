@@ -26,7 +26,7 @@ echo 'scale=20; 1 / 3' | bc | sed -e 's/^-\./-0./g' -e 's/^\./0./g'
 
 From [Floating Point Math in Bash | Linux Journal](https://www.linuxjournal.com/content/floating-point-math-bash) ([archived](https://archive.is/20201104222335/https://www.linuxjournal.com/content/floating-point-math-bash)).
 
-See [the modified script](./comp). Output:
+[The modified script](./comp). Output:
 
 ```
 12.5 / 3.2 is 3.9062
