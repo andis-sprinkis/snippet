@@ -34,7 +34,7 @@ Print the file `./example.txt` modification time:
 stat --format="%y" "./example.txt"
 ```
 
-Print the file `./example.txt` user and group permissions:
+Print the file `./example.txt` user and group permissions (mode bits):
 
 -   Human-readable form:
     ```sh
