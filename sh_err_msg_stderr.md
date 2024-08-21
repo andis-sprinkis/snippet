@@ -4,5 +4,5 @@ This script redirects `stdout` output from `echo` to the file descriptor for `st
 
 ```sh
 echo "$(basename $0): something went wrong" 1>&2
-exit 1
+exit "1"
 ```
