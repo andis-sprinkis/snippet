@@ -1,0 +1,43 @@
+#!/usr/bin/env sh
+dir="$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
+
+echo "# 3% and 5% step increment fractions of integers 0 to 255"
+
+for p in 5 3; do
+  echo
+  echo "## ${p}% step"
+  echo
+  { 
+    echo "% Decimal Hexadecimal Octal Binary"
+    echo "-: -: -: -: -:"
+    for x in $(y=0; while [ $y -le "100" ]; do echo "${y}"; y="$((y+p))"; done); do
+      echo $(
+         printf "%03d\n" "$x"
+         for b in 10 16 8 2; do
+           case "$b" in
+            10)
+              printf "%03d\n" "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
+            ;;
+            16)
+              num="$(printf "%s\n" "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)")"
+              case "${#num}" in
+                1) 
+                  echo "0${num}"
+                ;;
+                *)
+                  echo "$num"
+                ;;
+              esac
+            ;;
+            8)
+              printf "%03d\n" "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
+            ;;
+            2)
+              printf "%08d\n" "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
+            ;;
+           esac
+         done
+      )
+    done 
+  } | column -t -R - -o " | " | sed -e 's/^/| /g' -e 's/$/ |/g'
+done
