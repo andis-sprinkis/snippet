@@ -3,6 +3,9 @@ dir="$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
 
 echo "# Percentage step increment fractions of number 255"
 
+echo
+echo "TODO: 3.3333333"
+
 for p in 5 3 1; do
   echo
   echo "## ${p}%"
