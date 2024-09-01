@@ -1,5 +1,7 @@
 # Percentage step increment fractions of number 255
 
+TODO: 3.3333333
+
 ## 5%
 
 |   % | Decimal | Hexadecimal | Octal |   Binary |
