@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
 dir="$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
 
-echo "# 3% and 5% step increment fractions of integers 0 to 255"
+echo "# Percentage step increment fractions of number 255"
 
-for p in 5 3; do
+for p in 5 3 1; do
   echo
-  echo "## ${p}% step"
+  echo "## ${p}%"
   echo
   { 
     echo "% Decimal Hexadecimal Octal Binary"
