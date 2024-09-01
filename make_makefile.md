@@ -1,4 +1,4 @@
-# `make` `makefile`-s
+# `make` `makefile`
 
 ```makefile
 DOLOR_OBJECTS = lorem.txt ipsum.txt
