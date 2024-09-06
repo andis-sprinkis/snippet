@@ -1,4 +1,4 @@
-# Converting a UNIX file path to `file://` URL in Python
+# Converting a UNIX file path to file URL in Python
 
 ```py
 import pathlib
