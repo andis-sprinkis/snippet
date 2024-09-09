@@ -3,7 +3,7 @@
 ```sh
 device=/dev/nvme0n1
 cryptsetup open --type plain -d /dev/urandom $device to_be_wiped
-dd if=/dev/zero of=/dev/mapper/to_be_wiped bs=1M status=progress 2> /dev/null
+dd if=/dev/zero of=/dev/mapper/to_be_wiped bs=1M status=progress
 cryptsetup close to_be_wiped
 ```
 
