@@ -2,11 +2,9 @@
 set -eu
 export LC_ALL=C
 
-dir="$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
+third="3.3333333"
 
 echo "# Percentage step increments of the decimal number 255"
-
-third="3.3333333"
 
 for p in 5 "$third" 3 1; do
   echo
