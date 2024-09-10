@@ -24,26 +24,26 @@ for p in 5 "$third" 3 1; do
        printf "%03d " "$x"
        for b in 10 16 8 2; do
          case "$b" in
-          10)
-            printf "%03d " "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
-          ;;
-          16)
-            num="$(printf "%s " "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)")"
-            case "${#num}" in
-              2)
-                printf "%s " "0${num}"
-              ;;
-              *)
-                printf "%s " "$num"
-              ;;
-            esac
-          ;;
-          8)
-            printf "%03d " "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
-          ;;
-          2)
-            printf "%08d " "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
-          ;;
+           10)
+             printf "%03d " "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
+           ;;
+           16)
+             num="$(printf "%s " "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)")"
+             case "${#num}" in
+               2)
+                 printf "%s " "0${num}"
+               ;;
+               *)
+                 printf "%s " "$num"
+               ;;
+             esac
+           ;;
+           8)
+             printf "%03d " "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
+           ;;
+           2)
+             printf "%08d " "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
+           ;;
          esac
        done
        echo
