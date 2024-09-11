@@ -87,7 +87,7 @@ rsync /src/ username@host:/dest
 For 'dry run' of the above:
 
 ```sh
-rsync -n --delete /src/ username@host:/dest
+rsync -n /src/ username@host:/dest
 ```
 
 Copy contents of directory `/src` to remote host directory `/dest` over SSH, deleting the existing files at destination:
