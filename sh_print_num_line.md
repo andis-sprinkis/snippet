@@ -48,8 +48,7 @@ Print lines 2 to 4, using `head` and `tail`:
 lines="qqq
 AAA
 AAA
-AAA
-"
+AAA"
 
 echo "$lines" | head -n +4 | tail -n +2
 ```
