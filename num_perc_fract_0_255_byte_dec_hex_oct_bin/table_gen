@@ -2,30 +2,64 @@
 set -eu
 export LC_ALL=C
 
-third="3.3333333"
+# Floating point number functions.
+
+# Default scale used by float functions.
+float_scale="4"
+
+# Evaluate a floating point number expression.
+float_eval() {
+  stat="0" result="0.0"
+
+  [ "$1" ] && {
+    result="$(echo "scale=${float_scale}; ${*}" | bc -q 2> "/dev/null")"
+    stat="$?"
+    [ "$stat" = "0" ] && [ -z "$result" ] && stat="1"
+  }
+
+  echo "$result"; return "$stat"
+}
+
+# Evaluate a floating point number conditional expression.
+float_cond() {
+  cond="0"
+
+  [ "$1" ] && {
+    cond="$(echo "$*" | bc -q 2> "/dev/null")"
+    [ "$cond" ] || cond="0"
+    [ "$cond" != "0" ] && [ "$cond" != "1" ] && cond="0"
+  }
+
+  return "$((cond == "0"))"
+}
+
+third="3.33333333333"
 
 echo "# Percentage step increments of the decimal number 255"
 
-for p in 5 "$third" 3 1; do
+echo "
+TODO: use floor, ceil for closer Hexadecimal Octal Binary approximations"
+
+for p in 5 "$third" 1; do
   echo
   echo "## ${p}%"
   echo
 
-  if [ "$p" = "$third" ]; then
-    echo "TODO."
-    continue
-  fi
+  # if [ "$p" = "$third" ]; then
+  #   echo "TODO."
+  #   continue
+  # fi
 
   {
     echo "% Decimal Hexadecimal Octal Binary"
-    echo "--: ------: ----------: ----: -------:
+    echo "------: ------: ----------: ----: -------:
 "
-    for x in $(y=0; while [ $y -le "100" ]; do printf "%s " "${y}"; y="$((y+p))"; done); do
-       printf "%03d " "$x"
+    for x in $(y=0; while float_cond "${y}<=100"; do printf "%s " "${y}"; y="$(float_eval "${y}+${p}")"; done); do
+       printf "%03.3f " "$x"
        for b in 10 16 8 2; do
          case "$b" in
            10)
-             printf "%03d " "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
+             printf "%03.3f " "$(echo "scale = 9; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
            ;;
            16)
              num="$(printf "%s " "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)")"
