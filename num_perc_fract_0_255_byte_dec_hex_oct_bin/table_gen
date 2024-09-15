@@ -38,47 +38,21 @@ third="3.33333333333"
 echo "# Percentage step increments of the decimal number 255"
 
 echo "
-TODO: use floor, ceil for closer Hexadecimal Octal Binary approximations"
+TODO: add floor, ceil approx. columns"
 
 for p in 5 "$third" 1; do
   echo
   echo "## ${p}%"
   echo
 
-  # if [ "$p" = "$third" ]; then
-  #   echo "TODO."
-  #   continue
-  # fi
-
   {
-    echo "% Decimal Hexadecimal Octal Binary"
-    echo "------: ------: ----------: ----: -------:
+    echo "% Decimal Hexadecimal Binary Octal"
+    echo "-: -: -: -: -:
 "
     for x in $(y=0; while float_cond "${y}<=100"; do printf "%s " "${y}"; y="$(float_eval "${y}+${p}")"; done); do
-       printf "%03.3f " "$x"
-       for b in 10 16 8 2; do
-         case "$b" in
-           10)
-             printf "%03.3f " "$(echo "scale = 9; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
-           ;;
-           16)
-             num="$(printf "%s " "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)")"
-             case "${#num}" in
-               2)
-                 printf "%s " "0${num}"
-               ;;
-               *)
-                 printf "%s " "$num"
-               ;;
-             esac
-           ;;
-           8)
-             printf "%03d " "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
-           ;;
-           2)
-             printf "%08d " "$(echo "scale = 0; obase = ${b}; (255 * (${x} * 0.01)) / 1" | bc)"
-           ;;
-         esac
+       printf "\`%s\` " "$x"
+       for b in 10 16 2 8; do
+         printf "\`%s\` " "$(float_eval "obase = ${b}; (255 * (${x} * 0.01)) / 1")"
        done
        echo
     done 
