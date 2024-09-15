@@ -46,13 +46,15 @@ for p in 5 "$third" 1; do
   echo
 
   {
-    echo "% Decimal Hexadecimal Binary Octal"
-    echo "-: -: -: -: -:
+    echo "% Dec. Dec.f. Dec.c. Hex. Hex.f. Hex.c. Bin. Bin.f. Bin.c. Oct. Oct.f. Oct.c."
+    echo "-: -: -: -: -: -: -: -: -: -: -: -: -:
 "
     for x in $(y=0; while float_cond "${y}<=100"; do printf "%s " "${y}"; y="$(float_eval "${y}+${p}")"; done); do
        printf "\`%s\` " "$x"
        for b in 10 16 2 8; do
          printf "\`%s\` " "$(float_eval "obase = ${b}; (255 * (${x} * 0.01)) / 1")"
+         printf "\`%s\` " "0000"
+         printf "\`%s\` " "0000"
        done
        echo
     done 
