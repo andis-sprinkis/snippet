@@ -3,6 +3,8 @@
 By specific file names:
 
 ```sh
+#!/usr/bin/env sh
+
 mkdir -p "./rotated"
 
 images="image0.JPG
