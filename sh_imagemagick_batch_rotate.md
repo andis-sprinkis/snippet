@@ -21,7 +21,6 @@ for img_path in $paths_images; do
   img_name="$(basename "$img_path")"
   magick "$img_path" -rotate "-90" "./rotated/${img_name%.JPG}.JPG"
 done
-
 IFS="$IFS_"
 
 mv -f ./rotated/* ./
