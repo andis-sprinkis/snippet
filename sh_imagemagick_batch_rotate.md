@@ -17,6 +17,7 @@ IFS="
 "
 
 for img in $images; do
+  IFS="$IFS_"
   echo "$img"
   convert "$img" -rotate "-90" "./rotated/${img%.JPG}.JPG"
 done
