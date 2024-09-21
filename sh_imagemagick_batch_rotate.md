@@ -7,19 +7,16 @@ By specific file names:
 
 mkdir -p "./rotated"
 
-images="image0.JPG
-image1.JPG"
-# or
-images="$(cat file_list.txt)"
+paths_images="$(cat file_list.txt)"
 
-IFS_="$IFS"
-IFS="
+IFS_="$IFS" IFS="
 "
 
-for img in $images; do
+for img_path in $paths_images; do
   IFS="$IFS_"
-  echo "$img"
-  magick "$img" -rotate "-90" "./rotated/${img%.JPG}.JPG"
+  echo "$img_path"
+  img_name="$(basename "$img_path")"
+  magick "$img_path" -rotate "-90" "./rotated/${img_name%.JPG}.JPG"
 done
 
 IFS="$IFS_"
