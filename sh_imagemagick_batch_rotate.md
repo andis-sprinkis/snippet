@@ -10,7 +10,7 @@ image1.JPG"
 # or
 images="$(cat file_list.txt)"
 
-ifs_old="$IFS"
+IFS_="$IFS"
 IFS="
 "
 
@@ -19,7 +19,7 @@ for img in $images; do
   convert "$img" -rotate "-90" "./rotated/${img%.JPG}.JPG"
 done
 
-IFS="$ifs_old"
+IFS="$IFS_"
 
 mv -f ./rotated/* ./
 rm -rf ./rotated
