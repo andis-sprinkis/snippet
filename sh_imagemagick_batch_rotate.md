@@ -14,7 +14,6 @@ paths_images="$(cat file_list.txt)"
 
 IFS_="$IFS" IFS="
 "
-
 for img_path in $paths_images; do
   IFS="$IFS_"
   echo "$img_path"
