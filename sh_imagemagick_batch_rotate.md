@@ -7,6 +7,9 @@ By specific file names:
 
 mkdir -p "./rotated"
 
+# paths_images="image0.JPG
+# image1.JPG"
+# or
 paths_images="$(cat file_list.txt)"
 
 IFS_="$IFS" IFS="
