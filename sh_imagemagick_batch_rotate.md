@@ -4,6 +4,7 @@ By specific file names:
 
 ```sh
 #!/usr/bin/env sh
+set -eu
 
 mkdir -p "./rotated"
 
