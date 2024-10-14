@@ -1,0 +1,95 @@
+#!/usr/bin/env sh
+
+example() {
+  ## Printing the initial arguments
+
+  echo "$@"
+  echo "$#"
+
+  # Output:
+  # second third
+  # 2
+
+  ## Setting arguments
+
+  set -- "first" "$1" "$2" "fourth" "fifth"
+
+  echo
+  echo "$@"
+  echo "$#"
+
+  # Output:
+  # first second third fourth fifth
+  # 5
+
+  ## Shifting arguments list, removing arguments from the beginning
+
+  shift
+  shift
+
+  echo
+  echo "$@"
+  echo "$#"
+
+  # Output:
+  # third fourth fifth
+  # 3
+
+  ## Iterating over arguments, removing and substituting arguments
+
+  args_count="$#"
+  while [ "$args_count" -gt "0" ]; do
+    case "$1" in
+      "third")
+        shift
+        set -- "$@" "THIRD"
+      ;;
+      "fourth")
+        shift
+      ;;
+      "fifth")
+        shift
+        set -- "$@" "5th"
+      ;;
+      "*")
+        exit "1"
+      ;;
+    esac
+    args_count="$((args_count - 1))"
+  done
+
+  echo
+  echo "$@"
+  echo "$#"
+
+  # Output:
+  # THIRD 5th
+  # 2
+
+  ## Arguments from command output
+
+  # shellcheck disable=SC2046
+  set -- $(uname -a)
+
+  echo
+  echo "$@"
+  echo "$#"
+
+  # Output:
+  # Linux archpc0 6.10.4-arch2-1 #1 SMP PREEMPT_DYNAMIC Sun, 11 Aug 2024 16:19:06 +0000 x86_64 GNU/Linux
+  # 14
+
+  ## Unsetting arguments
+
+  set --
+
+  echo
+  echo "$@"
+  echo "$#"
+
+  # Output:
+  #
+  # 0
+}
+
+example "second" "third"
