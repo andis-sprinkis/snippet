@@ -22,7 +22,8 @@ example() {
   # first second third fourth fifth
   # 5
 
-  ## Shifting arguments list, removing arguments from the beginning
+  ## Shifting the arguments list left twice
+  # (Replacing the argument $1, $2, $3 values with the values of $3, $4, $5, unsetting $4, $5.)
 
   shift
   shift
