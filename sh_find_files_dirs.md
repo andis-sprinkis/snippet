@@ -69,3 +69,11 @@ Find files by name, loop through the list and print the line count of each file:
     ```sh
     find -type "f" -name '*.md' | while read -r ln; do wc -l "$ln"; done
     ```
+
+Find files by MIME type:
+
+```sh
+find -type "f" | while read -r ln; do
+    if [ "$(file --mime-type --brief "$ln")" = "application/zip" ]; then printf "%s\n" "$ln"; fi
+done
+```
