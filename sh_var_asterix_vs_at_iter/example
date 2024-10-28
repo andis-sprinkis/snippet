@@ -1,0 +1,46 @@
+#!/usr/bin/env sh
+
+# ./example "lorem ipsum" " " dolor "" "" "" "sit amet"
+
+# No quotes:
+
+# shellcheck disable=SC2048
+for arg in $*; do printf "%s\n" "$arg"; done
+
+# lorem
+# ipsum
+# dolor
+# sit
+# amet
+
+printf "\n%s\n\n" "----"
+
+# shellcheck disable=SC2068
+for arg in $@; do printf "%s\n" "$arg"; done
+
+# lorem
+# ipsum
+# dolor
+# sit
+# amet
+
+printf "\n%s\n\n" "----"
+
+# Quotes:
+
+# shellcheck disable=SC2066
+for arg in "$*"; do printf "%s\n" "$arg"; done
+
+# lorem ipsum   dolor    sit amet
+
+printf "\n%s\n\n" "----"
+
+for arg in "$@"; do printf "%s\n" "$arg"; done
+
+# lorem ipsum
+#  
+# dolor
+# 
+# 
+# 
+# sit amet
