@@ -49,7 +49,7 @@ touch ./example
 Print the hexdump of file `./file.bin`:
 
 ```sh
-env hexdump --canonical "./file.bin"
+hexdump --canonical "./file.bin"
 ```
 
 Print the size of file `./file.bin` in bytes:
