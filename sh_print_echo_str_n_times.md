@@ -45,3 +45,4 @@ TODO:
 
 -   Check POSIX compatibility
 -   Remove traling space
+-   Add `while -ne` loop example
