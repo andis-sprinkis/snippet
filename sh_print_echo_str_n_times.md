@@ -29,6 +29,16 @@ Print string `example text` 5 times:
     for i in $(seq "5"); do printf '%s\n' "example text"; done
     ```
 
+-   Using `while` loop and `printf`:
+
+    ```sh
+    # Space delimiter
+    i="1" j="5"; while [ "$i" -le "$j" ]; do i="$((i + "1"))"; printf "%s " "example text"; done
+
+    # Newline delimiter
+    i="1" j="5"; while [ "$i" -le "$j" ]; do i="$((i + "1"))"; printf "%s " "example text"; done
+    ```
+
 -   Using `seq` and `awk`
 
     ```sh
@@ -45,4 +55,3 @@ TODO:
 
 -   Check POSIX compatibility
 -   Remove traling space
--   Add `while -ne` loop example
