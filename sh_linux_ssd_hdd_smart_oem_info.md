@@ -16,7 +16,7 @@ Filter device IDs from `/dev/disk/` by a `/dev/` mapping:
 
 ```sh
 for l in $(find "/dev/disk/by-id/" -maxdepth "1" -type "l"); do
-    echo "$(basename "/dev/disk/by-id/$(readlink -s $l)")" "$(basename $l)"
+    echo "$(basename "/dev/disk/by-id/$(readlink -s "$l")")" "$(basename "$l")"
 done | \grep '^nvme.*\|^sd.*' | sort | column -t | $PAGER
 ```
 
