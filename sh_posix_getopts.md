@@ -54,7 +54,7 @@ done
 
 [ "$opt_has_a" = "0" ] && {
   echo "${script}: Option -a STRING is required." 1>&2
-  exit 1
+  exit "1"
 }
 ```
 
