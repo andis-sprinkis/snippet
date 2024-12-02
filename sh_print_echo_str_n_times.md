@@ -54,4 +54,4 @@ Print string `example text` 5 times:
 TODO:
 
 -   Check POSIX compatibility
--   Remove traling space
+-   Remove the trailing space
