@@ -7,7 +7,9 @@ Print string `example text` 5 times:
     ```sh
     # Space delimiter
     printf 'example text %.0s' $(seq "5")
-
+    ```
+    
+    ```sh
     # Newline delimiter
     printf 'example text\n%.0s' $(seq "5")
     ```
@@ -24,7 +26,9 @@ Print string `example text` 5 times:
     ```sh
     # Space delimiter
     for i in $(seq "5"); do printf '%s ' "example text"; done
-
+    ```
+    
+    ```sh
     # Newline delimiter
     for i in $(seq "5"); do printf '%s\n' "example text"; done
     ```
@@ -34,7 +38,9 @@ Print string `example text` 5 times:
     ```sh
     # Space delimiter
     i="1" j="5"; while [ "$i" -le "$j" ]; do i="$((i + "1"))"; printf "%s " "example text"; done
-
+    ```
+    
+    ```sh
     # Newline delimiter
     i="1" j="5"; while [ "$i" -le "$j" ]; do i="$((i + "1"))"; printf "%s " "example text"; done
     ```
@@ -44,7 +50,9 @@ Print string `example text` 5 times:
     ```sh
     # Space delimiter
     seq "5" | awk '{ printf "example text " }'
-
+    ```
+    
+    ```sh
     # Newline delimiter
     seq "5" | awk '{ print "example text" }'
     ```
