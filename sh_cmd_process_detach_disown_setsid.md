@@ -12,7 +12,7 @@
 
     `&` runs the command in background.
 
-    This includes the process from the shell process group.
+    This includes the process in the shell process group.
 
 -   Using `disown`:
 
