@@ -37,7 +37,7 @@ $wm_cmd -t "get_outputs" | jq -r ".[] | select(.name == \"DP-2\") | .rect"
 }
 ```
 
-Generate sorted a array of the workspace numbers:
+Generate a sorted array of the workspace numbers:
 
 ```sh
 $wm_cmd -t "get_workspaces" | jq -r "[.[] | .num] | sort"
@@ -45,6 +45,16 @@ $wm_cmd -t "get_workspaces" | jq -r "[.[] | .num] | sort"
 
 ```json
 [1, 2, 3, 9]
+```
+
+Generate a sorted array of the visible workspace numbers:
+
+```sh
+$wm_cmd -t "get_workspaces" | jq -r "map({num,visible}) | [.[] | select(.visible == true) | .num] | sort"
+```
+
+```json
+[1, 2, 3]
 ```
 
 Generate index object of the workspace numbers by their corresponding output names:
