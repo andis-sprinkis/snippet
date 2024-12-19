@@ -4,7 +4,7 @@ The control sequence for formatting text in \*nix terminal consists of:
 
 -   _Control sequence introducer_ (CSI)
 
-    The _CSI_ for calling a function is made of one the byte `27 033 0x1b ESC` escape sequences and the
+    The _CSI_ for calling a function is made of one the byte `27 33 0x1b ESC` escape sequences and the
     character `[`.
 
     Either - `\x1b[`, `\033[`, `\e[`.
