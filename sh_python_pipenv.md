@@ -116,6 +116,12 @@ Running the virtualenv shell:
 pipenv shell
 ```
 
+Exiting the virtualenv shell:
+
+```sh
+exit
+```
+
 Running a command in the virtualenv shell:
 
 ```sh
