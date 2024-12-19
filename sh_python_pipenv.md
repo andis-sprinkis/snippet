@@ -1,5 +1,13 @@
 # Managing a Python project's dependencies and virtualenv using pipenv
 
+Initializing `Pipfile` and `Pipfile.lock` OR installing all packages from the existing `Pipfile`:
+
+```sh
+pipenv install
+```
+
+This command re-locks the lockfile.
+
 Installing a package:
 
 ```sh
@@ -30,19 +38,17 @@ Uninstalling all development environment packages:
 pipenv uninstall --all-dev
 ```
 
-Installing a specific Python version:
+Installing and using a specific Python version:
 
 ```sh
-pipenv install --python 3.6
+pipenv install --python 3.12
 ```
 
-Installing all packages from `Pipfile`:
+Using a specific Python version:
 
 ```sh
-pipenv install
+pipenv --python 3.12
 ```
-
-This command re-locks the lockfile.
 
 Generating `Pipfile.lock` from `Pipfile`:
 
