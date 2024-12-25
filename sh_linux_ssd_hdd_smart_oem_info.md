@@ -26,4 +26,10 @@ View device information by the `/dev/disk/` device ID link:
 sudo smartctl -x /dev/disk/by-id/DEVICE_NAME | $PAGER
 ```
 
+TODO: correlate device ID by lsblk instead e.g.
+
+```sh
+lsblk -l -o NAME,MODEL,SERIAL,SIZE,STATE,MOUNTPOINT,LABEL,FSUSED,FSUSE%,FSSIZE
+```
+
 TODO: `dmenu`/`wmenu`/`fzf` script
