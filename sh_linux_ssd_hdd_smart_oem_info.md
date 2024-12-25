@@ -29,6 +29,7 @@ sudo smartctl -x /dev/disk/by-id/DEVICE_NAME | $PAGER
 TODO: correlate device ID by lsblk instead e.g.
 
 ```sh
+lsblk --list-columns
 lsblk -l -o NAME,MODEL,SERIAL,SIZE,STATE,MOUNTPOINT,LABEL,FSUSED,FSUSE%,FSSIZE
 ```
 
