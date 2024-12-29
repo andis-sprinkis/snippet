@@ -3,7 +3,7 @@
 Prints the system date and time in the ISO8601 format:
 
 ```sh
-date -u +"%Y-%m-%dT%H:%M:%SZ"
+date -u "+%Y-%m-%dT%H:%M:%SZ"
 ```
 
 ```
@@ -13,7 +13,7 @@ date -u +"%Y-%m-%dT%H:%M:%SZ"
 Prints the system date and time in the UNIX timestamp format:
 
 ```sh
-date +"%s"
+date "+%s"
 ```
 
 ```
@@ -23,7 +23,7 @@ date +"%s"
 Concerts a string from the UNIX timestamp format to the ISO8601 format:
 
 ```sh
-date +"%Y-%m-%dT%H:%M:%SZ" -d "@1722123585"
+date "+%Y-%m-%dT%H:%M:%SZ" -d "@1722123585"
 ```
 
 ```
