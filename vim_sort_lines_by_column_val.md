@@ -34,9 +34,13 @@ To sort the lines, with values delimited by character `;`, by the numerical valu
 sort! f /^\v(.{-};){2}/
 ```
 
+Output:
+
+```
 minim;sint;28;cilum
 sint;consectetur;10;cupidatat
 lorem;ipsum;09;dolor
 sit;amet;04;qui
 minim;labore;03;adipisicing
 lorem;ipsum;01;dolor
+```
