@@ -11,7 +11,7 @@ sint;consectetur;10;cupidatat
 lorem;ipsum;01;dolor
 ```
 
-To sort the lines by the numerical values of column 3, delimeted by character `;`:
+To sort the lines by the numerical values of column 3, delimited by character `;`:
 
 ```vim
 sort f /^\v(.{-};){2}/
