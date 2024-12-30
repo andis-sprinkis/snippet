@@ -33,7 +33,7 @@ date "+%Y-%m-%dT%H:%M:%SZ" -d "@1722123585"
 Concerts a string from the ISO8601 format to the UNIX timestamp format:
 
 ```sh
-date -d '2024-07-27T23:39:45Z' +"%s"
+date -d '2024-07-27T23:39:45Z' "+%s"
 ```
 
 ```
