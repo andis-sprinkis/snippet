@@ -30,7 +30,7 @@ TODO: correlate device ID by lsblk instead e.g.
 
 ```sh
 lsblk --list-columns
-lsblk --tree -o "NAME,ID-LINK,SIZE,PATH,MOUNTPOINT,MODEL,SERIAL" | $PAGER
+lsblk --tree -o "MODEL,SERIAL,NAME,ID-LINK,SIZE,PATH,MOUNTPOINT" | $PAGER
 ```
 
 TODO: `dmenu`/`wmenu`/`fzf` script
