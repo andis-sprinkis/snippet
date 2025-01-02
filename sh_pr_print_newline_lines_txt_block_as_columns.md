@@ -1,4 +1,4 @@
-# Printing newline character line-delimited blocks of text as columns in Shell
+# Printing blocks of newline character delimited lines of text as columns in Shell
 
 ```sh
 a="AAA
