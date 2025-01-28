@@ -11,9 +11,9 @@ dolor"
 - Using `paste`:
 
     ```sh
-    echo "$list" | paste -s -d ' '
+    echo "$list" | paste -s -d ' ' -
     # or
-    cat list.txt | paste -s -d ' '
+    cat list.txt | paste -s -d ' ' -
     ```
 
 - Using `echo` without quotes:
