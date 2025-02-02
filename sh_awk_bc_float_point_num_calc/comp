@@ -7,15 +7,19 @@ float_scale="4"
 
 # Evaluate a floating point number expression.
 float_eval() {
-  stat="0" result="0.0"
+  stat="0"
+  result="0.0"
 
   [ "$1" ] && {
     result="$(echo "scale=${float_scale}; ${*}" | bc -q 2> "/dev/null")"
+
     stat="$?"
+
     [ "$stat" = "0" ] && [ -z "$result" ] && stat="1"
   }
 
-  echo "$result"; return "$stat"
+  echo "$result"
+  return "$stat"
 }
 
 # Evaluate a floating point number conditional expression.

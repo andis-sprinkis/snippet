@@ -66,7 +66,7 @@ The control sequence for formatting text in \*nix terminal consists of:
 ## An example
 
 ```sh
-printf "\x1b[0;35mHello world\x1b[0m"
+printf "\x1b[0;35m%s\x1b[0m" "Hello world"
 ```
 
 |         Token | Type                     | Action                                           |
