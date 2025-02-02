@@ -1,4 +1,4 @@
-# Extracting a single and a multi character sequence delimited text column in Shell
+# Extracting a single or a multi character sequence delimited text column in Shell
 
 Single character delimiter - printing the second text column, delimited by character `~`:
 
