@@ -2,14 +2,14 @@
 
 The control sequence for formatting text in \*nix terminal consists of:
 
--   _Control sequence introducer_ (CSI)
+- _Control sequence introducer_ (CSI)
 
     The _CSI_ for calling a function is made of one the byte `27 033 0x1b ESC` escape sequences and the
     character `[`.
 
     Either - `\x1b[`, `\033[`, `\e[`.
 
--   _Set graphics mode_ (SGR) function
+- _Set graphics mode_ (SGR) function
 
     The _SGR_ function - `m`, prefixed with one or more of it's arguments - the formatting codes, separated with `;`.
 
@@ -83,6 +83,6 @@ printf "\x1b[0;35m%s\x1b[0m" "Hello world"
 
 ## Resources
 
--   [Everything you never wanted to know about ANSI escape codes](https://notes.burke.libbey.me/ansi-escape-codes/)
-    ([archived](https://archive.is/20210203094825/https://notes.burke.libbey.me/ansi-escape-codes/))
--   [ANSI code generator](https://ansi.gabebanks.net/)
+- [Everything you never wanted to know about ANSI escape codes](https://notes.burke.libbey.me/ansi-escape-codes/)
+  ([archived](https://archive.is/20210203094825/https://notes.burke.libbey.me/ansi-escape-codes/))
+- [ANSI code generator](https://ansi.gabebanks.net/)
