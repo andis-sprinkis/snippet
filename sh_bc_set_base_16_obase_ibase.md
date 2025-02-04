@@ -3,7 +3,7 @@
 Set `bc` to take a base 16 input `ABCDEF-CDEF` and produce a base 16 output:
 
 ```sh
-echo 'obase=16;ibase=16;ABCDEF-CDEF' | \bc 
+echo 'obase = 16; ibase = 16; ABCDEF-CDEF' | \bc 
 ```
 
 Output:
