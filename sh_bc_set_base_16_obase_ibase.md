@@ -12,4 +12,4 @@ Output:
 AB0000
 ```
 
-⚠️ The `obase` variable definition must precede the `ibase` variable definition.
+⚠️ The `obase` variable definition must precede the `ibase` variable definition to pass both values in decimal.
