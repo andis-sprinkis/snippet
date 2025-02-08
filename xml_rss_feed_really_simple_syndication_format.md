@@ -1,12 +1,12 @@
 # RSS (Really Simple Syndication) format
 
-## Specifications
+## RSS (Really Simple Syndication) 0.91, 0.92, 2.0
 
-- [RSS 2.0 Specification (Current)](https://www.rssboard.org/rss-specification)
+[RSS 2.0 Specification (Current)](https://www.rssboard.org/rss-specification)
 
-## Versions
+## RSS (RDF Site Summary) 1.0
 
-...
+[RDF Site Summary (RSS) 1.0](https://validator.w3.org/feed/docs/rss1.html)
 
 ## Examples
 
