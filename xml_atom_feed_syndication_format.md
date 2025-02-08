@@ -1,12 +1,17 @@
 # The Atom Syndication Format
 
+Registering feed `http://example.org/feed/atom.xml` in the HTML `<head>`:
+
+```html
+<link href="http://example.org/feed/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed" />
+```
+
 File `http://example.org/feed/atom.xml`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-
     <title>Example Feed</title>
     <subtitle>A subtitle.</subtitle>
     <link href="http://example.org/feed/atom.xml" rel="self" />
@@ -33,14 +38,7 @@ File `http://example.org/feed/atom.xml`:
             <email>johndoe@example.com</email>
         </author>
     </entry>
-
 </feed>
-```
-
-Registering feed in the HTML `<head>`:
-
-```html
-<link href="http://example.org/feed/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide Atom feed" />
 ```
 
 ## Resources
