@@ -1,6 +1,6 @@
 # RSS (Really Simple Syndication) format
 
-## RSS (Really Simple Syndication) 0.91, 0.92, 2.0
+## RSS (Really Simple Syndication) 2.0, 0.92, 0.91
 
 [RSS 2.0 Specification (Current)](https://www.rssboard.org/rss-specification)
 
