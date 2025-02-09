@@ -52,7 +52,7 @@ From [RSS - Wikipedia](https://en.wikipedia.org/wiki/RSS):
 > - RSS 0.92 through 0.94 are expansions of the RSS 0.91 format, which are mostly compatible with each other and with Winer's version of RSS 0.91, but are not compatible with RSS 0.90.
 > - RSS 2.0.1 has the internal version number 2.0. RSS 2.0.1 was proclaimed to be "frozen", but still updated shortly after release without changing the version number. RSS now stood for _Really Simple Syndication_. The major change in this version is an explicit extension mechanism using XML namespaces.
 
-## RSS (RDF Site Summary) 1.0
+## RSS (RDF Site Summary) 1.0, 0.9
 
 [RDF Site Summary (RSS) 1.0](https://validator.w3.org/feed/docs/rss1.html)
 
