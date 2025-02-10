@@ -28,3 +28,7 @@ From [RSS - Wikipedia](https://en.wikipedia.org/wiki/RSS):
 > | `pubDate`                      | `published` (subelement of `entry`) |
 > | `title`\*                      | `title`\*                           |
 > | `ttl`                          | —                                   |
+
+## Resources
+
+- [Rss20AndAtom10Compared - Atom Wiki](https://www.intertwingly.net/wiki/pie/Rss20AndAtom10Compared) ([achived](https://archive.is/20240808192514/http://www.intertwingly.net/wiki/pie/Rss20AndAtom10Compared))
