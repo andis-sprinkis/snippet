@@ -5,7 +5,7 @@ There are multiple ways to do this.
 1.  Using the `uname` command kernel name output:
 
     ```sh
-    case $(uname) in
+    case "$(uname)" in
       "Linux") echo "Linux" ;;
       "FreeBSD") echo "FreeBSD" ;;
       "WindowsNT") echo "Windows" ;;
