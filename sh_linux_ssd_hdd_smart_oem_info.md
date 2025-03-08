@@ -20,17 +20,20 @@ for l in $(find "/dev/disk/by-id/" -maxdepth "1" -type "l"); do
 done | \grep '^nvme.*\|^sd.*' | sort | column -t -o" | " | $PAGER
 ```
 
+Display devices, their information, including the `/dev/disk/` ID links:
+
+```sh
+lsblk --tree -o "MODEL,SERIAL,NAME,ID-LINK,SIZE,PATH,MOUNTPOINT" | $PAGER --header=1,0,0
+```
+
 View device information by the `/dev/disk/` device ID link:
 
 ```sh
 sudo smartctl -x /dev/disk/by-id/DEVICE_NAME | $PAGER
 ```
 
-TODO: correlate device ID by lsblk instead e.g.
+View device information by the `/dev/disk/` device ID link, by selecting it from lsblk output using fzf:
 
 ```sh
-lsblk --list-columns
-lsblk --tree -o "MODEL,SERIAL,NAME,ID-LINK,SIZE,PATH,MOUNTPOINT" | $PAGER
+sudo smartctl -x "/dev/disk/by-id/$(lsblk --tree -o "ID-LINK,MODEL,SERIAL,NAME,SIZE,PATH,MOUNTPOINT" | fzf --preview="" | cut -d" " -f1)" | $PAGER
 ```
-
-TODO: `dmenu`/`wmenu`/`fzf` script
