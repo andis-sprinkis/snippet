@@ -1,4 +1,4 @@
-# Managing a Python project's dependencies and virtualenv using pipenv
+# Managing dependencies and virtualenv of a Python project using pipenv
 
 Initializing `Pipfile` and `Pipfile.lock` OR installing all packages from the existing `Pipfile`:
 
