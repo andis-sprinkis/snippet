@@ -2,7 +2,7 @@
 
 - Order of operands:
 
-    - Intel
+    - Intel:
 
         | First       | Second |
         | ----------- | ------ |
@@ -13,7 +13,7 @@
         mov rax, 0xFF
         ```
 
-    - AT&T
+    - AT&T:
 
         | First  | Second      |
         | ------ | ----------- |
@@ -24,42 +24,53 @@
         movq $0xFF, %rax
         ```
 
+    ***
+
+    The Intel syntax matches closer to the common ABI rules for order of registers when passing function arguments:
+
+    ```c
+    long sum(long foo, long bar);
+    // foo -> %rdi
+    // bar -> %rsi
+    ```
+
+    The first argument allocates RDI (destination index) and the second argument allocates RSI (source index).
+
 - Size of the operands in the opname of the instructions:
 
-    In AT&T Assembly the opnames contain size of the operands.
+    - In AT&T Assembly the opnames contain size of the operands.
 
-    | Operand size, b | Opname suffix |
-    | --------------- | ------------- |
-    | 64 (quad-word)  | `q`           |
-    | 32 (long-word)  | `l`           |
-    | 16 (word)       | `w`           |
-    | 8 (byte)        | `b`           |
+        | Operand size, b | Opname suffix |
+        | --------------- | ------------- |
+        | 64 (quad-word)  | `q`           |
+        | 32 (long-word)  | `l`           |
+        | 16 (word)       | `w`           |
+        | 8 (byte)        | `b`           |
 
-    ```asm
-    movl %ebx, %eax # move 32 bit value from ebx -> eax
-    ```
+        ```asm
+        movl %ebx, %eax # move 32 bit value from ebx -> eax
+        ```
 
-    Some operations in Intel Assembly require size directives:
+    - Some operations in Intel Assembly do require size directives.
 
-    ```asm
-    ; how many bytes?
-    mov [rbp - 20], 20
+        ```asm
+        ; how many bytes?
+        mov [rbp - 20], 20
 
-    ; clarification:
-    mov DWORD PTR [rbp - 20], 20 ; Move the 32-bit integer representation of 20 into 4 bytes starting at the address RBP - 20.
+        ; clarification:
+        mov DWORD PTR [rbp - 20], 20 ; Move the 32-bit integer representation of 20 into 4 bytes starting at the address RBP - 20.
 
-    mov BYTE PTR [ebx], 2 ; Move 2 into the single byte at the address stored in EBX.
-    mov WORD PTR [ebx], 2 ; Move the 16-bit integer representation of 2 into the 2 bytes starting at the address in EBX.
-    mov DWORD PTR [ebx], 2 ; Move the 32-bit integer representation of 2 into the 4 bytes starting at the address in EBX.
-    ```
+        mov BYTE PTR [ebx], 2 ; Move 2 into the single byte at the address stored in EBX.
+        mov WORD PTR [ebx], 2 ; Move the 16-bit integer representation of 2 into the 2 bytes starting at the address in EBX.
+        mov DWORD PTR [ebx], 2 ; Move the 32-bit integer representation of 2 into the 4 bytes starting at the address in EBX.
+        ```
 
+- Operand by size name differences between Intel ASM, AT&T ASM and C:
 
-- Value operand by size name discrepencies between Intel ASM, AT&T ASM and C:
-
-    - In AT&T assembly syntax a 32b number is "long-word"
     - `sizeof(long)` in C on 64 bit machines is 64b, on older machines 32b
-    - In Intel assembly syntax a 64b number is "double-word"
-    - In AT&T assembly syntax a 64b number is "quad-word"
+    - In AT&T assembly syntax a 32b number is "long-word"
+    - In Intel assembly syntax a 32b number is "double-word"
+    - In Intel and AT&T assembly syntax a 64b number is "quad-word"
 
 - Register and immediate value denoting prefixes (AT&T):
 
