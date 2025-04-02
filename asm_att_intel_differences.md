@@ -105,7 +105,7 @@
             // Error: .size expression for rax does not evaluate to a constant
             ```
 
-- Syntax of memory references:
+- Syntax of memory operands:
 
     | Intel                                                         | AT&T                                                   |
     | ------------------------------------------------------------- | ------------------------------------------------------ |
@@ -114,7 +114,7 @@
     | `mov ecx, [ebx + eax * 4]`                                    | `movl (%ebx, %eax, $4), %ecx`                          |
     | `opname destination, [ base + index * scale + displacement ]` | `opname displacement(base, index, scale), destination` |
 
-    In AT&T the displacements aren't the same as immediate values - don't require a `$` prefix.
+    (In AT&T the displacements aren't the same as immediate values - don't require a `$` prefix.)
 
 - Comment format:
 
@@ -122,7 +122,30 @@
 | --------------- | --------------- |
 | `; Lorem ipsum` | `# Lorem ipsum` |
 
-## Switching common utilities to use the Intel syntax
+## Syntax in common tools
+
+Intel syntax by default
+
+AT&T syntax by default
+
+- `clang`
+- `gcc`
+    - ```sh
+      gcc -S -masm=intel
+      ```
+- `gdb`
+
+    - `$HOME/.config/gdb/gdbinit`:
+
+        ```
+        set disassembly-flavor intel
+        ```
+
+- `objdump`
+
+    - ```sh
+      objdump -Mintel
+      ```
 
 ## Resources
 
