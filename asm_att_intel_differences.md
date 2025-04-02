@@ -24,6 +24,23 @@
         movq $0xFF, %rax
         ```
 
+        - There are exceptions:
+
+            - ```asm
+              subq %rax, %rbx
+              ```
+
+                The `sub` instruction subtracts the source operand from the destination operand.
+
+                This line computes `rbx − rax` and stores the result in `rbx`.
+
+            - ```asm
+              cmpq $1, %rax    # compare the value 1 to the contents of rax
+              jg   somelabel   # jg - jump if greater than
+              ```
+
+                Destination operand is compared against the source operand - jump if `rax > 1`.
+
     ***
 
     The Intel syntax matches closer to the common ABI rules for order of registers when passing function arguments:
@@ -38,7 +55,7 @@
 
 - Size of the operands in the opname of the instructions:
 
-    - In AT&T Assembly the opnames contain size of the operands.
+    - In the AT&T Assembly the opnames contain size of the operands.
 
         | Operand size, b | Opname suffix |
         | --------------- | ------------- |
@@ -51,7 +68,14 @@
         movl %ebx, %eax # move 32 bit value from ebx -> eax
         ```
 
-    - Some operations in Intel Assembly do require size directives.
+        ```asm
+        movb $1, %al  # move value 0x01 to register al
+        movw $1, %ax  # move value 0x0001 to register ax
+        movl $1, %eax # move value 0x00000001 to register eax
+        movq $1, %rax # move value 0x0000000000000001 to register rax
+        ```
+
+    - Some operations in the Intel Assembly do require size directives.
 
         ```asm
         ; how many bytes?
