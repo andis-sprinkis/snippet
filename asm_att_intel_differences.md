@@ -53,9 +53,13 @@
     mov DWORD PTR [ebx], 2 ; Move the 32-bit integer representation of 2 into the 4 bytes starting at the address in EBX.
     ```
 
-    ⚠️ Some operand naming discrepencies, between Intel ASM, AT&T ASM, C:
 
-    ...
+- Value operand by size name discrepencies between Intel ASM, AT&T ASM and C:
+
+    - In AT&T assembly syntax a 32b number is "long-word"
+    - `sizeof(long)` in C on 64 bit machines is 64b, on older machines 32b
+    - In Intel assembly syntax a 64b number is "double-word"
+    - In AT&T assembly syntax a 64b number is "quad-word"
 
 - Register and immediate value denoting prefixes (AT&T):
 
@@ -69,10 +73,10 @@
 
     - Having a `:rax` symbol in the Assembly code.
 
-        - Compiling Intel Assembly with such symbol will fail:
+        - Compiling Intel Assembly with such a symbol will fail:
 
             ```asm
-            ; Invalid symbol 'rax:'
+            ; Invalid label 'rax'
             main:
               mov eax, ebx
               call rax
@@ -122,11 +126,9 @@
 | --------------- | --------------- |
 | `; Lorem ipsum` | `# Lorem ipsum` |
 
-## Syntax in common tools
+## Default syntax in common tools
 
-Intel syntax by default
-
-AT&T syntax by default
+AT&T syntax by default:
 
 - `clang`
 - `gcc`
