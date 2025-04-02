@@ -24,7 +24,7 @@
         movq $0xFF, %rax
         ```
 
-- Size of the operands in the opname of instructions:
+- Size of the operands in the opname of the instructions:
 
     In AT&T Assembly the opnames contain size of the operands.
 
@@ -57,7 +57,7 @@
 
     ...
 
-- Register and immediate value prefixes (AT&T):
+- Register and immediate value denoting prefixes (AT&T):
 
     In AT&T Assembly the immediate values are prefixed with `$` and register names are prefixed with `%`.
 
@@ -72,6 +72,7 @@
         - Compiling Intel Assembly with such symbol will fail:
 
             ```asm
+            ; Invalid symbol 'rax:'
             main:
               mov eax, ebx
               call rax
@@ -81,7 +82,7 @@
               ret
             ```
 
-    - Having functions like `long rax()` in the C code.
+    - Having functions like `long rax()` named after registers in the C code.
 
         - Outputting C code with this symbol as the Intel Assembly will fail:
 
@@ -115,6 +116,12 @@
 
     In AT&T the displacements aren't the same as immediate values - don't require a `$` prefix.
 
+- Comment format:
+
+| Intel           | AT&T            |
+| --------------- | --------------- |
+| `; Lorem ipsum` | `# Lorem ipsum` |
+
 ## Switching common utilities to use the Intel syntax
 
 ## Resources
@@ -123,3 +130,4 @@
 - [Intel and ATT Assembly Syntax](https://homes.cs.washington.edu/~bodik/ucb/cs164/cs164-fall-2003/assembly.html) ([archived](https://archive.is/hesf4))
 - [Guide to x86 Assembly](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html) ([archived](https://archive.is/GtsZV))
     - Attribution: _Adapted from materials developed for University of Virginia cs216 by David Evans. This guide was revised for cs216 by David Evans, based on materials originally created by Adam Ferrari many years ago, and since updated by Alan Batson, Mike Lack, and Anita Jones.`_
+- [docs.oracle.com/cd/E19253-01/817-5477/ennab/index.html](https://docs.oracle.com/cd/E19253-01/817-5477/ennab/index.html)
