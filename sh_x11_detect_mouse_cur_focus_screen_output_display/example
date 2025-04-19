@@ -1,0 +1,51 @@
+#!/usr/bin/env sh
+# Inspired by a StackOverflow anwser by user 'cas' - https://unix.stackexchange.com/a/677884
+set -eu
+IFS_="$IFS"
+
+mouseloc="$(xdotool "getmouselocation")"
+
+m_x="${mouseloc##x:}"
+m_x="${m_x%% *}"
+
+m_y="${mouseloc##*y:}"
+m_y="${m_y%% *}"
+
+outputs="$(set +e; xrandr | grep " connected "; set -e)"
+
+# Coordinates are on the fourth field on the primary display or on the third field on the non-primary displays:
+# DP-2 connected 1440x2560+2880+0 right (normal left inverted right x axis y axis) 530mm x 300mm
+# DP-1 connected primary 1440x2560+1440+0 right (normal left inverted right x axis y axis) 530mm x 300mm
+
+IFS="
+"
+for o in $outputs; do
+  IFS="$IFS_"
+
+  o_name="${o%%" "*}"
+
+  o_coords="${o##*" connected "}"
+  o_coords="${o_coords##"primary "}"
+  o_coords="${o_coords%%" "*}"
+
+  o_width="${o_coords%%"x"*}"
+
+  o_height="${o_coords##*"x"}"
+  o_height="${o_height%%"+"*}"
+
+  o_x_offset="${o_coords##"${o_width}x${o_height}+"}"
+  o_x_offset="${o_x_offset%%"+"*}"
+
+  o_y_offset="${o_coords##"${o_width}x${o_height}+${o_x_offset}+"}"
+
+  if   [ "$m_x" -ge "$o_x_offset" ] \
+    && [ "$m_x" -le "$((o_width + o_x_offset))" ] \
+    && [ "$m_y" -ge "$o_y_offset" ] \
+    && [ "$m_y" -le "$((o_height + o_y_offset))" ]
+  then
+    exec echo "$o_name"
+  fi
+done
+IFS="$IFS_"
+
+exit "1"
