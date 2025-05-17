@@ -35,8 +35,8 @@ example() {
 
   ## Iterating over arguments, removing and substituting arguments
 
-  args_count="$#"
-  while [ "$args_count" -gt "0" ]; do
+  args_count_cached="$#"
+  while [ "$args_count_cached" -gt "0" ]; do
     case "$1" in
       "third")
         shift
@@ -53,7 +53,7 @@ example() {
         exit "1"
       ;;
     esac
-    args_count="$((args_count - 1))"
+    args_count_cached="$((args_count_cached - 1))"
   done
 
   echo
