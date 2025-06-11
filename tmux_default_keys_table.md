@@ -1,10 +1,12 @@
 # The tmux default key bindings
 
-tmux version: 3.5a
-
-`tmux list-keys` output:
+```
+$ tmux -V
+tmux 3.5a
+```
 
 ```
+$ tmux list-keys
 bind-key    -T copy-mode    Escape                 send-keys -X cancel
 bind-key    -T copy-mode    Space                  send-keys -X page-down
 bind-key    -T copy-mode    ,                      send-keys -X jump-reverse
@@ -269,9 +271,8 @@ bind-key    -T root         M-MouseDown3Status     display-menu -T "#[align=cent
 bind-key    -T root         M-MouseDown3StatusLeft display-menu -T "#[align=centre]#{session_name}" -t = -x M -y W Next n { switch-client -n } Previous p { switch-client -p } '' Renumber N { move-window -r } Rename n { command-prompt -I "#S" { rename-session "%%" } } '' "New Session" s { new-session } "New Window" w { new-window }
 ```
 
-`tmux list-keys -N` output:
-
 ```
+$ tmux list-keys -N
 C-b Space   Select next layout
 C-b !       Break pane to a new window
 C-b "       Split window vertically
