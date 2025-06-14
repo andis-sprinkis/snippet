@@ -10,13 +10,13 @@ sleeper() {
   trap 'echo "Timer reset (${reset_sig})"
   elapsed="$((-tick))"' "$reset_sig"
 
-  echo "${elapsed} / $target"
+  echo "${elapsed} / ${target}"
 
   while [ "$elapsed" -lt "$target" ]; do
     sleep "$tick" &
     wait "$!"
     elapsed="$((elapsed + tick))"
-    echo "${elapsed} / $target"
+    echo "${elapsed} / ${target}"
   done
 }
 
