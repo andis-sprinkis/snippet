@@ -23,6 +23,12 @@ sleeper() {
 
     # ... commands to run after the timer expires ...
 
+    # Conditionally resetting the timer after it has expired:
+    # if [ "$some_condition" ]; then
+    #   elapsed="0"
+    #   continue
+    # fi
+
     exit
   done
 }
