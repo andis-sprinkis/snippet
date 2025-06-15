@@ -12,11 +12,18 @@ sleeper() {
 
   echo "${elapsed} / ${target}"
 
-  while [ "$elapsed" -lt "$target" ]; do
-    sleep "$tick" &
-    wait "$!"
-    elapsed="$((elapsed + tick))"
-    echo "${elapsed} / ${target}"
+  while true; do
+    while [ "$elapsed" -lt "$target" ]; do
+      sleep "$tick" &
+      wait "$!"
+      elapsed="$((elapsed + tick))"
+
+      echo "${elapsed} / ${target}"
+    done
+
+    # ... commands to run after the timer expires ...
+
+    exit
   done
 }
 
