@@ -4,7 +4,7 @@ tick="1"
 target="20"
 reset_sig="USR1"
 
-sleeper() {
+(
   elapsed="0"
 
   trap 'echo "Timer reset (${reset_sig})"
@@ -24,16 +24,14 @@ sleeper() {
     # ... commands to run after the timer expires ...
 
     # Conditionally resetting the timer after it has expired:
-    # if [ "$some_condition" ]; then
+    # if [ "$some_reset_condition" = "1" ]; then
     #   elapsed="0"
     #   continue
     # fi
 
     exit
   done
-}
-
-sleeper &
+) &
 
 sleeper_pid="$!"
 
