@@ -14,7 +14,7 @@
 
     SIGHUP - signal sent to a process when its controlling terminal is closed.
 
-    `nohup` redirects stdout and stdeerr and shields the process from SIGHUP.
+    `nohup` redirects stdout and stdeerr and shields the process from SIGHUP, it doesn't prevent controlling shell from sending NOHUP to the process group.
 
 - Using `disown`:
 
@@ -26,7 +26,7 @@
 
     `disown` removes the process from the shell job control list.
 
-    `disown` prevents the controlling shell from sending NOHUP to the process group, it does not prevent the process from receiving NOHUP.
+    `disown` prevents the controlling shell from sending NOHUP to the process group, it does not prevent the process group from receiving NOHUP.
 
     ⚠️ In POSIX sh, `disown` is undefined.
 
