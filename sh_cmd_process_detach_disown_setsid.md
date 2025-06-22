@@ -3,10 +3,10 @@
 - Using `nohup`:
 
     ```sh
-    nohup httpd 0</dev/null 1>/dev/null 2>/dev/null &
+    nohup chromium 0</dev/null 1>/dev/null 2>/dev/null &
     ```
 
-    `0</dev/null` instructs the non-Linux system shell to immediately close the stdin file.
+    `0</dev/null` instructs the non-Linux system shell to immediately close the stdin file. Suppresses `nohup: ignoring input`.
 
     `1>/dev/null` and `2>/dev/null` redirect the stdout and stderr streams to `/dev/null`.
 
@@ -16,10 +16,24 @@
 
     `nohup` redirects stdout and stdeerr and shields the process from SIGHUP, it doesn't prevent controlling shell from sending NOHUP to the process group.
 
+    ***
+
+    Handling pipes in `nohup` via subshell:
+
+    ```sh
+    nohup "$SHELL" -c "cmd1 | cmd2" 0</dev/null 1>/dev/null 2>/dev/null &
+    ```
+
+- An alternative approach to `nohup` that handles pipes:
+
+    ```sh
+    (trap "" HUP; cmd1 | cmd2 ) 0</dev/null 1>/dev/null 2>/dev/null &
+    ```
+
 - Using `disown`:
 
     ```sh
-    httpd 1>/dev/null 2>/dev/null & disown
+    chromium 1>/dev/null 2>/dev/null & disown
     ```
 
     `disown` is a shell built-in command.
@@ -46,10 +60,24 @@
     > mychromium () { /usr/bin/chromium-browser & disown $!; }
     > ```
 
+- Using `nohup` and `disown`
+
+    ```sh
+    nohup chromium 0</dev/null 1>/dev/null 2>/dev/null & disown
+    ```
+
+    `nohup` shields the process from SIGHUP.
+
+    `disown` removes the process from the shell job control list.
+
+    `disown` prevents the controlling shell from sending NOHUP to the process group.
+
+    ⚠️ In POSIX sh, `disown` is undefined.
+
 - Using `setsid`
 
     ```sh
-    setsid httpd 1>/dev/null 2>/dev/null
+    setsid chromium 1>/dev/null 2>/dev/null
     ```
 
     ⚠️ macOS does not include `setsid`.
