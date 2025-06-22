@@ -12,13 +12,27 @@
 
     `&` runs the command in background.
 
-    `nohup` redirects stdout and shields process from SIGHUP - a signal sent to a process when its controlling terminal is closed.
+    SIGHUP - signal sent to a process when its controlling terminal is closed.
 
-    `nohup` does not remove the process from the shell job control list.
+    `nohup` redirects stdout and stdeerr and shields the process from SIGHUP.
+
+- Using `disown`:
+
+    ```sh
+    httpd 1>/dev/null 2>/dev/null & disown
+    ```
+
+    `disown` is a shell built-in command.
+
+    `disown` removes the process from the shell job control list.
+
+    `disown` prevents the controlling shell from sending NOHUP to the process group, it does not prevent the process from receiving NOHUP.
+
+    ⚠️ In POSIX sh, `disown` is undefined.
 
     ***
 
-    From [chrome - Why is chromium-browser killed when I close the terminal despite nohup? - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/162749/why-is-chromium-browser-killed-when-i-close-the-terminal-despite-nohup/194640#194640):
+    From [chrome - Why is chromium-browser killed when I close the terminal despite nohup? - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/162749/why-is-chromium-browser-killed-when-i-close-the-terminal-despite-nohup/194640#194640) ([archived](https://archive.is/7cldG)):
 
     > The shell will typically send a SIGHUP to every process group that it knows it created - even ones started with `nohup` - and then exit.
 
@@ -32,20 +46,6 @@
     > mychromium () { /usr/bin/chromium-browser & disown $!; }
     > ```
 
-- Using `disown`:
-
-    ```sh
-    httpd 1>/dev/null 2>/dev/null & disown
-    ```
-
-    `disown` is a shell built-in command.
-
-    `disown` removes the process from the shell job control list.
-
-    ⚠️ In POSIX sh, `disown` is undefined.
-
-    This does not include the process in the shell process group.
-
 - Using `setsid`
 
     ```sh
@@ -53,8 +53,6 @@
     ```
 
     ⚠️ macOS does not include `setsid`.
-
-    This does not include the process in the shell process group.
 
 # Resources
 
