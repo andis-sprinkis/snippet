@@ -27,7 +27,7 @@
 - An alternative approach to `nohup` that handles pipes:
 
     ```sh
-    (trap "" HUP; cmd1 | cmd2 ) 0</dev/null 1>/dev/null 2>/dev/null &
+    (trap "" "HUP"; cmd1 | cmd2) 0</dev/null 1>/dev/null 2>/dev/null &
     ```
 
 - Using `disown`:
@@ -77,7 +77,7 @@
 - Using `nohup`-like subshell and `disown`
 
     ```sh
-    (trap "" HUP; cmd1 | cmd2 ) 0</dev/null 1>/dev/null 2>/dev/null & disown
+    (trap "" "HUP"; cmd1 | cmd2) 0</dev/null 1>/dev/null 2>/dev/null & disown
     ```
 
     ⚠️ In POSIX sh, `disown` is undefined.
