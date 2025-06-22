@@ -74,6 +74,14 @@
 
     ⚠️ In POSIX sh, `disown` is undefined.
 
+- Using `nohup`-like subshell and `disown`
+
+    ```sh
+    (trap "" HUP; cmd1 | cmd2 ) 0</dev/null 1>/dev/null 2>/dev/null & disown
+    ```
+
+    ⚠️ In POSIX sh, `disown` is undefined.
+
 - Using `setsid`
 
     ```sh
