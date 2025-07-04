@@ -113,8 +113,7 @@ All editing commands in a sed script are applied in order to each input line.
     ```
 - `-n` - only print lines specified with the print command (or the `p` flag of the substitute (`s`) command)
 - `-f` scriptfile - next argument is a filename containing editing commands
-- `-e` command - the next argument is an editing command rather than a filename, useful if multiple commands are
-  specified
+- `-e` command - the next argument is an editing command rather than a filename, useful if multiple commands are specified
 - If the first line of a scriptfile is `#n`, sed acts as though `-n` had been specified
 
 ## Print
@@ -158,13 +157,13 @@ All editing commands in a sed script are applied in order to each input line.
    the UNIX operating system …
    ```
 
-   ```sed
-   s/.NI./wonderful &/
-   ```
+    ```sed
+    s/.NI./wonderful &/
+    ```
 
-   ```
-   the wonderful UNIX operating system …
-   ```
+    ```
+    the wonderful UNIX operating system …
+    ```
 
 1. ```sh
    cat test1
@@ -189,3 +188,26 @@ All editing commands in a sed script are applied in order to each input line.
    ```
 
     Pig Latin (`unix is fun` -> `nixuay siay unfay`)
+
+## Append, insert, and change
+
+## Append and insert
+
+## Change
+
+## Change examples
+
+## Using `!`
+
+## Transform
+
+## Pattern and hold spaces
+
+## Quit
+
+## `sed` drawbacks
+
+- Hard to remember text from one line to another
+- Not possible to go backward in the file
+- No way to do forward references like `/..../+1`
+- No facilities to manipulate numbers

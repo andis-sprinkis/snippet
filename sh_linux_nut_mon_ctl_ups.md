@@ -6,34 +6,52 @@ To view the currently detected UPS devices:
 upsc -L
 ```
 
+To print the name of the first detected UPS device:
+
+```sh
+upsc -L | head | cut -d":" -f1
+```
+
 To view device details of a connected device:
 
 ```sh
 upsc "$ups_device" | $PAGER
+
+upsc "$(upsc -L | head | cut -d":" -f1)" | $PAGER
 ```
 
 To view a single variable:
 
 ```sh
 upsc "$ups_device" "$ups_var_name"
+
+upsc "$(upsc -L | head | cut -d":" -f1)" "$ups_var_name"
+
+upsc "$(upsc -L | head | cut -d":" -f1)" "battery.charge"
 ```
 
 To watch periodic change in a single variable:
 
 ```sh
 watch -n "5" "upsc ${ups_device} battery.charge"
+
+watch -n "5" "upsc $(upsc -L | head | cut -d":" -f1) battery.charge"
 ```
 
 To list the available UPS device commands:
 
 ```sh
 upscmd -l "$ups_device"
+
+upscmd -l "$(upsc -L | head | cut -d":" -f1)"
 ```
 
 To issue a command to a UPS device:
 
 ```sh
 upscmd "$ups_device" "beeper.toggle"
+
+upscmd "$(upsc -L | head | cut -d":" -f1)" "beeper.toggle"
 ```
 
 To view the UPS devices configured to be monitored by the system directly, see `/etc/nut/ups.conf`.
