@@ -32,8 +32,19 @@
     - POSIX
     - GNU
 - `sed`
+
     - POSIX
+
+        - [sed (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/sed.html)
+
+            - > The _sed_ utility shall support the REs described in XBD [_9\. Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09); by default it shall use BREs as described in XBD [_9.3 Basic Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03), but if the **\-E** option is used, it shall use EREs as described in XBD [_9.4 Extended Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_04).
+            - ```
+              -E
+                  Match using extended regular expressions. Treat each pattern specified as an ERE, as described in XBD 9.4 Extended Regular Expressions.
+              ```
+
     - GNU
+
 - `grep`
     - POSIX
     - GNU
