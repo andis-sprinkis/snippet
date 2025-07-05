@@ -191,6 +191,28 @@ All editing commands in a sed script are applied in order to each input line.
 
 ## Append, insert, and change
 
+- Syntax for these commands is a little strange because they must be specified on multiple lines
+- append
+
+    ```sed
+    [address]a\
+    text
+    ```
+
+- insert
+
+    ```sed
+    [address]i\
+    text
+    ```
+
+- change
+    ```sed
+    [address(es)]c\
+    text
+    ```
+- append/insert for single lines only, not range
+
 ## Append and insert
 
 ## Change
