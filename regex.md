@@ -21,6 +21,8 @@
         - Used in the GNU implementations of classic UNIX tools
 - Perl Compatible Regular Expressions (PCRE)
     - [Regular Expressions/Perl-Compatible Regular Expressions - Wikibooks, open books for an open world](https://en.wikibooks.org/wiki/Regular_Expressions/Perl-Compatible_Regular_Expressions)
+    - [Perl Compatible Regular Expressions - Wikipedia](https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions)
+        - > While PCRE originally aimed at feature-equivalence with Perl, the two implementations are not fully equivalent. During the PCRE 7.x and Perl 5.9.x phase, the two projects coordinated development, with features being ported between them in both directions. As of Perl 5.10, PCRE is also available as a replacement for Perl's default regular-expression engine through the `re::engine::PCRE` module.
 - Shell regular expressions
     - [Regular Expressions/Shell Regular Expressions - Wikibooks, open books for an open world](https://en.wikibooks.org/wiki/Regular_Expressions/Shell_Regular_Expressions)
 
