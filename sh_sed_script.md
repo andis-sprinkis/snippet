@@ -274,13 +274,13 @@ All editing commands in a sed script are applied in order to each input line.
 
 ## Transform
 
-- The Transform command (`y`) operates like `tr`, it does a one-to-one or character-to-character 
-replacement
+- The Transform command (`y`) operates like `tr`, it does a one-to-one or character-to-character
+  replacement
 - Transform accepts zero, one or two addresses
 - ```sed
   [address[,address]]y/abc/xyz/
   ```
-    - every `a` within the specified address(es) is transformed to an `x`.  The same is true for `b` to `y` and `c` to `z`
+    - every `a` within the specified address(es) is transformed to an `x`. The same is true for `b` to `y` and `c` to `z`
     - `y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/` changes all lower case characters on the addressed line to upper case
     - If you only want to transform specific characters (or a word) in the line, it is much more difficult and requires use of the hold space
 
@@ -317,3 +317,10 @@ h, H, g, G
 - Not possible to go backward in the file
 - No way to do forward references like `/..../+1`
 - No facilities to manipulate numbers
+
+---
+
+## Resources
+
+- [sed (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/sed.html)
+- [Regular Expressions (BRE) (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html)
