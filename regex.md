@@ -22,6 +22,7 @@
 - Perl Compatible Regular Expressions (PCRE)
     - [Regular Expressions/Perl-Compatible Regular Expressions - Wikibooks, open books for an open world](https://en.wikibooks.org/wiki/Regular_Expressions/Perl-Compatible_Regular_Expressions)
 - Shell regular expressions
+    - [Regular Expressions/Shell Regular Expressions - Wikibooks, open books for an open world](https://en.wikibooks.org/wiki/Regular_Expressions/Shell_Regular_Expressions)
 
 ## Per application
 
