@@ -215,17 +215,101 @@ All editing commands in a sed script are applied in order to each input line.
 
 ## Append and insert
 
+- Append places text after the current line in pattern space
+- Insert places text before the current line in pattern space
+    - Each of these commands requires a `\` following it. text must begin on the next line.
+    - If text begins with whitespace, sed will discard it unless you start the line with a `\`
+- Example:
+
+    ```sed
+    /<Insert Text Here>/i\
+    Line 1 of inserted text\
+    \    Line 2 of inserted text
+    ```
+
+    would leave the following in the pattern space
+
+    ```
+    Line 1 of inserted text
+        Line 2 of inserted text
+    <Insert Text Here>
+    ```
+
 ## Change
+
+- Unlike Insert and Append, Change can be applied to either a single line address or a range of addresses
+- When applied to a range, the entire range is replaced by text specified with change, not each line
+    - Exception: If the Change command is executed with other commands enclosed in `{ }` that act on a range of lines, each line will be replaced with text
+- No subsequent editing allowed
 
 ## Change examples
 
+- Remove mail headers, ie; the address specifies a range of lines beginning with a line that begins with From until the first blank line.
+
+    - The first example replaces all lines with a single occurrence of `<Mail Header Removed>`.
+
+        ```sed
+        /^From /,/^$/c\
+          <Mail Headers Removed>
+        ```
+
+    - The second example replaces each line with `<Mail Header Removed>`.
+
+        ```sed
+        /^From /,/^$/{
+          s/^From //p
+          c\
+          <Mail Header Removed>
+          }
+        ```
+
 ## Using `!`
+
+- If an address is followed by an exclamation point (`!`), the associated command is applied to all lines that don’t match the address or address range
+- Examples:
+    - `1,5!d` would delete all lines except 1 through 5
+    - `/black/!s/cow/horse/` would substitute “horse” for “cow” on all lines except those that contained “black”
+        - `The brown cow` -> `The brown horse`
+        - `The black cow` -> `The black cow`
 
 ## Transform
 
+- The Transform command (`y`) operates like `tr`, it does a one-to-one or character-to-character 
+replacement
+- Transform accepts zero, one or two addresses
+- ```sed
+  [address[,address]]y/abc/xyz/
+  ```
+    - every `a` within the specified address(es) is transformed to an `x`.  The same is true for `b` to `y` and `c` to `z`
+    - `y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/` changes all lower case characters on the addressed line to upper case
+    - If you only want to transform specific characters (or a word) in the line, it is much more difficult and requires use of the hold space
+
 ## Pattern and hold spaces
 
+```
+   in
+    |
+  pattern --- hold
+    |
+    |
+   out
+```
+
+```
+h, H, g, G
+```
+
+- Pattern space: Workspace or temporary buffer where a single line of input is held while the editing commands are applied
+- Hold space: Secondary temporary buffer for temporary storage only
+
 ## Quit
+
+- Quit causes sed to stop reading new input lines and stop sending them to standard output
+- It takes at most a single line address - Once a line matching the address is reached, the script will be terminated
+    - This can be used to save time when you only want to process some portion of the beginning of a file
+- Example: to print the first 100 lines of a file (like head) use:
+    - `sed '100q' filename`
+        - sed will, by default, send the first 100 lines of filename to standard output and then quit processing
 
 ## `sed` drawbacks
 
