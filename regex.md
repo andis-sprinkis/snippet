@@ -4,9 +4,10 @@
     - Used on Unix based systems for backwards compatibility
     - Most regular-expression-aware Unix utilities, use it by default while providing support for extended regular expressions with command line arguments
     - Deprecated on POSIX compliant systems and should not be used by new utilities
-    - [Regular Expressions/Simple Regular Expressions - Wikibooks, open books for an open world](https://en.wikibooks.org/wiki/Regular_Expressions/Simple_Regular_Expressions)
-    - [Regular Expressions (The Single UNIX ® Specification, Version 2, Copyright © 1997 The Open Group)](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html)
-        - > The first (historical) version is described as part of the _[regexp()](https://pubs.opengroup.org/onlinepubs/7908799/xsh/regexp.html)_ function in the **XSH** specification.
+    - POSIX
+        - [Regular Expressions (The Single UNIX ® Specification, Version 2, Copyright © 1997 The Open Group)](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html)
+            - > The first (historical) version is described as part of the _[regexp()](https://pubs.opengroup.org/onlinepubs/7908799/xsh/regexp.html)_ function in the **XSH** specification.
+        - [Regular Expressions/Simple Regular Expressions - Wikibooks, open books for an open world](https://en.wikibooks.org/wiki/Regular_Expressions/Simple_Regular_Expressions)
 - Basic Regular Expressions (BRE)
     - POSIX
         - [IEEE Std 1003.1-2024 - 9. Regular Expressions - 9.3 Basic Regular Expressions](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03) ([Archived](https://archive.is/20250518161456/https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html))
