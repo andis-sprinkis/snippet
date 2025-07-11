@@ -5,8 +5,9 @@
     - Most regular-expression-aware Unix utilities, use it by default while providing support for extended regular expressions with command line arguments
     - Deprecated on POSIX compliant systems and should not be used by new utilities
     - POSIX
-        - [Regular Expressions (The Single UNIX ® Specification, Version 2, Copyright © 1997 The Open Group)](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html)
+        - [Regular Expressions (The Single UNIX ® Specification, Version 2, Copyright © 1997 The Open Group)](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html) ([Archived](https://archive.is/MdXc1))
             - > The first (historical) version is described as part of the _[regexp()](https://pubs.opengroup.org/onlinepubs/7908799/xsh/regexp.html)_ function in the **XSH** specification.
+                - [regexp](https://pubs.opengroup.org/onlinepubs/7908799/xsh/regexp.html) ([Archived](https://archive.is/20130730093704/http://pubs.opengroup.org/onlinepubs/7908799/xsh/regexp.html))
         - [Regular Expressions/Simple Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/Simple_Regular_Expressions) ([Archived](https://archive.is/20241012203436/https://en.wikibooks.org/wiki/Regular_Expressions/Simple_Regular_Expressions))
 - Basic Regular Expressions (BRE)
     - POSIX
@@ -66,8 +67,28 @@
 
     - GNU
 
-- `egrep`
-    - POSIX
+    - `egrep`, `grep`, `rgrep`
+
+        - POSIX
+
+            - [grep (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/grep.html)
+
+                > This _grep_ has been enhanced in an upwards-compatible way to provide the exact functionality of the historical _egrep_ and _fgrep_ commands as well. It was the clear intention of the standard developers to consolidate the three *grep*s into a single command.
+
+                > The old _egrep_ and _fgrep_ commands are likely to be supported for many years to come as implementation extensions, allowing historical applications to operate unmodified.
+
+        - GNU
+
+            - [Ubuntu Manpage: grep, egrep, fgrep, rgrep - print lines matching a pattern](https://manpages.ubuntu.com/manpages/bionic/en/man1/grep.1.html)
+
+                > In addition, the variant programs **egrep**, **fgrep** and **rgrep** are the same as **grep** **\-E**, **grep** **\-F**, and **grep** **\-r**, respectively. These variants are deprecated, but are provided for backward compatibility.
+
+            - [GNU Grep 3.12](https://www.gnu.org/software/grep/manual/grep.html)
+
+                > What happened to `egrep` and `fgrep`?
+
+                > 7th Edition Unix had commands `egrep` and `fgrep` that were the counterparts of the modern ‘grep -E’ and ‘grep -F’. Although breaking up `grep` into three programs was perhaps useful on the small computers of the 1970s, `egrep` and `fgrep` were deemed obsolescent by POSIX in 1992, removed from POSIX in 2001, deprecated by GNU Grep 2.5.3 in 2007, and changed to issue obsolescence warnings by GNU Grep 3.8 in 2022; eventually, they are planned to be removed entirely.
+
 - `tr`
 
     - POSIX
@@ -98,7 +119,6 @@
               [[(] pattern[ | pattern] ... ) compound-list]
             esac
             ```
-
 
     - GNU `bash`
 
