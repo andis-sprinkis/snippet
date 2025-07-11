@@ -33,8 +33,17 @@
 ## Per application
 
 - `awk`
+
     - POSIX
+
+        - [awk ( IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html)
+
+            - [Regular Expressions](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html#tag_20_06_13_04)
+
+                > The _awk_ utility shall make use of the extended regular expression notation (see XBD [_9.4 Extended Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_04)) except that it shall allow the use of C-language conventions for escaping special characters within the EREs, as specified in the table in XBD [_5\. File Format Notation_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap05.html#tag_05) for '\\\\', '\\a', '\\b', '\\f', '\\n', '\\r', '\\t', '\\v' and in the following table for other sequences; these escape sequences shall be recognized both inside and outside bracket expressions.
+
     - GNU
+
 - `sed`
 
     - POSIX
@@ -88,6 +97,11 @@
                 > What happened to `egrep` and `fgrep`?
 
                 > 7th Edition Unix had commands `egrep` and `fgrep` that were the counterparts of the modern ‘grep -E’ and ‘grep -F’. Although breaking up `grep` into three programs was perhaps useful on the small computers of the 1970s, `egrep` and `fgrep` were deemed obsolescent by POSIX in 1992, removed from POSIX in 2001, deprecated by GNU Grep 2.5.3 in 2007, and changed to issue obsolescence warnings by GNU Grep 3.8 in 2022; eventually, they are planned to be removed entirely.
+
+- `find`
+
+    - POSIX
+    - GNU
 
 - `tr`
 
