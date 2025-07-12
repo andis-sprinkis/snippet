@@ -61,7 +61,13 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
 - `ex`
 
     - POSIX
+
         - [ex (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/ex.html)
+
+            > The _ex_ utility shall support regular expressions that are a superset of the basic regular expressions described in XBD [_9.3 Basic Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03).
+
+            `ex` workflows is heavily based around the regular expressions use. In IEEE Std 1003.1-2024 there are a lot of rules and guidelines to adhere around the implementation consitency, extending BRE functionality and the historical practices.
+
     - GNU
     - BusyBox
     - FreeBSD
@@ -70,7 +76,11 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
 - `vi`
 
     - POSIX
+
         - [vi (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/vi.html)
+
+            > The enhanced regular expressions supported by _vi_ are described in [_Regular Expressions in ex_](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/ex.html#tag_20_40_13_58).
+
     - GNU
     - BusyBox
     - FreeBSD
@@ -129,7 +139,7 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
 
                 > Enable enhanced features in the regular expression syntax. Note that this option is independent of the `-E` option. See [re_format(7)](https://manp.gs/mac/7/re_format) for details.
 
-                From [RE\_FORMAT(7) - ENHANCED FEATURES](https://manp.gs/mac/7/re_format#ENHANCED_FEATURES):
+                From [RE_FORMAT(7) - ENHANCED FEATURES](https://manp.gs/mac/7/re_format#ENHANCED_FEATURES):
 
                 > When the `REG_ENHANCED` flag is passed to one of the [`regcomp`](https://manp.gs/mac/7/re_format#regcomp)() variants, additional features are activated. Like the enhanced `regex` implementations in scripting languages such as [perl(1)](https://manp.gs/mac/1/perl) and [python(1)](https://manp.gs/mac/1/python), these additional features may conflict with the IEEE Std 1003.2 (“POSIX.2”) standards in some ways. Use this with care in situations which require portability (including to past versions of the Mac OS X using the previous `regex` implementation).
 
