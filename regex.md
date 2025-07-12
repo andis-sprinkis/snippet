@@ -14,7 +14,7 @@
 - Basic Regular Expressions (BRE)
     - POSIX
         - [IEEE Std 1003.1-2024 - 9. Regular Expressions - 9.3 Basic Regular Expressions](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03) ([Archived](https://archive.is/20250518161456/https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html))
-        - [Regular Expressions/POSIX Basic Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/POSIX_Basic_Regular_Expressions) [Archived](https://archive.is/20241012215959/https://en.wikibooks.org/wiki/Regular_Expressions/POSIX_Basic_Regular_Expressions)
+        - [Regular Expressions/POSIX Basic Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/POSIX_Basic_Regular_Expressions) ([Archived](https://archive.is/20241012215959/https://en.wikibooks.org/wiki/Regular_Expressions/POSIX_Basic_Regular_Expressions))
     - GNU
         - POSIX BRE with GNU extensions
         - Used in the GNU implementations of classic UNIX tools
@@ -24,7 +24,7 @@
 - Extended Regular Expressions (ERE)
     - POSIX
         - [IEEE Std 1003.1-2024 - 9. Regular Expressions - 9.4 Extended Regular Expressions](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_04) ([Archived](https://archive.is/20250518161456/https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html))
-        - [Regular Expressions/POSIX-Extended Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/POSIX-Extended_Regular_Expressions) [Archived](https://archive.is/20241012220242/https://en.wikibooks.org/wiki/Regular_Expressions/POSIX-Extended_Regular_Expressions)
+        - [Regular Expressions/POSIX-Extended Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/POSIX-Extended_Regular_Expressions) ([Archived](https://archive.is/20241012220242/https://en.wikibooks.org/wiki/Regular_Expressions/POSIX-Extended_Regular_Expressions))
     - GNU
         - POSIX ERE with GNU extensions
         - Used in the GNU implementations of classic UNIX tools
