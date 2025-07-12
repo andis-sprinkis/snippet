@@ -30,14 +30,8 @@
     - [Perl Compatible Regular Expressions - Wikipedia](https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions)
         - > While PCRE originally aimed at feature-equivalence with Perl, the two implementations are not fully equivalent. During the PCRE 7.x and Perl 5.9.x phase, the two projects coordinated development, with features being ported between them in both directions. As of Perl 5.10, PCRE is also available as a replacement for Perl's default regular-expression engine through the `re::engine::PCRE` module.
 - The Shell pattern matching notation
-    - POSIX
-        - [Shell Command Language (IEEE Std 1003.1-2024) - 2.14 Pattern Matching Notation](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_14)
-            - "The `glob` syntax"
-    - GNU
-        - The `extglob` extension
-        - [Pattern Matching (Bash Reference Manual)](https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html)
-    - BusyBox
     - [Regular Expressions/Shell Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/Shell_Regular_Expressions) ([Archived](https://archive.is/20241012203753/https://en.wikibooks.org/wiki/Regular_Expressions/Shell_Regular_Expressions))
+    - See the 'Per application - Shell' section below.
 
 From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.freebsd.org/cgi/man.cgi?re_format):
 
@@ -136,6 +130,9 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
               > Match using extended regular expressions. Treat each pattern specified as an ERE, as described in XBD [_9.4 Extended Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_04). If any entire ERE pattern matches some part of an input line excluding the terminating \<newline\>, the line shall be matched. A null ERE shall match every line.
 
     - GNU
+    - BusyBox
+        - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html)
+    - FreeBSD
     - macOS
 
     - `egrep`, `grep`, `rgrep`
@@ -165,6 +162,7 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
                 > 7th Edition Unix had commands `egrep` and `fgrep` that were the counterparts of the modern ‘grep -E’ and ‘grep -F’. Although breaking up `grep` into three programs was perhaps useful on the small computers of the 1970s, `egrep` and `fgrep` were deemed obsolescent by POSIX in 1992, removed from POSIX in 2001, deprecated by GNU Grep 2.5.3 in 2007, and changed to issue obsolescence warnings by GNU Grep 3.8 in 2022; eventually, they are planned to be removed entirely.
 
         - FreeBSD
+
             - Ships `fgrep`, `egrep` and `rgrep`.
 
             - [grep(1)](https://man.freebsd.org/cgi/man.cgi?query=grep&apropos=0&sektion=1&manpath=FreeBSD+14.3-RELEASE+and+Ports&arch=default&format=html)
@@ -173,6 +171,7 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
 
         - BusyBox
             - Ships `fgrep` and `egrep`.
+            - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html)
         - macOS
 
 - `find`
@@ -187,6 +186,7 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
               > The primary shall evaluate as true if the current pathname matches _pattern_ using the pattern matching notation described in [_2.14 Pattern Matching Notation_](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_14). The additional rules in [_2.14.3 Patterns Used for Filename Expansion_](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_14_03) do not apply as this is a matching operation, not an expansion.
     - GNU
     - BusyBox
+    - FreeBSD
     - macOS
 
 - `tr`
@@ -199,6 +199,7 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
 
     - GNU
     - BusyBox
+    - FreeBSD
     - macOS
 
 - Shell
@@ -224,11 +225,24 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
             esac
             ```
 
-    - GNU `bash`
-    - BusyBox `ash`
+    - GNU
+        - `bash`
+            - The `extglob` extension
+            - [Pattern Matching (Bash Reference Manual)](https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html)
+    - BusyBox
+        - `ash`
     - FreeBSD
+
+        - [sh(1)](https://man.freebsd.org/cgi/man.cgi?query=sh&sektion=1&format=html)
+
+            From [FreeBSD Quickstart Guide for Linux® Users](https://docs.freebsd.org/en/articles/linux-users/):
+
+            > \[..\] the Bourne shell-compatible [sh(1)](https://man.freebsd.org/cgi/man.cgi?query=sh&sektion=1&format=html) as the default user shell. \[...\] [sh(1)](https://man.freebsd.org/cgi/man.cgi?query=sh&sektion=1&format=html) is very similar to Bash but with a much smaller feature-set.
+
     - macOS
-        - macOS uses GNU `bash` as the non-interactive shell.
+        - macOS uses GNU `bash` as the non-interactive shell and `zsh` as the interactive shell.
+        - `zsh`
+            - [regular expression - What kind of patterns can I use in zsh parameter expansion? - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/557473/what-kind-of-patterns-can-i-use-in-zsh-parameter-expansion/557482#557482)
 
 ## Resources
 
