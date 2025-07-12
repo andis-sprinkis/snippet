@@ -48,7 +48,11 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
 - `ed`
 
     - POSIX
+
         - [ed (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/ed.html)
+
+            > The _ed_ utility shall support basic regular expressions, as described in XBD [_9.3 Basic Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03).
+
     - GNU
     - BusyBox
     - FreeBSD
@@ -107,7 +111,7 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
         - [sed(1)](https://man.freebsd.org/cgi/man.cgi?query=sed&sektion=1&format=html)
     - macOS
 
-        - [SED(1) - June 10, 2020 - macOS 15.4](https://manp.gs/mac/1/sed) ()
+        - [SED(1) - June 10, 2020 - macOS 15.4](https://manp.gs/mac/1/sed) ([Archived](https://archive.is/20250712115551/https://manp.gs/mac/1/sed))
 
             > The `sed` utility is expected to be a superset of the IEEE Std 1003.2 (“POSIX.2”) specification.
 
@@ -124,6 +128,12 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
             - > [`-H`](https://manp.gs/mac/1/sed#H)
 
                 > Enable enhanced features in the regular expression syntax. Note that this option is independent of the `-E` option. See [re_format(7)](https://manp.gs/mac/7/re_format) for details.
+
+                From [RE\_FORMAT(7) - ENHANCED FEATURES](https://manp.gs/mac/7/re_format#ENHANCED_FEATURES):
+
+                > When the `REG_ENHANCED` flag is passed to one of the [`regcomp`](https://manp.gs/mac/7/re_format#regcomp)() variants, additional features are activated. Like the enhanced `regex` implementations in scripting languages such as [perl(1)](https://manp.gs/mac/1/perl) and [python(1)](https://manp.gs/mac/1/python), these additional features may conflict with the IEEE Std 1003.2 (“POSIX.2”) standards in some ways. Use this with care in situations which require portability (including to past versions of the Mac OS X using the previous `regex` implementation).
+
+                This option does not exist in the FreeBSD `sed`.
 
 - `grep`
 
@@ -222,6 +232,13 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
 
             > The following four varieties of parameter expansion provide for character substring processing. In each case, pattern matching notation (see [2.14 Pattern Matching Notation](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_14)), rather than regular expression notation, shall be used to evaluate the patterns. \[...\]
 
+            ```
+            ${parameter%[word]}
+            ${parameter%%[word]}
+            ${parameter#[word]}
+            ${parameter##[word]}
+            ```
+
         - [**2.14 Pattern Matching Notation**](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_14)
 
             > The pattern matching notation described in this section is used to specify patterns for matching character strings in the shell. This notation is also used by some other utilities ([_find_](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/find.html), [_pax_](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/pax.html), and optionally [_make_](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/make.html)) and by some system interfaces ([_fnmatch_()](https://pubs.opengroup.org/onlinepubs/9799919799/functions/fnmatch.html), [_glob_()](https://pubs.opengroup.org/onlinepubs/9799919799/functions/glob.html), and [_wordexp_()](https://pubs.opengroup.org/onlinepubs/9799919799/functions/wordexp.html)).
@@ -240,9 +257,23 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
             ```
 
     - GNU
+
         - `bash`
+
             - The `extglob` extension
+
+                - > If the `extglob` shell option is enabled using the `shopt` builtin, the shell recognizes several extended pattern matching operators. In the following description, a pattern-list is a list of one or more patterns separated by a ‘|’.
+
+                    ```
+                    ?(pattern-list)
+                    *(pattern-list)
+                    +(pattern-list)
+                    @(pattern-list)
+                    !(pattern-list)
+                    ```
+
             - [Pattern Matching (Bash Reference Manual)](https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html)
+
     - BusyBox
         - `ash`
     - FreeBSD
