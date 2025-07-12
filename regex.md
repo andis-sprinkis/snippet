@@ -185,7 +185,7 @@
 
         - POSIX
 
-            - Deprecated by POSIX.
+            - `egrep` and `fgrep` are deprecated by POSIX, `rgrep` is not specified.
 
             - [grep (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/grep.html)
 
