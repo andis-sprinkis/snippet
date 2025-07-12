@@ -206,8 +206,6 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
 
     - POSIX
 
-        The 'Parameter expansion' and 'Pattern matching notation' syntaxes share both similarities and differences from the regular expressions.
-
         [Shell Command Language (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html)
 
         - [**2.6.2 Parameter Expansion**](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_06_02)
