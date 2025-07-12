@@ -16,10 +16,11 @@
         - [IEEE Std 1003.1-2024 - 9. Regular Expressions - 9.3 Basic Regular Expressions](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03) ([Archived](https://archive.is/20250518161456/https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html))
         - [Regular Expressions/POSIX Basic Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/POSIX_Basic_Regular_Expressions) ([Archived](https://archive.is/20241012215959/https://en.wikibooks.org/wiki/Regular_Expressions/POSIX_Basic_Regular_Expressions))
     - GNU
-        - POSIX BRE with GNU extensions
-        - Used in the GNU implementations of classic UNIX tools
+        - POSIX BRE with GNU extensions. Used in the GNU implementations of classic UNIX tools.
         - [GNU Regular Expression Extensions - Gnulib Regex Module](https://www.regular-expressions.info/gnu.html) ([Archived](https://archive.is/20250302183430/https://www.regular-expressions.info/gnu.html))
             > GNU’s implementation of these tools follows the [POSIX standard](https://www.regular-expressions.info/posix.html), with added GNU extensions. The effect of the GNU extensions is that both the [Basic Regular Expressions](https://www.regular-expressions.info/posix.html#bre) flavor and the [Extended Regular Expressions](https://www.regular-expressions.info/posix.html#ere) flavor provide exactly the same functionality. The only difference is that BRE’s will use backslashes to give various characters a special meaning, while ERE’s will use backslashes to take away the special meaning of the same characters.
+            > The GNU extensions make the BRE and ERE flavors identical in functionality.
+            > On top of what POSIX BRE provides as described above, the GNU extension provides \\? and \\+ as an alternative syntax to \\{0,1\\} and \\{1,\\}. It adds [alternation](https://www.regular-expressions.info/alternation.html) via \\|, something sorely missed in POSIX BREs. These extensions in fact mean that GNU BREs have exactly the same features as GNU EREs, except that +, ?, |, braces and parentheses need backslashes to give them a special meaning instead of take it away.
     - BusyBox
     - FreeBSD
     - macOS
@@ -28,11 +29,20 @@
         - [IEEE Std 1003.1-2024 - 9. Regular Expressions - 9.4 Extended Regular Expressions](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_04) ([Archived](https://archive.is/20250518161456/https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html))
         - [Regular Expressions/POSIX-Extended Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/POSIX-Extended_Regular_Expressions) ([Archived](https://archive.is/20241012220242/https://en.wikibooks.org/wiki/Regular_Expressions/POSIX-Extended_Regular_Expressions))
     - GNU
-        - POSIX ERE with GNU extensions
-        - Used in the GNU implementations of classic UNIX tools
+        - POSIX ERE with GNU extensions. Used in the GNU implementations of classic UNIX tools.
+        - [GNU Regular Expression Extensions - Gnulib Regex Module](https://www.regular-expressions.info/gnu.html)
+            > POSIX ERE does not support [backreferences](https://www.regular-expressions.info/backref.html). The GNU Extension adds them, using the same \\1 through \\9 syntax.
     - BusyBox
     - FreeBSD
     - macOS
+- Additional GNU extensions
+
+    - [GNU Regular Expression Extensions - Gnulib Regex Module](https://www.regular-expressions.info/gnu.html)
+
+        > The GNU extensions not only make both flavors identical. They also adds some new syntax and several brand new features. The [shorthand classes](https://www.regular-expressions.info/shorthand.html) \\w, \\W, \\s and \\S can be used instead of \[\[:alnum:\]\_\], \[^\[:alnum:\]\_\], \[\[:space:\]\] and \[^\[:space:\]\]. You can use these directly in the regex, but not inside bracket expressions. A backslash inside a bracket expression is always a literal.
+
+        > The new features are [word boundaries](https://www.regular-expressions.info/wordboundaries.html) and [anchors](https://www.regular-expressions.info/anchors.html). Like modern flavors, GNU supports \\b to match at a position that is at a word boundary, and \\B at a position that is not. \\< matches at a position at the start of a word, and \\> matches at the end of a word. The anchor \\\` (backtick) matches at the very start of the subject string, while \\' (single quote) matches at the very end. These are useful with tools that can match a regex against multiple lines of text at once, as then ^ will match at the start of a line, and $ at the end.
+
 - Perl Compatible Regular Expressions (PCRE)
     - [Regular Expressions/Perl-Compatible Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/Perl-Compatible_Regular_Expressions) ([Archived](https://archive.is/20241012203540/https://en.wikibooks.org/wiki/Regular_Expressions/Perl-Compatible_Regular_Expressions))
     - [Perl Compatible Regular Expressions - Wikipedia](https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions)
