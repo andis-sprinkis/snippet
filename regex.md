@@ -311,7 +311,7 @@
             > \[..\] the Bourne shell-compatible [sh(1)](https://man.freebsd.org/cgi/man.cgi?query=sh&sektion=1&format=html) as the default user shell. \[...\] [sh(1)](https://man.freebsd.org/cgi/man.cgi?query=sh&sektion=1&format=html) is very similar to Bash but with a much smaller feature-set.
 
     - macOS
-        - macOS uses GNU `bash` as the non-interactive shell and `zsh` as the interactive shell.
+        - macOS uses GNU `bash` as the non-interactive shell and `zsh` as the interactive shell. See the GNU `bash` details above.
         - `zsh`
             - [regular expression - What kind of patterns can I use in zsh parameter expansion? - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/557473/what-kind-of-patterns-can-i-use-in-zsh-parameter-expansion/557482#557482)
             - [zsh: 14 Expansion](https://zsh.sourceforge.io/Doc/Release/Expansion.html#Expansion)
