@@ -200,6 +200,10 @@
               >
               > Match using extended regular expressions. Treat each pattern specified as an ERE, as described in XBD [_9.4 Extended Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_04). If any entire ERE pattern matches some part of an input line excluding the terminating \<newline\>, the line shall be matched. A null ERE shall match every line.
 
+            - > **\-F**
+              >
+              > Match using fixed strings. Treat each pattern specified as a string instead of a regular expression. If an input line contains any of the patterns as a contiguous sequence of bytes, the line shall be matched. A null string shall match every line.
+
             - > **\-e** _pattern_list_
               >
               > Specify one or more patterns to be used during the search for input. The application shall ensure that patterns in _pattern_list_ are separated by a <newline>. A null pattern can be specified by two adjacent <newline> characters in _pattern_list_. Unless the **\-E** or **\-F** option is also specified, each pattern shall be treated as a BRE, as described in XBD [_9.3 Basic Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03). Multiple **\-e** and **\-f** options shall be accepted by the _grep_ utility. All of the specified patterns shall be used when matching lines, but the order of evaluation is unspecified.
@@ -231,6 +235,10 @@
             - > [`-e`](https://manp.gs/mac/1/grep#e) pattern, `--regexp=`pattern
               >
               > Specify a pattern used during the search of the input: an input line is selected if it matches any of the specified patterns. This option is most useful when multiple `-e` options are used to specify multiple patterns, or when a pattern begins with a dash (‘-’).
+
+            - > [`-i`](https://manp.gs/mac/1/grep#i), `--ignore-case`
+              >
+              > Perform case insensitive matching. By default, `grep` is case sensitive.
 
             - > [`--include`](https://manp.gs/mac/1/grep#include) pattern
               >
