@@ -39,10 +39,6 @@
     - [Regular Expressions/Shell Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/Shell_Regular_Expressions) ([Archived](https://archive.is/20241012203753/https://en.wikibooks.org/wiki/Regular_Expressions/Shell_Regular_Expressions))
     - See the 'Per application - Shell' section below.
 
-From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.freebsd.org/cgi/man.cgi?re_format):
-
-> Regular expressions ("REs"), as defined in IEEE Std 1003.2 ("POSIX.2"), come in two forms: modern REs (roughly those of [_egrep_(1)](https://man.freebsd.org/cgi/man.cgi?query=egrep&sektion=1&apropos=0&manpath=FreeBSD+14.3-RELEASE+and+Ports); 1003.2 calls these "extended" REs) and obsolete REs (roughly those of [_ed_(1)](https://man.freebsd.org/cgi/man.cgi?query=ed&sektion=1&apropos=0&manpath=FreeBSD+14.3-RELEASE+and+Ports); 1003.2 "basic" REs). Obsolete REs mostly exist for backward compatibility in some old programs; they will be discussed at the end. IEEE Std 1003.2 ("POSIX.2") leaves some aspects of RE syntax and semantics open; \`<\*\*>' marks decisions on these aspects that may not be fully portable to other IEEE Std 1003.2 ("POSIX.2") implementations.
-
 ## Per application
 
 - `ed`
@@ -118,7 +114,27 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
     - GNU
     - BusyBox
     - FreeBSD
+
         - [sed(1)](https://man.freebsd.org/cgi/man.cgi?query=sed&sektion=1&format=html)
+
+            > The regular expressions used in **sed**, by default, are basic regular ex- pressions (BREs, see [_re_format_(7)](https://man.freebsd.org/cgi/man.cgi?query=re_format&sektion=7&apropos=0&manpath=FreeBSD+14.3-RELEASE+and+Ports) for more information), but extended (modern) regular expressions can be used instead if the **\-E** flag is given.
+
+            > The **sed** utility is expected to be a superset of the IEEE Std 1003.2 ("POSIX.2") specification.
+
+            > The **\-E**, **\-I**, **\-a** and **\-i** options, the special meaning of **\-f** **\-**, the prefix- ing "+" in the second member of an address range, as well as the "I" flag to the address regular expression and substitution command are non-standard FreeBSD extensions and may not be available on other operating systems.
+
+            Options:
+
+            > **\-E** Interpret regular expressions as extended (modern) regular ex- pressions rather than basic regular expressions (BRE's). The [_re_format_(7)](https://man.freebsd.org/cgi/man.cgi?query=re_format&sektion=7&apropos=0&manpath=FreeBSD+14.3-RELEASE+and+Ports) manual page fully describes both formats.
+
+            ***
+
+            From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.freebsd.org/cgi/man.cgi?re_format):
+
+            > Regular expressions ("REs"), as defined in IEEE Std 1003.2 ("POSIX.2"), come in two forms: modern REs (roughly those of [_egrep_(1)](https://man.freebsd.org/cgi/man.cgi?query=egrep&sektion=1&apropos=0&manpath=FreeBSD+14.3-RELEASE+and+Ports); 1003.2 calls these "extended" REs) and obsolete REs (roughly those of [_ed_(1)](https://man.freebsd.org/cgi/man.cgi?query=ed&sektion=1&apropos=0&manpath=FreeBSD+14.3-RELEASE+and+Ports); 1003.2 "basic" REs). Obsolete REs mostly exist for backward compatibility in some old programs; they will be discussed at the end. IEEE Std 1003.2 ("POSIX.2") leaves some aspects of RE syntax and semantics open; \`<\*\*>' marks decisions on these aspects that may not be fully portable to other IEEE Std 1003.2 ("POSIX.2") implementations.
+
+            Same applies to the macOS version of `sed`.
+
     - macOS
 
         - [SED(1) - June 10, 2020 - macOS 15.4](https://manp.gs/mac/1/sed) ([Archived](https://archive.is/20250712115551/https://manp.gs/mac/1/sed))
@@ -305,3 +321,4 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
 - [Regular Expressions/Print version - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/Print_version) ([Archived](https://archive.is/20241012203010/https://en.wikibooks.org/wiki/Regular_Expressions/Print_version))
 - [Regular Expression Engine Comparison Chart](https://gist.github.com/CMCDragonkai/6c933f4a7d713ef712145c5eb94a1816)
 - [macOS man pages](https://manp.gs/mac/)
+- [FreeBSD Manual Pages](https://man.freebsd.org/cgi/man.cgi)
