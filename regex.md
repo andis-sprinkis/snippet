@@ -12,18 +12,25 @@
     - FreeBSD
     - macOS
 - Basic Regular Expressions (BRE)
+
     - POSIX
         - [IEEE Std 1003.1-2024 - 9. Regular Expressions - 9.3 Basic Regular Expressions](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03) ([Archived](https://archive.is/20250518161456/https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html))
         - [Regular Expressions/POSIX Basic Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/POSIX_Basic_Regular_Expressions) ([Archived](https://archive.is/20241012215959/https://en.wikibooks.org/wiki/Regular_Expressions/POSIX_Basic_Regular_Expressions))
     - GNU
+
         - POSIX BRE with GNU extensions. Used in the GNU implementations of classic UNIX tools.
         - [GNU Regular Expression Extensions - Gnulib Regex Module](https://www.regular-expressions.info/gnu.html) ([Archived](https://archive.is/20250302183430/https://www.regular-expressions.info/gnu.html))
+
             > GNU’s implementation of these tools follows the [POSIX standard](https://www.regular-expressions.info/posix.html), with added GNU extensions. The effect of the GNU extensions is that both the [Basic Regular Expressions](https://www.regular-expressions.info/posix.html#bre) flavor and the [Extended Regular Expressions](https://www.regular-expressions.info/posix.html#ere) flavor provide exactly the same functionality. The only difference is that BRE’s will use backslashes to give various characters a special meaning, while ERE’s will use backslashes to take away the special meaning of the same characters.
+
             > The GNU extensions make the BRE and ERE flavors identical in functionality.
+
             > On top of what POSIX BRE provides as described above, the GNU extension provides \\? and \\+ as an alternative syntax to \\{0,1\\} and \\{1,\\}. It adds [alternation](https://www.regular-expressions.info/alternation.html) via \\|, something sorely missed in POSIX BREs. These extensions in fact mean that GNU BREs have exactly the same features as GNU EREs, except that +, ?, |, braces and parentheses need backslashes to give them a special meaning instead of take it away.
+
     - BusyBox
     - FreeBSD
     - macOS
+
 - Extended Regular Expressions (ERE)
     - POSIX
         - [IEEE Std 1003.1-2024 - 9. Regular Expressions - 9.4 Extended Regular Expressions](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_04) ([Archived](https://archive.is/20250518161456/https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html))
@@ -193,13 +200,67 @@
               >
               > Match using extended regular expressions. Treat each pattern specified as an ERE, as described in XBD [_9.4 Extended Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_04). If any entire ERE pattern matches some part of an input line excluding the terminating \<newline\>, the line shall be matched. A null ERE shall match every line.
 
+            - > **\-e** _pattern_list_
+              >
+              > Specify one or more patterns to be used during the search for input. The application shall ensure that patterns in _pattern_list_ are separated by a <newline>. A null pattern can be specified by two adjacent <newline> characters in _pattern_list_. Unless the **\-E** or **\-F** option is also specified, each pattern shall be treated as a BRE, as described in XBD [_9.3 Basic Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03). Multiple **\-e** and **\-f** options shall be accepted by the _grep_ utility. All of the specified patterns shall be used when matching lines, but the order of evaluation is unspecified.
+
+            - > **\-f** _pattern_file_
+              >
+              > Read one or more patterns from the file named by the pathname _pattern_file_. Patterns in _pattern_file_ shall be terminated by a <newline>. A null pattern can be specified by an empty line in _pattern_file_. Unless the **\-E** or **\-F** option is also specified, each pattern shall be treated as a BRE, as described in XBD [_9.3 Basic Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03).
+
+            - > **\-i**
+              >
+              > Perform pattern matching in a case-insensitive manner; see XBD [_9.2 Regular Expression General Requirements_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_02).
+
     - GNU
     - BusyBox
         - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html)
     - FreeBSD
     - macOS
 
-    - `egrep`, `grep`, `rgrep`
+        - [GREP(1)](https://manp.gs/mac/1/grep)
+
+            > `grep` is used for simple patterns and basic regular expressions (BREs); `egrep` can handle extended regular expressions (EREs). See [re_format(7)](https://manp.gs/mac/7/re_format) for more information on regular expressions. `fgrep` is quicker than both `grep` and `egrep`, but can only handle fixed patterns (i.e., it does not interpret regular expressions). Patterns may consist of one or more lines, allowing any of the pattern lines to match a portion of the input.
+
+            Options:
+
+            - > [`-E`](https://manp.gs/mac/1/grep#E), `--extended-regexp`
+              >
+              > Interpret pattern as an extended regular expression (i.e., force `grep` to behave as `egrep`).
+
+            - > [`-e`](https://manp.gs/mac/1/grep#e) pattern, `--regexp=`pattern
+              >
+              > Specify a pattern used during the search of the input: an input line is selected if it matches any of the specified patterns. This option is most useful when multiple `-e` options are used to specify multiple patterns, or when a pattern begins with a dash (‘-’).
+
+            - > [`--include`](https://manp.gs/mac/1/grep#include) pattern
+              >
+              > If specified, only files matching the given filename pattern are searched. Note that `--include` and `--exclude` patterns are processed in the order given. If a name matches multiple patterns, the latest matching rule wins. Patterns are matched to the full path specified, not only to the filename component.
+
+            - > [`--include-dir`](https://manp.gs/mac/1/grep#include-dir) pattern
+              >
+              > If `-R` is specified, only directories matching the given filename pattern are searched. Note that `--include-dir` and `--exclude-dir` patterns are processed in the order given. If a name matches multiple patterns, the latest matching rule wins.
+
+            - > [`--exclude`](https://manp.gs/mac/1/grep#exclude) pattern
+              >
+              > If specified, it excludes files matching the given filename pattern from the search. Note that `--exclude` and `--include` patterns are processed in the order given. If a name matches multiple patterns, the latest matching rule wins. If no `--include` pattern is specified, all files are searched that are not excluded. Patterns are matched to the full path specified, not only to the filename component.
+
+            - > [`--exclude-dir`](https://manp.gs/mac/1/grep#exclude-dir) pattern
+              >
+              > If `-R` is specified, it excludes directories matching the given filename pattern from the search. Note that `--exclude-dir` and `--include-dir` patterns are processed in the order given. If a name matches multiple patterns, the latest matching rule wins. If no `--include-dir` pattern is specified, all directories are searched that are not excluded.
+
+            - > [`-G`](https://manp.gs/mac/1/grep#G), `--basic-regexp`
+              >
+              > Interpret pattern as a basic regular expression (i.e., force `grep` to behave as traditional `grep`).
+
+            - > [`-w`](https://manp.gs/mac/1/grep#w), `--word-regexp`
+              >
+              > The expression is searched for as a word (as if surrounded by ‘\[\[:<:\]\]’ and ‘\[\[:>:\]\]’; see [re_format(7)](https://manp.gs/mac/7/re_format)). This option has no effect if `-x` is also specified.
+
+            - > [`-x`](https://manp.gs/mac/1/grep#x), `--line-regexp`
+              >
+              > Only input lines selected against an entire fixed string or regular expression are considered to be matching lines.
+
+    - `egrep`, `fgrep`, `rgrep`
 
         - POSIX
 
@@ -233,10 +294,20 @@
 
                 > **grep** is used for simple patterns and basic regular expressions (BREs); **egrep** can handle extended regular expressions (EREs). See [_re_format_(7)](https://man.freebsd.org/cgi/man.cgi?query=re_format&sektion=7&apropos=0&manpath=FreeBSD+14.3-RELEASE+and+Ports) for more information on regular expressions. **fgrep** is quicker than both **grep** and **egrep**, but can only handle fixed patterns (i.e., it does not interpret regular expressions). Patterns may consist of one or more lines, allowing any of the pattern lines to match a portion of the input.
 
+                - [bzgrep(1)](https://man.freebsd.org/cgi/man.cgi?query=bzgrep&apropos=0&sektion=1&manpath=FreeBSD+14.3-RELEASE+and+Ports&arch=default&format=html)
+
+                    > zgrep, zegrep, zfgrep, bzgrep, bzegrep, bzfgrep, lzgrep, lzegrep, lzfgrep, xzgrep, xzegrep, xzfgrep, zstdgrep, zstdegrep, zstdfgrep -- grep compressed files
+
+                    > Allow [_grep_(1)](https://man.freebsd.org/cgi/man.cgi?query=grep&sektion=1&apropos=0&manpath=FreeBSD+14.3-RELEASE+and+Ports) to read compressed files.
+
         - BusyBox
             - Ships `fgrep` and `egrep`.
             - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html)
         - macOS
+
+            [GREP(1)](https://manp.gs/mac/1/grep)
+
+            > `zgrep`, `zegrep`, and `zfgrep` act like `grep`, `egrep`, and `fgrep`, respectively, but accept input files compressed with the [compress(1)](https://manp.gs/mac/1/compress) or [gzip(1)](https://manp.gs/mac/1/gzip) compression utilities. `bzgrep`, `bzegrep`, and `bzfgrep` act like `grep`, `egrep`, and `fgrep`, respectively, but accept input files compressed with the [bzip2(1)](https://manp.gs/mac/1/bzip2) compression utility.
 
 - `find`
 
