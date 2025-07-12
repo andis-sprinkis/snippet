@@ -39,7 +39,35 @@
     - BusyBox
     - [Regular Expressions/Shell Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/Shell_Regular_Expressions) ([Archived](https://archive.is/20241012203753/https://en.wikibooks.org/wiki/Regular_Expressions/Shell_Regular_Expressions))
 
+From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.freebsd.org/cgi/man.cgi?re_format):
+
+> Regular expressions ("REs"), as defined in IEEE Std 1003.2 ("POSIX.2"), come in two forms: modern REs (roughly those of [_egrep_(1)](https://man.freebsd.org/cgi/man.cgi?query=egrep&sektion=1&apropos=0&manpath=FreeBSD+14.3-RELEASE+and+Ports); 1003.2 calls these "extended" REs) and obsolete REs (roughly those of [_ed_(1)](https://man.freebsd.org/cgi/man.cgi?query=ed&sektion=1&apropos=0&manpath=FreeBSD+14.3-RELEASE+and+Ports); 1003.2 "basic" REs). Obsolete REs mostly exist for backward compatibility in some old programs; they will be discussed at the end. IEEE Std 1003.2 ("POSIX.2") leaves some aspects of RE syntax and semantics open; \`<\*\*>' marks decisions on these aspects that may not be fully portable to other IEEE Std 1003.2 ("POSIX.2") implementations.
+
 ## Per application
+
+- `ed`
+
+    - POSIX
+        - [ed (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/ed.html)
+    - GNU
+    - BusyBox
+    - macOS
+
+- `ex`
+
+    - POSIX
+        - [ex (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/ex.html)
+    - GNU
+    - BusyBox
+    - macOS
+
+- `vi`
+
+    - POSIX
+        - [vi (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/vi.html)
+    - GNU
+    - BusyBox
+    - macOS
 
 - `awk`
 
@@ -53,7 +81,7 @@
 
     - GNU
     - BusyBox
-    - FreeBSD / macOS
+    - macOS
 
 - `sed`
 
@@ -71,7 +99,27 @@
 
     - GNU
     - BusyBox
-    - FreeBSD / macOS
+    - FreeBSD
+        - [sed(1)](https://man.freebsd.org/cgi/man.cgi?query=sed&sektion=1&format=html)
+    - macOS
+
+        - [SED(1) - June 10, 2020 - macOS 15.4](https://manp.gs/mac/1/sed) ()
+
+            > The `sed` utility is expected to be a superset of the IEEE Std 1003.2 (“POSIX.2”) specification.
+
+            > The `-E`, `-I`, `-a` and `-i` options, the special meaning of `-f` `-`, the prefixing “+” in the second member of an address range, as well as the “I” flag to the address regular expression and substitution command are non-standard FreeBSD extensions and may not be available on other operating systems.
+
+            > The regular expressions used in `sed`, by default, are basic regular expressions (BREs, see [re_format(7)](https://manp.gs/mac/7/re_format) for more information), but extended (modern) regular expressions can be used instead if the `-E` flag is given.
+
+            Options:
+
+            - > [`-E`](https://manp.gs/mac/1/sed#E)
+
+                > Interpret regular expressions as extended (modern) regular expressions rather than basic regular expressions (BRE's). The [re_format(7)](https://manp.gs/mac/7/re_format) manual page fully describes both formats.
+
+            - > [`-H`](https://manp.gs/mac/1/sed#H)
+
+                > Enable enhanced features in the regular expression syntax. Note that this option is independent of the `-E` option. See [re_format(7)](https://manp.gs/mac/7/re_format) for details.
 
 - `grep`
 
@@ -88,7 +136,7 @@
               > Match using extended regular expressions. Treat each pattern specified as an ERE, as described in XBD [_9.4 Extended Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_04). If any entire ERE pattern matches some part of an input line excluding the terminating \<newline\>, the line shall be matched. A null ERE shall match every line.
 
     - GNU
-    - FreeBSD / macOS
+    - macOS
 
     - `egrep`, `grep`, `rgrep`
 
@@ -106,7 +154,7 @@
 
             - Deprecated by GNU.
 
-            - [Ubuntu Manpage: grep, egrep, fgrep, rgrep - print lines matching a pattern](https://manpages.ubuntu.com/manpages/bionic/en/man1/grep.1.html)
+            - (OLD) [Ubuntu Manpage: grep, egrep, fgrep, rgrep - print lines matching a pattern](https://manpages.ubuntu.com/manpages/bionic/en/man1/grep.1.html)
 
                 > In addition, the variant programs **egrep**, **fgrep** and **rgrep** are the same as **grep** **\-E**, **grep** **\-F**, and **grep** **\-r**, respectively. These variants are deprecated, but are provided for backward compatibility.
 
@@ -116,9 +164,16 @@
 
                 > 7th Edition Unix had commands `egrep` and `fgrep` that were the counterparts of the modern ‘grep -E’ and ‘grep -F’. Although breaking up `grep` into three programs was perhaps useful on the small computers of the 1970s, `egrep` and `fgrep` were deemed obsolescent by POSIX in 1992, removed from POSIX in 2001, deprecated by GNU Grep 2.5.3 in 2007, and changed to issue obsolescence warnings by GNU Grep 3.8 in 2022; eventually, they are planned to be removed entirely.
 
+        - FreeBSD
+            - Ships `fgrep`, `egrep` and `rgrep`.
+
+            - [grep(1)](https://man.freebsd.org/cgi/man.cgi?query=grep&apropos=0&sektion=1&manpath=FreeBSD+14.3-RELEASE+and+Ports&arch=default&format=html)
+
+                > **grep** is used for simple patterns and basic regular expressions (BREs); **egrep** can handle extended regular expressions (EREs). See [_re_format_(7)](https://man.freebsd.org/cgi/man.cgi?query=re_format&sektion=7&apropos=0&manpath=FreeBSD+14.3-RELEASE+and+Ports) for more information on regular expressions. **fgrep** is quicker than both **grep** and **egrep**, but can only handle fixed patterns (i.e., it does not interpret regular expressions). Patterns may consist of one or more lines, allowing any of the pattern lines to match a portion of the input.
+
         - BusyBox
             - Ships `fgrep` and `egrep`.
-        - FreeBSD / macOS
+        - macOS
 
 - `find`
 
@@ -132,7 +187,7 @@
               > The primary shall evaluate as true if the current pathname matches _pattern_ using the pattern matching notation described in [_2.14 Pattern Matching Notation_](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_14). The additional rules in [_2.14.3 Patterns Used for Filename Expansion_](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_14_03) do not apply as this is a matching operation, not an expansion.
     - GNU
     - BusyBox
-    - FreeBSD / macOS
+    - macOS
 
 - `tr`
 
@@ -144,7 +199,7 @@
 
     - GNU
     - BusyBox
-    - FreeBSD / macOS
+    - macOS
 
 - Shell
 
@@ -179,3 +234,4 @@
 
 - [Regular Expressions/Print version - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/Print_version) ([Archived](https://archive.is/20241012203010/https://en.wikibooks.org/wiki/Regular_Expressions/Print_version))
 - [Regular Expression Engine Comparison Chart](https://gist.github.com/CMCDragonkai/6c933f4a7d713ef712145c5eb94a1816)
+- [macOS man pages](https://manp.gs/mac/)
