@@ -18,6 +18,8 @@
     - GNU
         - POSIX BRE with GNU extensions
         - Used in the GNU implementations of classic UNIX tools
+        - [GNU Regular Expression Extensions - Gnulib Regex Module](https://www.regular-expressions.info/gnu.html) ([Archived](https://archive.is/20250302183430/https://www.regular-expressions.info/gnu.html))
+            > GNU’s implementation of these tools follows the [POSIX standard](https://www.regular-expressions.info/posix.html), with added GNU extensions. The effect of the GNU extensions is that both the [Basic Regular Expressions](https://www.regular-expressions.info/posix.html#bre) flavor and the [Extended Regular Expressions](https://www.regular-expressions.info/posix.html#ere) flavor provide exactly the same functionality. The only difference is that BRE’s will use backslashes to give various characters a special meaning, while ERE’s will use backslashes to take away the special meaning of the same characters.
     - BusyBox
     - FreeBSD
     - macOS
@@ -79,6 +81,11 @@
 
     - GNU
     - BusyBox
+
+        - [Busybox vi tutorial - Krzysztof Adamski](https://k.japko.eu/busybox-vi-tutorial.html)
+
+            > This tutorial assumes that you have `busybox vi` with all additional features enabled. Note however, that VI_REGEX_SEARCH is disabled in many installations which disables using regular expressions when searching.
+
     - FreeBSD
     - macOS
 
@@ -113,6 +120,7 @@
 
     - GNU
     - BusyBox
+        - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html)
     - FreeBSD
 
         - [sed(1)](https://man.freebsd.org/cgi/man.cgi?query=sed&sektion=1&format=html)
@@ -232,6 +240,7 @@
               > The primary shall evaluate as true if the current pathname matches _pattern_ using the pattern matching notation described in [_2.14 Pattern Matching Notation_](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_14). The additional rules in [_2.14.3 Patterns Used for Filename Expansion_](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_14_03) do not apply as this is a matching operation, not an expansion.
     - GNU
     - BusyBox
+        - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html)
     - FreeBSD
     - macOS
 
@@ -243,10 +252,8 @@
 
             > It should be noted that, despite similarities in appearance, the string operands used by _tr_ are not regular expressions.
 
-    - GNU
-    - BusyBox
-    - FreeBSD
-    - macOS
+    - GNU, BusyBox, FreeBSD, macOS
+        - Don't add any functionality related to regular expressions.
 
 - Shell
 
@@ -302,6 +309,9 @@
 
     - BusyBox
         - `ash`
+            - [Almquist shell - Wikipedia](https://en.wikipedia.org/wiki/Almquist_shell)
+                - [README « shell - busybox - BusyBox: The Swiss Army Knife of Embedded Linux](https://git.busybox.net/busybox/tree/shell/README)
+                - [ash variants - BusyBox](https://www.in-ulm.de/~mascheck/various/ash/#busybox)
     - FreeBSD
 
         - [sh(1)](https://man.freebsd.org/cgi/man.cgi?query=sh&sektion=1&format=html)
