@@ -184,7 +184,7 @@
 
                 > When the `REG_ENHANCED` flag is passed to one of the [`regcomp`](https://manp.gs/mac/7/re_format#regcomp)() variants, additional features are activated. Like the enhanced `regex` implementations in scripting languages such as [perl(1)](https://manp.gs/mac/1/perl) and [python(1)](https://manp.gs/mac/1/python), these additional features may conflict with the IEEE Std 1003.2 (“POSIX.2”) standards in some ways. Use this with care in situations which require portability (including to past versions of the Mac OS X using the previous `regex` implementation).
 
-                This option does not exist in the FreeBSD `sed`.
+                **This option does not exist in the FreeBSD `sed`.**
 
 - `grep`
 
