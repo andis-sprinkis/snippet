@@ -206,7 +206,13 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
 
     - POSIX
 
+        The 'Parameter expansion' and 'Pattern matching notation' syntaxes share both similarities and differences from the regular expressions.
+
         [Shell Command Language (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html)
+
+        - [**2.6.2 Parameter Expansion**](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_06_02)
+
+            > The following four varieties of parameter expansion provide for character substring processing. In each case, pattern matching notation (see [2.14 Pattern Matching Notation](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_14)), rather than regular expression notation, shall be used to evaluate the patterns. \[...\]
 
         - [**2.14 Pattern Matching Notation**](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_14)
 
@@ -243,6 +249,7 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
         - macOS uses GNU `bash` as the non-interactive shell and `zsh` as the interactive shell.
         - `zsh`
             - [regular expression - What kind of patterns can I use in zsh parameter expansion? - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/557473/what-kind-of-patterns-can-i-use-in-zsh-parameter-expansion/557482#557482)
+            - [zsh: 14 Expansion](https://zsh.sourceforge.io/Doc/Release/Expansion.html#Expansion)
 
 ## Resources
 
