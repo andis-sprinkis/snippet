@@ -9,6 +9,8 @@
             - > The first (historical) version is described as part of the _[regexp()](https://pubs.opengroup.org/onlinepubs/7908799/xsh/regexp.html)_ \[[Archived](https://archive.is/20130730093704/http://pubs.opengroup.org/onlinepubs/7908799/xsh/regexp.html)\] function in the **XSH** specification.
         - [Regular Expressions/Simple Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/Simple_Regular_Expressions) ([Archived](https://archive.is/20241012203436/https://en.wikibooks.org/wiki/Regular_Expressions/Simple_Regular_Expressions))
     - BusyBox
+    - FreeBSD
+    - macOS
 - Basic Regular Expressions (BRE)
     - POSIX
         - [IEEE Std 1003.1-2024 - 9. Regular Expressions - 9.3 Basic Regular Expressions](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03) ([Archived](https://archive.is/20250518161456/https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html))
@@ -17,6 +19,8 @@
         - POSIX BRE with GNU extensions
         - Used in the GNU implementations of classic UNIX tools
     - BusyBox
+    - FreeBSD
+    - macOS
 - Extended Regular Expressions (ERE)
     - POSIX
         - [IEEE Std 1003.1-2024 - 9. Regular Expressions - 9.4 Extended Regular Expressions](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_04) ([Archived](https://archive.is/20250518161456/https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html))
@@ -25,6 +29,8 @@
         - POSIX ERE with GNU extensions
         - Used in the GNU implementations of classic UNIX tools
     - BusyBox
+    - FreeBSD
+    - macOS
 - Perl Compatible Regular Expressions (PCRE)
     - [Regular Expressions/Perl-Compatible Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/Perl-Compatible_Regular_Expressions) ([Archived](https://archive.is/20241012203540/https://en.wikibooks.org/wiki/Regular_Expressions/Perl-Compatible_Regular_Expressions))
     - [Perl Compatible Regular Expressions - Wikipedia](https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions)
@@ -45,6 +51,7 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
         - [ed (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/ed.html)
     - GNU
     - BusyBox
+    - FreeBSD
     - macOS
 
 - `ex`
@@ -53,6 +60,7 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
         - [ex (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/ex.html)
     - GNU
     - BusyBox
+    - FreeBSD
     - macOS
 
 - `vi`
@@ -61,6 +69,7 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
         - [vi (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/vi.html)
     - GNU
     - BusyBox
+    - FreeBSD
     - macOS
 
 - `awk`
@@ -75,6 +84,7 @@ From [FreeBSD - re_format(7) - Miscellaneous Information Manual](https://man.fre
 
     - GNU
     - BusyBox
+    - FreeBSD
     - macOS
 
 - `sed`
