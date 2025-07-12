@@ -2,7 +2,7 @@
 
 - Simple Regular Expressions (SRE)
     - Used on Unix based systems for backwards compatibility
-    - Most regular-expression-aware Unix utilities, use it by default while providing support for extended regular expressions with command line arguments (❓)
+    - (❓) Most regular-expression-aware Unix utilities, use it by default while providing support for extended regular expressions with command line arguments
     - Deprecated on POSIX compliant systems and should not be used by new utilities
     - POSIX
         - [Regular Expressions (The Single UNIX ® Specification, Version 2, Copyright © 1997 The Open Group)](https://pubs.opengroup.org/onlinepubs/7908799/xbd/re.html) ([Archived](https://archive.is/MdXc1))
