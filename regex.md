@@ -232,6 +232,10 @@
               >
               > Interpret pattern as an extended regular expression (i.e., force `grep` to behave as `egrep`).
 
+            - > [`-F`](https://manp.gs/mac/1/grep#F), `--fixed-strings`
+              >
+              > Interpret pattern as a set of fixed strings (i.e., force `grep` to behave as `fgrep`).
+
             - > [`-e`](https://manp.gs/mac/1/grep#e) pattern, `--regexp=`pattern
               >
               > Specify a pattern used during the search of the input: an input line is selected if it matches any of the specified patterns. This option is most useful when multiple `-e` options are used to specify multiple patterns, or when a pattern begins with a dash (‘-’).
