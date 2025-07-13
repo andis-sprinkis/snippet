@@ -54,7 +54,7 @@
     - [Regular Expressions/Perl-Compatible Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/Perl-Compatible_Regular_Expressions) ([Archived](https://archive.is/20241012203540/https://en.wikibooks.org/wiki/Regular_Expressions/Perl-Compatible_Regular_Expressions))
     - [Perl Compatible Regular Expressions - Wikipedia](https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions)
         - > While PCRE originally aimed at feature-equivalence with Perl, the two implementations are not fully equivalent. During the PCRE 7.x and Perl 5.9.x phase, the two projects coordinated development, with features being ported between them in both directions. As of Perl 5.10, PCRE is also available as a replacement for Perl's default regular-expression engine through the `re::engine::PCRE` module.
-- The Shell pattern matching notation
+- The Shell pattern matching notation, parameter expansion
     - [Regular Expressions/Shell Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/Shell_Regular_Expressions) ([Archived](https://archive.is/20241012203753/https://en.wikibooks.org/wiki/Regular_Expressions/Shell_Regular_Expressions))
     - See the 'Per application - Shell' section below.
 
