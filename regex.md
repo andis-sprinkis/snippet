@@ -50,6 +50,12 @@
 
         > The new features are [word boundaries](https://www.regular-expressions.info/wordboundaries.html) and [anchors](https://www.regular-expressions.info/anchors.html). Like modern flavors, GNU supports \\b to match at a position that is at a word boundary, and \\B at a position that is not. \\< matches at a position at the start of a word, and \\> matches at the end of a word. The anchor \\\` (backtick) matches at the very start of the subject string, while \\' (single quote) matches at the very end. These are useful with tools that can match a regex against multiple lines of text at once, as then ^ will match at the start of a line, and $ at the end.
 
+- Emacs Regular Expressions
+
+    - Used in Emacs and the GNU findutils.
+    - [Regular Expressions/Emacs Regular Expressions - Wikibooks, open books for an open world](https://en.wikibooks.org/wiki/Regular_Expressions/Emacs_Regular_Expressions)
+    - [EmacsWiki: Regular Expression](https://www.emacswiki.org/emacs/RegularExpression)
+
 - Perl Compatible Regular Expressions (PCRE)
     - [Regular Expressions/Perl-Compatible Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/Perl-Compatible_Regular_Expressions) ([Archived](https://archive.is/20241012203540/https://en.wikibooks.org/wiki/Regular_Expressions/Perl-Compatible_Regular_Expressions))
     - [Perl Compatible Regular Expressions - Wikipedia](https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions)
@@ -345,6 +351,12 @@
 
                 > find: Unknown regular expression type ‘help’; valid types are ‘findutils-default’, ‘ed’, ‘emacs’, ‘gnu-awk’, ‘grep’, ‘posix-awk’, ‘awk’, ‘posix-basic’, ‘posix-egrep’, ‘egrep’, ‘posix-extended’, ‘posix-minimal-basic’, ‘sed’.
 
+                [Regular Expressions/Emacs Regular Expressions - Wikibooks, open books for an open world](https://en.wikibooks.org/wiki/Regular_Expressions/Emacs_Regular_Expressions)
+
+                [GNU Findutils 4.10.0 - 8.5 Regular Expressions](https://www.gnu.org/software/findutils/manual/html_mono/find.html#Regular-Expressions):
+
+                > Both `find` and `locate` provide an option which allows selecting an alternative regular expression syntax;
+
             - > -iregex pattern
               >
               > Like -regex, but the match is case insensitive.
@@ -353,7 +365,11 @@
               >
               > File name matches regular expression pattern. This is a match on the whole path, not a search. For example, to match a file named ./fubar3, you can use the regular expression `.*bar.` or `.*b.*3`, but not `f.*r3`. The regular expressions understood by find are by default Emacs Regular Expressions, but this can be changed with the -regextype option.
 
-            The `-lname`, `-name`, `-path`, `-wholename`, `-ilname`, `-context` options *pattern* argument refers to 'shell pattern', not regular expression.
+            The `-lname`, `-name`, `-path`, `-wholename`, `-ilname`, `-context` options _pattern_ argument refers to 'shell pattern', not regular expression.
+
+            [GNU Findutils 4.10.0 - 2.3.4 Shell Pattern Matching](https://www.gnu.org/software/findutils/manual/html_mono/find.html#Shell-Pattern-Matching)
+
+            The shell pattern matching syntax described above closely resembles the one of GNU `bash`.
 
     - BusyBox
         - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html)
