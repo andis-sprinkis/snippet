@@ -143,7 +143,13 @@
 
     - GNU
     - BusyBox
-        - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html)
+
+        - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html#sed)
+
+            Options:
+
+            - > -r Use extended regex syntax
+
     - FreeBSD
 
         - [sed(1)](https://man.freebsd.org/cgi/man.cgi?query=sed&sektion=1&format=html)
@@ -224,7 +230,13 @@
 
     - GNU
     - BusyBox
-        - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html)
+
+        - [BusyBox - Command help - grep](https://www.busybox.net/downloads/BusyBox.html#grep)
+
+            Options:
+
+            - > -E PATTERN is an extended regular expression
+
     - FreeBSD
     - macOS
 
@@ -320,7 +332,8 @@
 
         - BusyBox
             - Ships `fgrep` and `egrep`.
-            - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html)
+            - [BusyBox - Command help - egrep](https://www.busybox.net/downloads/BusyBox.html#egrep)
+            - [BusyBox - Command help - fgrep](https://www.busybox.net/downloads/BusyBox.html#fgrep)
         - macOS
 
             [GREP(1)](https://manp.gs/mac/1/grep)
@@ -365,14 +378,24 @@
               >
               > File name matches regular expression pattern. This is a match on the whole path, not a search. For example, to match a file named ./fubar3, you can use the regular expression `.*bar.` or `.*b.*3`, but not `f.*r3`. The regular expressions understood by find are by default Emacs Regular Expressions, but this can be changed with the -regextype option.
 
-            The `-lname`, `-name`, `-path`, `-wholename`, `-ilname`, `-context` options _pattern_ argument refers to 'shell pattern', not regular expression.
+            The `-lname`, `-name`, `-iname`, `-path`, `-wholename`, `-ilname`, `-lname`, `-context` options _pattern_ argument refers to 'shell pattern', not regular expression.
 
             [GNU Findutils 4.10.0 - 2.3.4 Shell Pattern Matching](https://www.gnu.org/software/findutils/manual/html_mono/find.html#Shell-Pattern-Matching)
 
             The shell pattern matching syntax described above closely resembles the one of GNU `bash`.
 
     - BusyBox
-        - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html)
+
+        - [BusyBox - Command help - find](https://www.busybox.net/downloads/BusyBox.html#find)
+
+            Options:
+
+            - > -regex PATTERN Path matches regex PATTERN
+
+            The `-name`, `-path`, `iname` options _pattern_ argument refers to a POSIX compliant shell pattern matching syntax, not regular expression.
+
+            > BusyBox provides a fairly complete POSIX environment for any small or embedded system.
+
     - FreeBSD
         - [find](https://man.freebsd.org/cgi/man.cgi?query=find&apropos=0&sektion=0&manpath=FreeBSD+14.3-RELEASE+and+Ports&arch=default&format=html)
     - macOS
@@ -388,6 +411,34 @@
 
     - GNU, BusyBox, FreeBSD, macOS
         - Don't add any functionality related to regular expressions.
+
+- `pkill`
+
+    - POSIX
+        - Not part of POSIX.
+    - GNU
+    - BusyBox
+
+        - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html#pkill)
+
+            > Send a signal to process(es) selected by regex PATTERN
+
+    - FreeBSD
+    - macOS
+
+- `pgrep`
+
+    - POSIX
+        - Not part of POSIX.
+    - GNU
+    - BusyBox
+
+        - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html#pgrep)
+
+            > Display process(es) selected by regex PATTERN
+
+    - FreeBSD
+    - macOS
 
 - Shell
 
