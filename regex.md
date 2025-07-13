@@ -335,7 +335,9 @@
     - BusyBox
         - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html)
     - FreeBSD
+        - [find](https://man.freebsd.org/cgi/man.cgi?query=find&apropos=0&sektion=0&manpath=FreeBSD+14.3-RELEASE+and+Ports&arch=default&format=html)
     - macOS
+        - [FIND(1)](https://manp.gs/mac/1/find)
 
 - `tr`
 
