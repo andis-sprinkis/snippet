@@ -332,6 +332,29 @@
               >
               > The primary shall evaluate as true if the current pathname matches _pattern_ using the pattern matching notation described in [_2.14 Pattern Matching Notation_](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_14). The additional rules in [_2.14.3 Patterns Used for Filename Expansion_](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html#tag_19_14_03) do not apply as this is a matching operation, not an expansion.
     - GNU
+
+        - `man find` (findutils 4.10.0-3)
+
+            Options:
+
+            - > -regextype type
+              >
+              > Changes the regular expression syntax understood by -regex and -iregex tests which occur later on the command line. To see which regular expression types are known, use -regextype help. The Texinfo documentation (see SEE ALSO) explains the meaning of and differences between the various types of regular expression. If you do not use this option, find behaves as if the regular expression type emacs had been specified.
+
+                The `find -regextype help` output:
+
+                > find: Unknown regular expression type ‘help’; valid types are ‘findutils-default’, ‘ed’, ‘emacs’, ‘gnu-awk’, ‘grep’, ‘posix-awk’, ‘awk’, ‘posix-basic’, ‘posix-egrep’, ‘egrep’, ‘posix-extended’, ‘posix-minimal-basic’, ‘sed’.
+
+            - > -iregex pattern
+              >
+              > Like -regex, but the match is case insensitive.
+
+            - > -regex pattern
+              >
+              > File name matches regular expression pattern. This is a match on the whole path, not a search. For example, to match a file named ./fubar3, you can use the regular expression `.*bar.` or `.*b.*3`, but not `f.*r3`. The regular expressions understood by find are by default Emacs Regular Expressions, but this can be changed with the -regextype option.
+
+            The `-lname`, `-name`, `-path`, `-wholename`, `-ilname`, `-context` options *pattern* argument refers to 'shell pattern', not regular expression.
+
     - BusyBox
         - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html)
     - FreeBSD
