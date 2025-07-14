@@ -229,13 +229,99 @@
               > Perform pattern matching in a case-insensitive manner; see XBD [_9.2 Regular Expression General Requirements_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_02).
 
     - GNU
+
+        - [GNU Grep 3.12](https://www.gnu.org/software/grep/manual/grep.html)
+
+            > Regular expressions are constructed analogously to arithmetic expressions, by using various operators to combine smaller expressions. `grep` understands three different versions of regular expression syntax: basic (BRE), extended (ERE), and Perl-compatible (PCRE). In GNU `grep`, basic and extended regular expressions are merely different notations for the same pattern-matching functionality.
+
+            > Perl-compatible regular expressions have different functionality, and are documented in the _pcre2syntax_(3) and _pcre2pattern_(3) manual pages, but work only if PCRE is available in the system.
+
+            Options:
+
+            - > \-G
+              >
+              > \--basic-regexp
+              >
+              > Interpret patterns as basic regular expressions (BREs). This is the default.
+
+            - > \-E
+              >
+              > \--extended-regexp
+              >
+              > Interpret patterns as extended regular expressions (EREs). (\-E is specified by POSIX.)
+
+            - > \-F
+              >
+              > \--fixed-strings
+              >
+              > Interpret patterns as fixed strings, not regular expressions. (\-F is specified by POSIX.)
+
+            - > \-P
+              >
+              > \--perl-regexp
+              >
+              > Interpret patterns as Perl-compatible regular expressions (PCREs).
+
+            - > \-e patterns
+              >
+              > \--regexp=patterns
+              >
+              > Use patterns as one or more patterns; newlines within patterns separate each pattern from the next. If this option is used multiple times or is combined with the \-f (\--file) option, search for all patterns given. Typically patterns should be quoted when `grep` is used in a shell command. (\-e is specified by POSIX.)
+            - > \-f file
+              >
+              > \--file=file
+              >
+              > Obtain patterns from file, one per line. If this option is used multiple times or is combined with the \-e (\--regexp) option, search for all patterns given. When file is ‘\-’, read patterns from standard input. The empty file contains zero patterns, and therefore matches nothing. (\-f is specified by POSIX.)
+
+            - > \-i
+              >
+              > \-y
+              >
+              > \--ignore-case
+              >
+              > Ignore case distinctions in patterns and input data, so that characters that differ only in case match each other.
+
+            - > --no-ignore-case
+              >
+              > Do not ignore case distinctions in patterns and input data. This is the default. This option is useful for passing to shell scripts that already use -i, in order to cancel its effects because the two options override each other.
+
+            - > -v
+              >
+              > --invert-match
+              >
+              > Invert the sense of matching, to select non-matching lines. (-v is specified by POSIX.)
+
+            - > \-w
+              >
+              > \--word-regexp
+              >
+              > Select only those lines containing matches that form whole words. The test is that the matching substring must either be at the beginning of the line, or preceded by a non-word constituent character. Similarly, it must be either at the end of the line or followed by a non-word constituent character. Word constituent characters are letters, digits, and the underscore. This option has no effect if \-x is also specified.
+
+            - > \-x
+              >
+              > \--line-regexp
+              >
+              > Select only those matches that exactly match the whole line. For regular expression patterns, this is like parenthesizing each pattern and then surrounding it with ‘^’ and ‘$’. (\-x is specified by POSIX.)
+
+            > Note that the regular expression syntax used in the pattern differs from the globbing syntax that the shell uses to match file names.
+
+            - > \--exclude-dir=glob
+              >
+              > Skip any command-line directory with a name suffix that matches the pattern glob. When searching recursively, skip any subdirectory whose base name matches glob. Ignore any redundant trailing slashes in glob.
+
+            - > \--include=glob
+              >
+              > Search only files whose name matches glob, using wildcard matching as described under \--exclude. If contradictory \--include and \--exclude options are given, the last matching one wins. If no \--include or \--exclude options match, a file is included unless the first such option is \--include.
+
     - BusyBox
 
         - [BusyBox - Command help - grep](https://www.busybox.net/downloads/BusyBox.html#grep)
 
             Options:
 
+            - > -F PATTERN is a set of newline-separated strings
             - > -E PATTERN is an extended regular expression
+            - > -e PTRN Pattern to match
 
     - FreeBSD
     - macOS
