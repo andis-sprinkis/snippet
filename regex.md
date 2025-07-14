@@ -303,8 +303,6 @@
               >
               > Select only those matches that exactly match the whole line. For regular expression patterns, this is like parenthesizing each pattern and then surrounding it with ‘^’ and ‘$’. (\-x is specified by POSIX.)
 
-            > Note that the regular expression syntax used in the pattern differs from the globbing syntax that the shell uses to match file names.
-
             - > \--exclude-dir=glob
               >
               > Skip any command-line directory with a name suffix that matches the pattern glob. When searching recursively, skip any subdirectory whose base name matches glob. Ignore any redundant trailing slashes in glob.
@@ -312,6 +310,8 @@
             - > \--include=glob
               >
               > Search only files whose name matches glob, using wildcard matching as described under \--exclude. If contradictory \--include and \--exclude options are given, the last matching one wins. If no \--include or \--exclude options match, a file is included unless the first such option is \--include.
+
+                > Note that the regular expression syntax used in the pattern differs from the globbing syntax that the shell uses to match file names.
 
     - BusyBox
 
