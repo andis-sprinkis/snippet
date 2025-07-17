@@ -1,5 +1,7 @@
 # Neovim options and variables
 
+TODO: Add code examples.
+
 ## Options
 
 - `vim.o`
