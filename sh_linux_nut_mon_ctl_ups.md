@@ -1,4 +1,4 @@
-# Monitoring and controlling UPS devices with *Network UPS Tools*
+# Monitoring and controlling UPS devices with *Network UPS Tools (NUT)*
 
 To view the currently detected UPS devices:
 
