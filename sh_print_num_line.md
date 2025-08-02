@@ -39,7 +39,7 @@ AAA
 AAA
 AAA"
 
-echo "$lines" | sed "2,4\!d"
+echo "$lines" | sed "2,4!d"
 ```
 
 Print lines 2 to 4, using `head` and `tail`:
