@@ -7,7 +7,7 @@ lines="qqq
 AAA
 AAA"
 
-echo "$lines" | grep --line-number -x "AAA" | cut -d ":" -f 1
+echo "$lines" | grep -n -x "AAA" | cut -d ":" -f 1
 ```
 
 Print line at the line number 2, using `sed`:
