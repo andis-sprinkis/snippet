@@ -1,9 +1,10 @@
 # Neovim options and variables
 
 TODO: Add code examples.
-TODO: `vim.api.nvim_get/set_option_value("option_name", { })`, `vim.api.nvim_get/set_option_value("option_name", { buf/win = 1 })`
 
 ## Options
+
+TODO: `vim.api.nvim_get/set_option_value("option_name", { })`, `vim.api.nvim_get/set_option_value("option_name", { buf/win = 1 })`
 
 - `vim.o`
 
