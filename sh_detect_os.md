@@ -78,6 +78,7 @@ There are multiple ways to do this.
 1. Combining both approaches
 
     ```sh
+    # shellcheck disable=SC3028
     case "${OSTYPE:-"$(uname)"}" in
       [lL]"inux"*)
         echo "Linux"
