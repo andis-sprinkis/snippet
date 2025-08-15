@@ -191,5 +191,5 @@ AT&T syntax by default:
 - [marcelofern.com/posts/asm/att-vs-intel-syntax/index.html](https://marcelofern.com/posts/asm/att-vs-intel-syntax/index.html) ([archived](https://archive.is/MmoR0))
 - [Intel and ATT Assembly Syntax](https://homes.cs.washington.edu/~bodik/ucb/cs164/cs164-fall-2003/assembly.html) ([archived](https://archive.is/hesf4))
 - [Guide to x86 Assembly](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html) ([archived](https://archive.is/GtsZV))
-    - Attribution: _Adapted from materials developed for University of Virginia cs216 by David Evans. This guide was revised for cs216 by David Evans, based on materials originally created by Adam Ferrari many years ago, and since updated by Alan Batson, Mike Lack, and Anita Jones.`_
+    - Attribution: _Adapted from materials developed for University of Virginia cs216 by David Evans. This guide was revised for cs216 by David Evans, based on materials originally created by Adam Ferrari many years ago, and since updated by Alan Batson, Mike Lack, and Anita Jones._
 - [docs.oracle.com/cd/E19253-01/817-5477/ennab/index.html](https://docs.oracle.com/cd/E19253-01/817-5477/ennab/index.html)
