@@ -157,11 +157,11 @@
 
 - Comment format:
 
-| Intel           | AT&T                                 |
-| --------------- | ------------------------------------ |
-| `; Lorem ipsum` | `# Lorem ipsum`                      |
-|                 | `/* Lorem ipsum */`                  |
-|                 | `/ Lorem ipsum` (start of line only) |
+    | Intel           | AT&T                                 |
+    | --------------- | ------------------------------------ |
+    | `; Lorem ipsum` | `# Lorem ipsum`                      |
+    |                 | `/* Lorem ipsum */`                  |
+    |                 | `/ Lorem ipsum` (start of line only) |
 
 ## Default syntax in common tools
 
