@@ -5,25 +5,37 @@ Using hardcoded `yes` and `no` strings, case insensitive:
 ```sh
 #!/usr/bin/env sh
 set -eu
+ANS=""
 
-question="Lorem ipsum dolor sit amet?"
+confirm_prompt() {
+  while true; do
+    printf "%s\nyes / no\n> " "$1"
 
-while true; do
-  printf "%s\nyes / no\n> " "$question"
+    read -r input
 
-  read -r input
+    case "$input" in
+      [yY]|[yY][eE]|[yY][eE][sS])
+        ANS="yes"
+        return "0"
+      ;;
+      [nN]|[nN][oO])
+        ANS="no"
+        return "0"
+      ;;
+    esac
+  done
+}
 
-  case "$input" in
-    [yY]|[yY][eE]|[yY][eE][sS])
-      echo "yes"
-      break
-    ;;
-    [nN]|[nN][oO])
-      echo "no"
-      break
-    ;;
-  esac
-done
+confirm_prompt "Lorem ipsum dolor sit amet?"
+
+case "$ANS" in
+  "yes")
+    echo "confirmed yes"
+  ;;
+  "no")
+    echo "confirmed no"
+  ;;
+esac
 ```
 
 Using the `locale` defined `yes` and `no` strings, case insensitive:
@@ -31,29 +43,40 @@ Using the `locale` defined `yes` and `no` strings, case insensitive:
 ```sh
 #!/usr/bin/env sh
 set -eu
-
+ANS=""
 yesexpr="$(set +e;locale yesexpr; set -e)" yesexpr="${yesexpr:-"^[+1yY]"}"
 yesstr="$(set +e; locale yesstr; set -e)" yesstr="${yesstr:-"yes"}"
 noexpr="$(set +e; locale noexpr; set -e)" noexpr="${noexpr:-"^[-0nN]"}"
 nostr="$(set +e; locale nostr; set -e)" nostr="${nostr:-"no"}"
 
-question="Lorem ipsum dolor sit amet?"
+confirm_prompt() {
+  while true; do
+    printf "%s\n%s / %s\n> " "$1" "$yesstr" "$nostr";
 
-while true; do
-  printf "%s\n%s / %s\n> " "$question" "$yesstr" "$nostr"
+    read -r input
 
-  read -r input
+    if printf "%s\n" "$input" | grep -Eq "$yesexpr"; then
+      ANS="yes"
+      return "0"
+    fi
 
-  if printf "%s\n" "$input" | grep -Eq "$yesexpr"; then
-    echo "$yesstr"
-    break
-  fi
+    if printf "%s\n" "$input" | grep -Eq "$noexpr"; then
+      ANS="no"
+      return "0"
+    fi
+  done
+}
 
-  if printf "%s\n" "$input" | grep -Eq "$noexpr"; then
-    echo "$nostr"
-    break
-  fi
-done
+confirm_prompt "Lorem ipsum dolor sit amet?"
+
+case "$ANS" in
+  "yes")
+    echo "confirmed yes"
+  ;;
+  "no")
+    echo "confirmed no"
+  ;;
+esac
 ```
 
 ## Resources
