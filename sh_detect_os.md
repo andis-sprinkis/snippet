@@ -79,7 +79,9 @@ There are multiple ways to do this.
 
     ```sh
     # shellcheck disable=SC3028
-    case "${OSTYPE:-"$(uname)"}" in
+    ostype="${OSTYPE:-"$(uname)"}"
+
+    case "$ostype" in
       [lL]"inux"*)
         echo "Linux"
       ;;
@@ -95,8 +97,17 @@ There are multiple ways to do this.
       "DragonFlyBSD")
         echo "DragonFlyBSD"
       ;;
+      bsd*)
+        echo "BSD"
+      ;;
       "WindowsNT")
         echo "Windows"
+      ;;
+      msys*)
+        echo "Windows MSYS"
+      ;;
+      cygwin*)
+        echo "Windows CygWin"
       ;;
       [dD]"arwin"*)
         echo "macOS"
@@ -111,7 +122,7 @@ There are multiple ways to do this.
         echo "Android"
       ;;
       *)
-        echo "Unknown OS${OSTYPE:+": ${OSTYPE}"}"
+        echo "Unknown OS${ostype:+": ${ostype}"}"
       ;;
     esac
     ``
