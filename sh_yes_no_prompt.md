@@ -53,8 +53,10 @@ confirm_prompt() {
 
     if printf "%s\n" "$input" | grep -Eq "$yesexpr"; then
       ANS="yes"
+      return "0"
     elif printf "%s\n" "$input" | grep -Eq "$noexpr"; then
       ANS="no"
+      return "0"
     fi
   done
 }
