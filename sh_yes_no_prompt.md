@@ -10,7 +10,6 @@ ANS=""
 confirm_prompt() {
   while true; do
     printf "%s\nyes / no\n> " "$1"
-
     read -r input
 
     case "$input" in
@@ -52,7 +51,6 @@ nostr="$(set +e; locale nostr; set -e)" nostr="${nostr:-"no"}"
 confirm_prompt() {
   while true; do
     printf "%s\n%s / %s\n> " "$1" "$yesstr" "$nostr";
-
     read -r input
 
     if printf "%s\n" "$input" | grep -Eq "$yesexpr"; then
