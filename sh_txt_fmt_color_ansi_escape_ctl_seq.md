@@ -28,40 +28,40 @@ The control sequence for formatting text in \*nix terminal consists of:
 | Swap background and foreground |    7 |
 | Hidden                         |    8 |
 | Strikethrough                  |    9 |
-| Default foreground             |   39 |
-| Default background             |   49 |
-| Black foreground               |   30 |
-| Blue foreground                |   34 |
-| Cyan foreground                |   36 |
-| Green foreground               |   32 |
-| Magenta foreground             |   35 |
-| Red foreground                 |   31 |
-| White foreground               |   37 |
-| Yellow foreground              |   33 |
-| Black background               |   40 |
-| Blue background                |   44 |
-| Cyan background                |   46 |
-| Green background               |   42 |
-| Magenta background             |   45 |
-| Red background                 |   41 |
-| White background               |   47 |
-| Yellow background              |   43 |
-| Black bright foreground        |   90 |
-| Blue bright foreground         |   94 |
-| Cyan bright foreground         |   96 |
-| Green bright foreground        |   92 |
-| Magenta bright foreground      |   95 |
-| Red bright foreground          |   91 |
-| White bright foreground        |   97 |
-| Yellow bright foreground       |   93 |
-| Black bright background        |  100 |
-| Blue bright background         |  104 |
-| Cyan bright background         |  106 |
-| Green bright background        |  102 |
-| Magenta bright background      |  105 |
-| Red bright background          |  101 |
-| White bright background        |  107 |
-| Yellow bright background       |  103 |
+| Bright background black        |  100 |
+| Bright background blue         |  104 |
+| Bright background cyan         |  106 |
+| Bright background green        |  102 |
+| Bright background magenta      |  105 |
+| Bright background red          |  101 |
+| Bright background white        |  107 |
+| Bright background yellow       |  103 |
+| Bright foreground black        |   90 |
+| Bright foreground blue         |   94 |
+| Bright foreground cyan         |   96 |
+| Bright foreground green        |   92 |
+| Bright foreground magenta      |   95 |
+| Bright foreground red          |   91 |
+| Bright foreground white        |   97 |
+| Bright foreground yellow       |   93 |
+| Dark background black          |   40 |
+| Dark background blue           |   44 |
+| Dark background cyan           |   46 |
+| Dark background default        |   49 |
+| Dark background green          |   42 |
+| Dark background magenta        |   45 |
+| Dark background red            |   41 |
+| Dark background white          |   47 |
+| Dark background yellow         |   43 |
+| Dark foreground black          |   30 |
+| Dark foreground blue           |   34 |
+| Dark foreground cyan           |   36 |
+| Dark foreground default        |   39 |
+| Dark foreground green          |   32 |
+| Dark foreground magenta        |   35 |
+| Dark foreground red            |   31 |
+| Dark foreground white          |   37 |
+| Dark foreground yellow         |   33 |
 
 ## An example
 
