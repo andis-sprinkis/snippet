@@ -56,7 +56,7 @@ There are multiple ways to do this.
         echo "Windows MSYS"
       ;;
       cygwin*)
-        echo "Windows CygWin"
+        echo "Windows Cygwin"
       ;;
       solaris*)
         echo "Solaris"
@@ -107,7 +107,7 @@ There are multiple ways to do this.
         echo "Windows MSYS"
       ;;
       cygwin*)
-        echo "Windows CygWin"
+        echo "Windows Cygwin"
       ;;
       [dD]"arwin"*)
         echo "macOS"
