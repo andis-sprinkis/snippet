@@ -5,7 +5,9 @@ There are multiple ways to do this.
 1.  Using the `uname` command kernel name output:
 
     ```sh
-    case "$(uname)" in
+    ostype="$(uname)"
+
+    case "$ostype" in
       "Linux")
         echo "Linux"
       ;;
@@ -34,7 +36,7 @@ There are multiple ways to do this.
         echo "AIX"
       ;;
       *)
-        echo "Unknown OS"
+        echo "Unknown OS${ostype:+": ${ostype}"}"
       ;;
     esac
     ```
@@ -42,7 +44,9 @@ There are multiple ways to do this.
 1.  Using the `$OSTYPE` shell variable:
 
     ```sh
-    case "$OSTYPE" in
+    ostype="${OSTYPE:-""}"
+
+    case "$ostype" in
       bsd*)
         echo "BSD"
       ;;
@@ -68,7 +72,7 @@ There are multiple ways to do this.
         echo "Android"
       ;;
       *)
-        echo "Unknown OS: ${OSTYPE}"
+        echo "Unknown OS${ostype:+": ${ostype}"}"
       ;;
     esac
     ```
@@ -82,6 +86,9 @@ There are multiple ways to do this.
     ostype="${OSTYPE:-"$(uname)"}"
 
     case "$ostype" in
+      android*)
+        echo "Android"
+      ;;
       [lL]"inux"*)
         echo "Linux"
       ;;
@@ -100,14 +107,14 @@ There are multiple ways to do this.
       bsd*)
         echo "BSD"
       ;;
-      "WindowsNT")
-        echo "Windows"
-      ;;
       msys*)
         echo "Windows MSYS"
       ;;
       cygwin*)
         echo "Windows Cygwin"
+      ;;
+      "WindowsNT")
+        echo "Windows"
       ;;
       [dD]"arwin"*)
         echo "macOS"
@@ -117,9 +124,6 @@ There are multiple ways to do this.
       ;;
       aix*|"AIX")
         echo "AIX"
-      ;;
-      android*)
-        echo "Android"
       ;;
       *)
         echo "Unknown OS${ostype:+": ${ostype}"}"
