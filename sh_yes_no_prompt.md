@@ -5,7 +5,6 @@ Using hardcoded `yes` and `no` strings, case insensitive:
 ```sh
 #!/usr/bin/env sh
 set -eu
-ANS=""
 
 confirm_prompt() {
   while true; do
@@ -42,7 +41,6 @@ Using the `locale` defined `yes` and `no` strings, case insensitive:
 ```sh
 #!/usr/bin/env sh
 set -eu
-ANS=""
 yesexpr="$(set +e;locale yesexpr; set -e)" yesexpr="${yesexpr:-"^[+1yY]"}"
 yesstr="$(set +e; locale yesstr; set -e)" yesstr="${yesstr:-"yes"}"
 noexpr="$(set +e; locale noexpr; set -e)" noexpr="${noexpr:-"^[-0nN]"}"
