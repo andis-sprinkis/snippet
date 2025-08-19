@@ -17,51 +17,94 @@ The control sequence for formatting text in \*nix terminal consists of:
 
 ## The formatting codes
 
-| Format                         | Code |
-| ------------------------------ | ---: |
-| Reset                          |    0 |
-| Bold (or bright)               |    1 |
-| Faint                          |    2 |
-| Italic                         |    3 |
-| Underline                      |    4 |
-| Slow blink                     |    5 |
-| Swap background and foreground |    7 |
-| Hidden                         |    8 |
-| Strikethrough                  |    9 |
-| Bright background black        |  100 |
-| Bright background blue         |  104 |
-| Bright background cyan         |  106 |
-| Bright background green        |  102 |
-| Bright background magenta      |  105 |
-| Bright background red          |  101 |
-| Bright background white        |  107 |
-| Bright background yellow       |  103 |
-| Bright foreground black        |   90 |
-| Bright foreground blue         |   94 |
-| Bright foreground cyan         |   96 |
-| Bright foreground green        |   92 |
-| Bright foreground magenta      |   95 |
-| Bright foreground red          |   91 |
-| Bright foreground white        |   97 |
-| Bright foreground yellow       |   93 |
-| Dark background black          |   40 |
-| Dark background blue           |   44 |
-| Dark background cyan           |   46 |
-| Dark background default        |   49 |
-| Dark background green          |   42 |
-| Dark background magenta        |   45 |
-| Dark background red            |   41 |
-| Dark background white          |   47 |
-| Dark background yellow         |   43 |
-| Dark foreground black          |   30 |
-| Dark foreground blue           |   34 |
-| Dark foreground cyan           |   36 |
-| Dark foreground default        |   39 |
-| Dark foreground green          |   32 |
-| Dark foreground magenta        |   35 |
-| Dark foreground red            |   31 |
-| Dark foreground white          |   37 |
-| Dark foreground yellow         |   33 |
+|         _n_ | Format                                                        | Note                       |
+| ----------: | ------------------------------------------------------------- | -------------------------- |
+|         `0` | Reset                                                         |                            |
+|             |                                                               |                            |
+|         `1` | Bold or increased intensity                                   |                            |
+|         `2` | Faint                                                         |                            |
+|         `3` | Italic                                                        |                            |
+|         `4` | Underlined                                                    |                            |
+|         `5` | Slow blinking                                                 |                            |
+|         `6` | Rapid blinking                                                |                            |
+|         `7` | Reverse video or invert                                       |                            |
+|         `8` | Concealed or hidden                                           |                            |
+|         `9` | Crossed out or strikethrough                                  |                            |
+|        `10` | Primary (default) font                                        |                            |
+|             |                                                               |                            |
+| `11` - `19` | Alternative font n - `10`                                     |                            |
+|             |                                                               |                            |
+|        `20` | Fraktur (Gothic)                                              |                            |
+|        `21` | Not underlined or not bold                                    |                            |
+|        `22` | Not bold or increased instensity (normal intensity)           |                            |
+|        `23` | Not italic                                                    |                            |
+|        `23` | Not italic, nor blackletter                                   |                            |
+|        `24` | Not underlined                                                |                            |
+|        `25` | Not blinking                                                  |                            |
+|        `26` | Proportional spacing                                          |                            |
+|        `27` | Not reverse video or invert                                   |                            |
+|        `28` | Not concealed or hidden                                       |                            |
+|        `29` | Not crossed out or strikethrough                              |                            |
+|        `50` | Not proportional spacing                                      |                            |
+|        `51` | Framed                                                        |                            |
+|        `52` | Encircled                                                     |                            |
+|        `53` | Overlined                                                     |                            |
+|        `55` | Not overlined                                                 |                            |
+|             |                                                               |                            |
+|        `60` | Ideogram underline or right side line                         | Rarely supported           |
+|        `61` | Ideogram double underline, _or_ double line on the right side | Rarely supported           |
+|        `62` | Ideogram overline or left side line                           | Rarely supported           |
+|        `63` | Ideogram double overline, _or_ double line on the left side   | Rarely supported           |
+|        `64` | Ideogram stress marking                                       | Rarely supported           |
+|        `65` | No ideogram attributes                                        | Reset the `60`–`64`        |
+|             |                                                               |                            |
+|        `73` | Superscript                                                   | Implemented only in mintty |
+|        `74` | Subscript                                                     |                            |
+|        `75` | Neither superscript nor subscript                             |                            |
+|             |                                                               |                            |
+|        `38` | Set background color                                          |                            |
+|        `48` | Set background color                                          |                            |
+|        `58` | Set underline color                                           |                            |
+|             |                                                               |                            |
+|        `39` | Default foreground color                                      |                            |
+|        `49` | Default background color                                      |                            |
+|        `59` | Default underline color                                       |                            |
+|             |                                                               |                            |
+|        `30` | ⬛ Dark foreground black                                      |                            |
+|        `31` | 🟥 Dark foreground red                                        |                            |
+|        `32` | 🟩 Dark foreground green                                      |                            |
+|        `33` | 🟨 Dark foreground yellow                                     |                            |
+|        `34` | 🟦 Dark foreground blue                                       |                            |
+|        `35` | 🟪 Dark foreground magenta                                    |                            |
+|        `36` | 🟦 Dark foreground cyan                                       |                            |
+|        `37` | ⬜ Dark foreground white                                      |                            |
+|             |                                                               |                            |
+|        `40` | ⬛ Dark background black                                      |                            |
+|        `41` | 🟥 Dark background red                                        |                            |
+|        `42` | 🟩 Dark background green                                      |                            |
+|        `43` | 🟨 Dark background yellow                                     |                            |
+|        `44` | 🟦 Dark background blue                                       |                            |
+|        `45` | 🟪 Dark background magenta                                    |                            |
+|        `46` | 🟦 Dark background cyan                                       |                            |
+|        `47` | ⬜ Dark background white                                      |                            |
+|             |                                                               |                            |
+|        `90` | ⬛ Bright foreground black                                    |                            |
+|        `91` | 🟥 Bright foreground red                                      |                            |
+|        `92` | 🟩 Bright foreground green                                    |                            |
+|        `93` | 🟨 Bright foreground yellow                                   |                            |
+|        `94` | 🟦 Bright foreground blue                                     |                            |
+|        `95` | 🟪 Bright foreground magenta                                  |                            |
+|        `96` | 🟦 Bright foreground cyan                                     |                            |
+|        `97` | ⬜ Bright foreground white                                    |                            |
+|             |                                                               |                            |
+|       `100` | ⬛ Bright background black                                    |                            |
+|       `101` | 🟥 Bright background red                                      |                            |
+|       `102` | 🟩 Bright background green                                    |                            |
+|       `103` | 🟨 Bright background yellow                                   |                            |
+|       `104` | 🟦 Bright background blue                                     |                            |
+|       `105` | 🟪 Bright background magenta                                  |                            |
+|       `106` | 🟦 Bright background cyan                                     |                            |
+|       `107` | ⬜ Bright background white                                    |                            |
 
 ## An example
 
@@ -83,6 +126,7 @@ printf "\x1b[0;35m%s\x1b[0m" "Hello world"
 
 ## Resources
 
+- [ANSI escape code - Wikipedia](https://en.wikipedia.org/wiki/ANSI_escape_code#SGR)
 - [Everything you never wanted to know about ANSI escape codes](https://notes.burke.libbey.me/ansi-escape-codes/)
   ([archived](https://archive.is/20210203094825/https://notes.burke.libbey.me/ansi-escape-codes/))
 - [ANSI code generator](https://ansi.gabebanks.net/)
