@@ -56,7 +56,7 @@ The control sequence for formatting text in \*nix terminal consists of:
 |        `62` | Ideogram overline or left side line                           | Rarely supported           |
 |        `63` | Ideogram double overline, _or_ double line on the left side   | Rarely supported           |
 |        `64` | Ideogram stress marking                                       | Rarely supported           |
-|        `65` | No ideogram attributes                                        | Reset the `60`–`64`        |
+|        `65` | No ideogram attributes                                        | Resets the `60`–`64`       |
 |             |                                                               |                            |
 |        `73` | Superscript                                                   | Implemented only in mintty |
 |        `74` | Subscript                                                     |                            |
