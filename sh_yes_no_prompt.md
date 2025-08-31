@@ -7,31 +7,27 @@ Using hardcoded `yes` and `no` strings, case insensitive:
 set -eu
 
 confirm_prompt() {
-  while true; do
-    printf "%s\nyes / no\n> " "$1"
+  ANS=""
+  while [ "$ANS" = "" ]; do
+    printf "\n%s\nyes / no ?\n> " "$1"
     read -r input
-
     case "$input" in
-      [yY]|[yY][eE]|[yY][eE][sS])
-        ANS="yes"
-        return "0"
-      ;;
-      [nN]|[nN][oO])
-        ANS="no"
-        return "0"
-      ;;
+      [yY]|[yY][eE]|[yY][eE][sS]) ANS="yes" ;;
+      [nN]|[nN][oO]) ANS="no" ;;
     esac
   done
+
+  printf '%s\n\n' "[ ${ANS} ]"
 }
 
 confirm_prompt "Lorem ipsum dolor sit amet?"
 
 case "$ANS" in
   "yes")
-    echo "confirmed yes"
+    echo "Handle yes..."
   ;;
   "no")
-    echo "confirmed no"
+    echo "Handle no..."
   ;;
 esac
 ```
@@ -41,34 +37,36 @@ Using the `locale` defined `yes` and `no` strings, case insensitive:
 ```sh
 #!/usr/bin/env sh
 set -eu
-yesexpr="$(set +e;locale yesexpr; set -e)" yesexpr="${yesexpr:-"^[+1yY]"}"
-yesstr="$(set +e; locale yesstr; set -e)" yesstr="${yesstr:-"yes"}"
-noexpr="$(set +e; locale noexpr; set -e)" noexpr="${noexpr:-"^[-0nN]"}"
-nostr="$(set +e; locale nostr; set -e)" nostr="${nostr:-"no"}"
 
 confirm_prompt() {
-  while true; do
-    printf "%s\n%s / %s\n> " "$1" "$yesstr" "$nostr";
+  yesexpr="$(set +e;locale yesexpr; set -e)" yesexpr="${yesexpr:-"^[+1yY]"}"
+  yesstr="$(set +e; locale yesstr; set -e)" yesstr="${yesstr:-"yes"}"
+  noexpr="$(set +e; locale noexpr; set -e)" noexpr="${noexpr:-"^[-0nN]"}"
+  nostr="$(set +e; locale nostr; set -e)" nostr="${nostr:-"no"}"
+
+  ANS="" ansstr=""
+  while [ "$ANS" = "" ]; do
+    printf "\n%s\n%s / %s ?\n> " "$1" "$yesstr" "$nostr";
     read -r input
 
     if printf "%s\n" "$input" | grep -Eq "$yesexpr"; then
-      ANS="yes"
-      return "0"
+      ANS="yes" ansstr="$yesstr"
     elif printf "%s\n" "$input" | grep -Eq "$noexpr"; then
-      ANS="no"
-      return "0"
+      ANS="no" ansstr="$nostr"
     fi
   done
+
+  printf '%s\n\n' "[ ${ansstr} ]"
 }
 
 confirm_prompt "Lorem ipsum dolor sit amet?"
 
 case "$ANS" in
   "yes")
-    echo "confirmed yes"
+    echo "Handle yes..."
   ;;
   "no")
-    echo "confirmed no"
+    echo "Handle no..."
   ;;
 esac
 ```
