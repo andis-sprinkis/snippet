@@ -28,6 +28,8 @@
             > On top of what POSIX BRE provides as described above, the GNU extension provides \\? and \\+ as an alternative syntax to \\{0,1\\} and \\{1,\\}. It adds [alternation](https://www.regular-expressions.info/alternation.html) via \\|, something sorely missed in POSIX BREs. These extensions in fact mean that GNU BREs have exactly the same features as GNU EREs, except that +, ?, |, braces and parentheses need backslashes to give them a special meaning instead of take it away.
 
     - BusyBox
+        - > BusyBox provides a fairly complete POSIX environment for any small or embedded system.
+        - BusyBox utilities support Basic and Extended regular expressions
     - FreeBSD
     - macOS
 
@@ -40,6 +42,8 @@
         - [GNU Regular Expression Extensions - Gnulib Regex Module](https://www.regular-expressions.info/gnu.html)
             > POSIX ERE does not support [backreferences](https://www.regular-expressions.info/backref.html). The GNU Extension adds them, using the same \\1 through \\9 syntax.
     - BusyBox
+        - > BusyBox provides a fairly complete POSIX environment for any small or embedded system.
+        - BusyBox utilities support Basic and Extended regular expressions
     - FreeBSD
     - macOS
 - Additional GNU extensions
@@ -65,6 +69,32 @@
     - See the 'Per application - Shell' section below.
 
 ## Per application
+
+- `expr`
+
+    - POSIX
+
+        - [expr (IEEE Std 1003.1-2024)](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/expr.html#tag_20_42)
+
+            > The ':' matching operator shall compare the string resulting from the evaluation of _expr1_ with the regular expression pattern resulting from the evaluation of _expr2_.
+            > Regular expression syntax shall be that defined in XBD [_9.3 Basic Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03) \[...\]
+
+    - GNU
+    - BusyBox
+
+        - [BusyBox - Command help - expr](https://busybox.net/downloads/BusyBox.html#expr)
+
+            > EXPRESSION may be:
+            >
+            > ```
+            > ...
+            > STRING : REGEXP         Anchored pattern match of REGEXP in STRING
+            > match STRING REGEXP     Same as STRING : REGEXP
+            > ...
+            > ```
+
+    - FreeBSD
+    - macOS
 
 - `ed`
 
@@ -143,6 +173,8 @@
 
     - GNU
     - BusyBox
+
+        - Supports Basic and Extended regular expressions
 
         - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html#sed)
 
@@ -314,6 +346,8 @@
                 > Note that the regular expression syntax used in the pattern differs from the globbing syntax that the shell uses to match file names.
 
     - BusyBox
+
+        - Supports Basic and Extended regular expressions
 
         - [BusyBox - Command help - grep](https://www.busybox.net/downloads/BusyBox.html#grep)
 
