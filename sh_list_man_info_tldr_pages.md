@@ -6,6 +6,7 @@ man -k ''
 
 ```sh
 man -k "^ls"
+man -k '' | grep '^ls'
 ```
 
 ```sh
@@ -86,12 +87,23 @@ The sections of the manual are:
 
 ```sh
 info -k ''
+```
+
+```sh
 info -k "^ls"
+info -k '' | grep "^ls"
 ```
 
 ---
 
 ```sh
 tldr -l
+```
+
+```sh
 tldr -l | grep "^ls"
 ```
+
+## Resources
+
+- [STOP Using 'man' Pages Incorrectly! - YouTube](https://www.youtube.com/watch?v=cnmtKv2kUXs)
