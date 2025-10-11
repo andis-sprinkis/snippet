@@ -9,8 +9,11 @@
             - > The first (historical) version is described as part of the _[regexp()](https://pubs.opengroup.org/onlinepubs/7908799/xsh/regexp.html)_ \[[Archived](https://archive.is/20130730093704/http://pubs.opengroup.org/onlinepubs/7908799/xsh/regexp.html)\] function in the **XSH** specification.
         - [Regular Expressions/Simple Regular Expressions - Wikibooks](https://en.wikibooks.org/wiki/Regular_Expressions/Simple_Regular_Expressions) ([Archived](https://archive.is/20241012203436/https://en.wikibooks.org/wiki/Regular_Expressions/Simple_Regular_Expressions))
     - BusyBox
+        - ?
     - FreeBSD
+        - ?
     - macOS
+        - ?
 - Basic Regular Expressions (BRE)
 
     - POSIX
@@ -31,7 +34,9 @@
         - > BusyBox provides a fairly complete POSIX environment for any small or embedded system.
         - BusyBox utilities support Basic and Extended regular expressions
     - FreeBSD
+        - ?
     - macOS
+        - ?
 
 - Extended Regular Expressions (ERE)
     - POSIX
@@ -45,7 +50,9 @@
         - > BusyBox provides a fairly complete POSIX environment for any small or embedded system.
         - BusyBox utilities support Basic and Extended regular expressions
     - FreeBSD
+        - ?
     - macOS
+        - ?
 - Additional GNU extensions
 
     - [GNU Regular Expression Extensions - Gnulib Regex Module](https://www.regular-expressions.info/gnu.html)
@@ -80,6 +87,7 @@
             > Regular expression syntax shall be that defined in XBD [_9.3 Basic Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03) \[...\]
 
     - GNU
+        - ?
     - BusyBox
 
         - [BusyBox - Command help - expr](https://busybox.net/downloads/BusyBox.html#expr)
@@ -94,7 +102,9 @@
             > ```
 
     - FreeBSD
+        - ?
     - macOS
+        - ?
 
 - `ed`
 
@@ -105,9 +115,13 @@
             > The _ed_ utility shall support basic regular expressions, as described in XBD [_9.3 Basic Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_03).
 
     - GNU
+        - ?
     - BusyBox
+        - ?
     - FreeBSD
+        - ?
     - macOS
+        - ?
 
 - `ex`
 
@@ -120,9 +134,13 @@
             `ex` workflows is heavily based around the regular expressions use. In IEEE Std 1003.1-2024 there are a lot of rules and guidelines to adhere around the implementation consitency, extending BRE functionality and the historical practices.
 
     - GNU
+        - ?
     - BusyBox
+        - ?
     - FreeBSD
+        - ?
     - macOS
+        - ?
 
 - `vi`
 
@@ -133,6 +151,7 @@
             > The enhanced regular expressions supported by _vi_ are described in [_Regular Expressions in ex_](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/ex.html#tag_20_40_13_58).
 
     - GNU
+        - ?
     - BusyBox
 
         - [Busybox vi tutorial - Krzysztof Adamski](https://k.japko.eu/busybox-vi-tutorial.html)
@@ -140,7 +159,9 @@
             > This tutorial assumes that you have `busybox vi` with all additional features enabled. Note however, that VI_REGEX_SEARCH is disabled in many installations which disables using regular expressions when searching.
 
     - FreeBSD
+        - ?
     - macOS
+        - ?
 
 - `awk`
 
@@ -172,6 +193,7 @@
               > Match using extended regular expressions. Treat each pattern specified as an ERE, as described in XBD [_9.4 Extended Regular Expressions_](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html#tag_09_04).
 
     - GNU
+        - ?
     - BusyBox
 
         - Supports Basic and Extended regular expressions
@@ -358,6 +380,7 @@
             - > -e PTRN Pattern to match
 
     - FreeBSD
+        - ?
     - macOS
 
         - [GREP(1)](https://manp.gs/mac/1/grep)
@@ -518,8 +541,10 @@
 
     - FreeBSD
         - [find](https://man.freebsd.org/cgi/man.cgi?query=find&apropos=0&sektion=0&manpath=FreeBSD+14.3-RELEASE+and+Ports&arch=default&format=html)
+        - ?
     - macOS
         - [FIND(1)](https://manp.gs/mac/1/find)
+        - ?
 
 - `tr`
 
@@ -537,6 +562,7 @@
     - POSIX
         - Not part of POSIX.
     - GNU
+        - ?
     - BusyBox
 
         - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html#pkill)
@@ -544,13 +570,16 @@
             > Send a signal to process(es) selected by regex PATTERN
 
     - FreeBSD
+        - ?
     - macOS
+        - ?
 
 - `pgrep`
 
     - POSIX
         - Not part of POSIX.
     - GNU
+        - ?
     - BusyBox
 
         - [BusyBox - Command help](https://www.busybox.net/downloads/BusyBox.html#pgrep)
@@ -558,7 +587,9 @@
             > Display process(es) selected by regex PATTERN
 
     - FreeBSD
+        - ?
     - macOS
+        - ?
 
 - Shell
 
@@ -617,6 +648,7 @@
             - [Almquist shell - Wikipedia](https://en.wikipedia.org/wiki/Almquist_shell)
                 - [README « shell - busybox - BusyBox: The Swiss Army Knife of Embedded Linux](https://git.busybox.net/busybox/tree/shell/README)
                 - [ash variants - BusyBox](https://www.in-ulm.de/~mascheck/various/ash/#busybox)
+        - ?
     - FreeBSD
 
         - [sh(1)](https://man.freebsd.org/cgi/man.cgi?query=sh&sektion=1&format=html)
