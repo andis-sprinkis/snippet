@@ -1,4 +1,4 @@
-# RSS compared with Atom
+# RSS compared to Atom
 
 From [RSS - Wikipedia](https://en.wikipedia.org/wiki/RSS):
 
