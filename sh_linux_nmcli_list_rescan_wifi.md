@@ -1,4 +1,4 @@
-# Rescanning the Wi-Fi device list using the NetworkManager `nmcli`
+# Rescanning and showing the Wi-Fi device list using the NetworkManager `nmcli`
 
 ```sh
 nmcli device wifi rescan
