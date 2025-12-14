@@ -18,6 +18,8 @@ done
 IFS="$IFS_"
 ```
 
+⚠️ [DontReadLinesWithFor - Greg's Wiki](https://mywiki.wooledge.org/DontReadLinesWithFor) ([archived](https://archive.is/20250727151121/https://mywiki.wooledge.org/DontReadLinesWithFor))
+
 Using `while` loop:
 
 ```sh
