@@ -35,4 +35,4 @@ The `A` elements also support `ADD_DATE` and `LAST_MODIFIED` attributes, that ar
 
 ## Resources
 
--   [Netscape Bookmark File Format (Internet Explorer) | Microsoft Learn](<https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753582(v=vs.85)>)
+-   [Netscape Bookmark File Format (Internet Explorer) | Microsoft Learn](<https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753582(v=vs.85)>) ([Archived](<https://archive.is/20250917233937/https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753582(v=vs.85)>))
