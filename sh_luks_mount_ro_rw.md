@@ -17,11 +17,11 @@ lsblk /dev/sda1
 ```
 
 ```sh
-sudo mount -r /dev/mapper/sata_luks_data /mnt/usb1
+sudo mount -o ro /dev/mapper/sata_luks_data /mnt/usb1
 ```
 
 ```sh
-sudo mount -rw /dev/mapper/sata_luks_data /mnt/usb1
+sudo mount -o rw /dev/mapper/sata_luks_data /mnt/usb1
 # or
 sudo mount /dev/mapper/sata_luks_data /mnt/usb1
 ```
