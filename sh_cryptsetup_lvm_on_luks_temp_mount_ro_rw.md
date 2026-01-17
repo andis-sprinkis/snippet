@@ -13,7 +13,13 @@ sudo cryptsetup -v status usb1
 ```
 
 ```sh
+ls /dev/mapper
 lsblk /dev/sda1
+```
+
+```sh
+sudo vgscan --mknodes -v
+sudo vgchange -a y
 ```
 
 ```sh
@@ -27,5 +33,6 @@ sudo mount /dev/mapper/sata_luks_data /mnt/usb1
 ```
 
 ```sh
+sudo cryptsetup close sata_luks_data
 sudo cryptsetup close usb1
 ```
