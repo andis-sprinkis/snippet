@@ -5,12 +5,12 @@ Define a function `replace_aaa_bbb` that can accept both the an argument `$1` an
 ```sh
 replace_aaa_bbb() {
   if [ "${1:-""}" ]; then
-    echo "$1" | sed -e 's/AAA/BBB/g'
+    printf '%s' "$1" | sed -e 's/AAA/BBB/g'
     return
   fi
 
   while read -r l; do
-    echo "$1" | sed -e 's/AAA/BBB/g'
+    printf '%s' "$l" | sed -e 's/AAA/BBB/g'
   done
 }
 ```
