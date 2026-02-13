@@ -32,6 +32,7 @@ List mappings and block deices:
 ```sh
 ls /dev/mapper
 lsblk /dev/sda1
+lsblk
 ```
 
 If the `sda1 > usb1 > sata_luks-data` LVM partition is not visible then:
