@@ -1,4 +1,4 @@
-# Testing if string is a number in Shell
+# Testing if string is an unsigner integer number in Shell
 
 ```sh
 case "$str" in
@@ -6,7 +6,7 @@ case "$str" in
     exit "1"
   ;;
   *)
-    echo "A number!"
+    echo "An unsigned integer!"
   ;;
 esac
 ```
