@@ -1,6 +1,6 @@
 # Testing if string is an integer number in Shell
 
-Matching unsigned integer:
+Matching an unsigned integer:
 
 ```sh
 case "$str" in
@@ -15,7 +15,7 @@ esac
 
 The first case tests if the `$str` is empty or contains no numerical characters.
 
-Matching signed integer:
+Matching a signed integer:
 
 ```sh
 case "${str#[+-]}" in
