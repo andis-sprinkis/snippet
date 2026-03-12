@@ -16,7 +16,7 @@ find -maxdepth "1"
 find "./" -maxdepth "1"
 ```
 
-⚠️Not POSIX compliant.
+⚠️ Not POSIX compliant.
 
 Find files or directories by name:
 
