@@ -596,7 +596,7 @@
                 >
                 > Only match processes whose names (or command lines if -f is specified) exactly match the pattern.
             -   > _pattern_
-            -   > Specifies an **Extended Regular Expression** for matching against the process names or command lines.
+                > Specifies an **Extended Regular Expression** for matching against the process names or command lines.
             -   > procps-ng 2025-12-29
 
     -   BusyBox
