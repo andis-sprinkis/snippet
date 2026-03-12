@@ -79,3 +79,5 @@ find -type "f" | while read -r ln; do
     if [ "$(file --mime-type --brief "$ln")" = "application/zip" ]; then printf "%s\n" "$ln"; fi
 done
 ```
+
+Note: [ShellCheck: SC2044 – For loops over find output are fragile. Use \`find -exec\` or a \`while read\` loop.](https://www.shellcheck.net/wiki/SC2044)
