@@ -15,7 +15,8 @@ sudo smartctl -x /dev/sda | $PAGER
 Filter device IDs from `/dev/disk/` by a `/dev/` mapping:
 
 ```sh
-for l in $(find "/dev/disk/by-id/" -maxdepth "1" -type "l"); do
+diskids="$(find "/dev/disk/by-id/" -maxdepth "1" -type "l")"
+for l in $diskids; do
     echo "$(basename "/dev/disk/by-id/$(readlink -s $l)")" "$(basename $l)"
 done | \grep '^nvme.*\|^sd.*' | sort | column -t -o" | " | $PAGER
 ```
