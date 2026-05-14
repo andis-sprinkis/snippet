@@ -17,7 +17,7 @@ Output:
   1
   ```
 
-Using `lscpu`:
+Using `lscpu` (Linux):
 
 ```sh
 lscpu | grep "Byte Order"
