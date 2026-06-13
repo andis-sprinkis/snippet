@@ -60,4 +60,6 @@ Printing the ASCII representation of the octal number:
 printf "\\${o}\n"
 ```
 
+Only standard ASCII 0-127 decimal, 0-177 octal, NOT the extended ASCII (128-255 decimal, 200-377 octal).
+
 `\ddd` is POSIX standard `printf` syntax, the hexadecimal `\xhhh` is not.
