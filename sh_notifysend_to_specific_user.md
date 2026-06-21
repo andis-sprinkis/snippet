@@ -11,7 +11,7 @@ sudo -u "$usr" DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u "$usr")/bus
 
 ```sh
 #!/usr/bin/env sh
-set -eu
+set -euf
 
 usr="$1"
 id="$(id -u "$usr")"

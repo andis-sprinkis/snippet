@@ -4,7 +4,7 @@ By specific file names:
 
 ```sh
 #!/usr/bin/env sh
-set -eu
+set -euf
 
 mkdir -p "./rotated"
 
@@ -23,13 +23,18 @@ for img_path in $paths_images; do
 done
 IFS="$IFS_"
 
+set +f
 mv -f ./rotated/* ./
+set -f
 rm -rf ./rotated
 ```
 
 By an integer range of file names:
 
 ```sh
+#!/usr/bin/env sh
+set -euf
+
 mkdir -p "./rotated"
 
 for img in ./ADFE{0019..0293}.JPG; do
@@ -37,6 +42,8 @@ for img in ./ADFE{0019..0293}.JPG; do
   magick "$img" -rotate "-90" "./rotated/${img%.JPG}.JPG"
 done
 
+set +f
 mv -f ./rotated/* ./
+set -f
 rm -rf ./rotated
 ```

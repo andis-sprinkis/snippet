@@ -4,7 +4,7 @@ Using hardcoded `yes` and `no` strings, case insensitive:
 
 ```sh
 #!/usr/bin/env sh
-set -eu
+set -euf
 
 confirm_prompt() {
   ANS=""
@@ -36,7 +36,7 @@ Using the `locale` defined `yes` and `no` strings, case insensitive:
 
 ```sh
 #!/usr/bin/env sh
-set -eu
+set -euf
 
 confirm_prompt() {
   yesexpr="$(set +e;locale yesexpr; set -e)" yesexpr="${yesexpr:-"^[+1yY]"}"

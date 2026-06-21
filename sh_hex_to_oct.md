@@ -2,7 +2,7 @@
 
 ```sh
 #!/usr/bin/env sh
-set -eu
+set -euf
 
 i="1" b=""
 while [ "$i" -le "${#1}" ]; do

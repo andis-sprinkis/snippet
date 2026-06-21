@@ -2,7 +2,7 @@
 
 ```sh
 #!/usr/bin/env sh
-set -eu
+set -euf
 
 src=/tmp/application.c
 out=/tmp/application

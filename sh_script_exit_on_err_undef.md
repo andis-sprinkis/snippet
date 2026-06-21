@@ -2,7 +2,7 @@
 
 ```sh
 #!/usr/bin/env sh
-set -eu
+set -euf
 ```
 
 `-e` stands for exiting on error.
