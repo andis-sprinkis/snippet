@@ -7,20 +7,29 @@ Using the Mozilla Firefox web browser:
 
     ```js
     async function addUrl(container, url) {
-        const identities = await browser.contextualIdentities.query({ name: container });
+        const identities = await browser.contextualIdentities.query({
+            name: container,
+        });
 
-        if (identities.length > 1) throw new Error("Container with the same name exists");
+        if (identities.length > 1)
+            throw new Error("Container with the same name exists");
 
         if (identities.length == 0) throw new Error("Container is not found");
 
         const cookieStoreId = identities[0].cookieStoreId;
-        const userContextId = backgroundLogic.getUserContextIdFromCookieStoreId(cookieStoreId);
+        const userContextId =
+            backgroundLogic.getUserContextIdFromCookieStoreId(cookieStoreId);
 
         console.log("user context: ", userContextId);
 
         const assignManager = window.assignManager;
 
-        await assignManager._setOrRemoveAssignment(false, url, userContextId, false);
+        await assignManager._setOrRemoveAssignment(
+            false,
+            url,
+            userContextId,
+            false,
+        );
     }
 
     addUrl("Facebook", "https://facebook.com");
@@ -28,5 +37,6 @@ Using the Mozilla Firefox web browser:
 
 ## Resources
 
--   [Discussion on GitHub](https://github.com/mozilla/multi-account-containers/pull/2114#issuecomment-1004056712)
--   [phy1729/container-config](https://github.com/phy1729/container-config)
+- [Discussion on GitHub](https://github.com/mozilla/multi-account-containers/pull/2114#issuecomment-1004056712)
+- [phy1729/container-config](https://github.com/phy1729/container-config)
+- [Fix #1670 - Add option to manually assign an URL to a container by dannycolin · Pull Request #2710 · mozilla/multi-account-containers](https://github.com/mozilla/multi-account-containers/pull/2710)
