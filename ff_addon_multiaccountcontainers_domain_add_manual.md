@@ -8,11 +8,14 @@ Using the Mozilla Firefox web browser:
     ```js
     async function addUrl(container, url) {
         const identities = await browser.contextualIdentities.query({ name: container });
-        if (identities.length > 1) throw new Error("too many container with the same name");
-        if (identities.length == 0) throw new Error("container not found");
+
+        if (identities.length > 1) throw new Error("Container with the same name exists");
+
+        if (identities.length == 0) throw new Error("Container is not found");
 
         const cookieStoreId = identities[0].cookieStoreId;
         const userContextId = backgroundLogic.getUserContextIdFromCookieStoreId(cookieStoreId);
+
         console.log("user context: ", userContextId);
 
         const assignManager = window.assignManager;
