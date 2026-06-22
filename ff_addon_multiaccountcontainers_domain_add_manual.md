@@ -106,6 +106,29 @@ Using the Mozilla Firefox web browser:
     OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
     ```
 
+---
+
+Adding URL to an existing container:
+
+```js
+async function addUrl(container, url) {
+    const identities = await browser.contextualIdentities.query({ name: container });
+
+    if (identities.length > 1) throw new new Error(`More than one container with name ${container}.`;
+    if (identities.length == 0) throw new Error(`Container ${container} is not found.`);
+
+    const cookieStoreId = identities[0].cookieStoreId;
+    const userContextId = backgroundLogic.getUserContextIdFromCookieStoreId(cookieStoreId);
+    console.log("user context: ", userContextId);
+
+    const assignManager = window.assignManager;
+
+    await assignManager._setOrRemoveAssignment(false, url, userContextId, false);
+}
+
+addUrl("Facebook", "https://facebook.com");
+```
+
 ## Resources
 
 - [Discussion on GitHub](https://github.com/mozilla/multi-account-containers/pull/2114#issuecomment-1004056712)
