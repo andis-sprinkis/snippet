@@ -68,7 +68,7 @@ sudo virsh pool-define-as --name "default" --type "dir" --target "/mnt/sata1/vir
 sudo virsh pool-start "default"
 ```
 
-or
+Alternatively:
 
 ```sh
 sudo virsh pool-edit "default"
