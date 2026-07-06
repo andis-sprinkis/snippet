@@ -35,31 +35,31 @@ Optionally
 
 ## Setup
 
-```sh
-yay -S qemu-base qemu-desktop libvirt virt-manager edk2-ovmf dnsmasq iptables-nft
-```
+1.  ```sh
+    sudo pacman -S qemu-base qemu-desktop libvirt virt-manager edk2-ovmf dnsmasq iptables-nft
+    ```
 
-```sh
-sudo systemctl enable --now "libvirtd"
-sudo systemctl status "libvirtd"
-```
+1.  ```sh
+    sudo systemctl enable --now "libvirtd"
+    sudo systemctl status "libvirtd"
+    ```
 
-```sh
-sudo usermod -aG "libvirt" "$(whoami)"
-```
+1.  ```sh
+    sudo usermod -aG "libvirt" "$(whoami)"
+    ```
 
-```sh
-reboot
-```
+1.  ```sh
+    reboot
+    ```
 
-```sh
-groups
-```
+1.  ```sh
+    groups
+    ```
 
-```sh
-sudo virsh net-start "default"
-sudo virsh net-autostart "default"
-```
+1.  ```sh
+    sudo virsh net-autostart "default"
+    sudo virsh net-start "default"
+    ```
 
 ## Changing the `default` storage pool location
 
