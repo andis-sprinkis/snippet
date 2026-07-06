@@ -33,6 +33,8 @@ Optionally
 - `swtpm` - Software TPM 2.0 emulator – needed for Windows 11 VMs and TPM-dependent operating systems
 - `virt-viewer` - Console viewer for connecting to VM displays (SPICE/VNC)
 
+## Setup
+
 ```sh
 yay -S qemu-base qemu-desktop libvirt virt-manager edk2-ovmf dnsmasq iptables-nft
 ```
