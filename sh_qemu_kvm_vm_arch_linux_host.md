@@ -38,12 +38,12 @@ yay -S qemu-base qemu-desktop libvirt virt-manager edk2-ovmf dnsmasq iptables-nf
 ```
 
 ```sh
-sudo systemctl enable --now libvirtd
-sudo systemctl status libvirtd
+sudo systemctl enable --now "libvirtd"
+sudo systemctl status "libvirtd"
 ```
 
 ```sh
-sudo usermod -aG libvirt $(whoami)
+sudo usermod -aG "libvirt" "$(whoami)"
 ```
 
 ```sh
@@ -55,22 +55,26 @@ groups
 ```
 
 ```sh
-sudo virsh net-start default
-sudo virsh net-autostart default
+sudo virsh net-start "default"
+sudo virsh net-autostart "default"
 ```
 
+## Changing the `default` storage pool location
+
 ```sh
-sudo virsh pool-destroy default
-sudo virsh pool-undefine default
-sudo virsh pool-define-as --name default --type dir --target /mnt/sata1/virt
-sudo virsh pool-start default
+sudo virsh pool-destroy "default"
+sudo virsh pool-undefine "default"
+sudo virsh pool-define-as --name "default" --type "dir" --target "/mnt/sata1/virt"
+sudo virsh pool-start "default"
 ```
 
 or
 
 ```sh
-sudo virsh pool-edit default
+sudo virsh pool-edit "default"
 ```
+
+and edit the `target` `path` value.
 
 ## Resources
 
