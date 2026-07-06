@@ -61,12 +61,14 @@ sudo virsh net-autostart "default"
 
 ## Changing the `default` storage pool location
 
-```sh
-sudo virsh pool-destroy "default"
-sudo virsh pool-undefine "default"
-sudo virsh pool-define-as --name "default" --type "dir" --target "/mnt/sata1/virt"
-sudo virsh pool-start "default"
-```
+1. Delete and redefine the `default` storage pool to point to an example path `/mnt/sata1/virt`:
+
+    ```sh
+    sudo virsh pool-destroy "default"
+    sudo virsh pool-undefine "default"
+    sudo virsh pool-define-as --name "default" --type "dir" --target "/mnt/sata1/virt"
+    sudo virsh pool-start "default"
+    ```
 
 Alternatively:
 
