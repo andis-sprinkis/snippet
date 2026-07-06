@@ -70,11 +70,11 @@ sudo virsh pool-start "default"
 
 Alternatively:
 
-```sh
-sudo virsh pool-edit "default"
-```
+1. ```sh
+   sudo virsh pool-edit "default"
+   ```
 
-and edit the `target` `path` value.
+1. Edit the `target` `path` value.
 
 ## Resources
 
