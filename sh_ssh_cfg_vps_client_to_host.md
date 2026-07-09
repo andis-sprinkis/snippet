@@ -3,10 +3,10 @@
 1.  Generate the SSH key for authenticating with the host machine.
 
     ```sh
-    ssh-keygen -t ed25519 -C "usr0@example.com" -f "~/.ssh/hostalias0"
+    ssh-keygen -t ed25519 -C "usr0@example.com" -f "$HOME/.ssh/hostalias0"
     ```
 
-1.  Back up the generated key files `~/.ssh/hostalias0` and `~/.ssh/hostalias.pub`.
+1.  Back up the generated key files `$HOME/.ssh/hostalias0` and `$HOME/.ssh/hostalias.pub`.
 
 1.  Add a host ip to a local domain alias entry to file `/etc/hosts`.
 
@@ -14,7 +14,24 @@
     128.128.128.128 host.alias
     ```
 
-1.  Add an SSH authentication configuration entry to file `~/.ssh/config`.
+1.  Fix the local `$HOME/.ssh` directory file permissions.
+
+    ```sh
+    chmod "700" "${HOME}/.ssh"
+    chmod "600" "${HOME}/.ssh/"*
+    chmod "644" -f "${HOME}/.ssh/"*".pub" "${HOME}/.ssh/authorized_keys" "${HOME}/.ssh/known_hosts"
+    chmod "700" -f "${HOME}/.ssh/agent"
+    ```
+
+1.  Add the authentication public key to `/home/usr0/.ssh/authorized_keys` file on the host.
+
+    ```sh
+    ssh-copy-id -i "$HOME/.ssh/hostalias0.pub" "usr0@host.alias"
+    ```
+
+    (If an existing authentication method to host machine, like the password or another SSH key is already present.)
+
+1.  Add an SSH authentication configuration entry to file `$HOME/.ssh/config`.
 
     ```sshconfig
     Host host.alias
@@ -24,22 +41,6 @@
       Preferredauthentications publickey
       User usr0
     ```
-
-1.  Fix the local `~/.ssh` directory file permissions.
-
-    ```sh
-    chmod 700 "${HOME}/.ssh"
-    chmod 600 "${HOME}/.ssh/"*
-    chmod 644 -f "${HOME}/.ssh/"*".pub" "${HOME}/.ssh/authorized_keys" "${HOME}/.ssh/known_hosts"
-    ```
-
-1.  Add the authentication public key to `/home/usr0/.ssh/authorized_keys` file on the host.
-
-    ```sh
-    ssh-copy-id -i "~/.ssh/hostalias0.pub" "usr0@host.alias"
-    ```
-
-    (If an existing authentication method to host machine, like the password or another SSH key is already present.)
 
 1.  Disable the password authentication on the host machine.
     1. In file `/etc/ssh/sshd_config` set the values of the keys `PasswordAuthentication` and `PermitRootLogin`:
