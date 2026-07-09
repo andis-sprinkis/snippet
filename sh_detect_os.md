@@ -79,7 +79,7 @@ There are multiple ways to do this.
 
     ⚠️ Not all shells provide the `$OSTYPE` variable.
 
-1. Combining both approaches
+1.  Combining both approaches
 
     ```sh
     # shellcheck disable=SC3028
@@ -129,4 +129,4 @@ There are multiple ways to do this.
         echo "Unknown OS${ostype:+": ${ostype}"}"
       ;;
     esac
-    ``
+    ```
