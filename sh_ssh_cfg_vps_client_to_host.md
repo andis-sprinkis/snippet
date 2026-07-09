@@ -44,7 +44,7 @@
 
 1.  Disable the password authentication on the host machine.
     1. In file `/etc/ssh/sshd_config` set the values of the keys `PasswordAuthentication` and `PermitRootLogin`:
-        ```sshdconfig
+        ```sshconfig
         PasswordAuthentication no
         PermitRootLogin prohibit-password
         ```
