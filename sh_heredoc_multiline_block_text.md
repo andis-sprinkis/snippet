@@ -6,7 +6,7 @@
 DELIMITER
 ```
 
-```
+```sh
 cat <<eof1; cat <<eof2
 Hi,
 eof1
