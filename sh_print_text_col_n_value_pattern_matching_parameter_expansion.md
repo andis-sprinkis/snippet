@@ -10,8 +10,6 @@ line3="111;2222;;444;555555;6"
 line4="1111111111;22222222222;33;444;555555;6"
 line5=";;33;;;6"
 
-line="$line3"
-
 for line in "$line1" "$line2" "$line3" "$line4" "$line5"; do
   col1="$line"
   col1="${col1%;*;*;*;*;*}"
