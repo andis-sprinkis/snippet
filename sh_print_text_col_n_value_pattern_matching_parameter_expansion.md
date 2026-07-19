@@ -82,3 +82,64 @@ done
 6
 ---
 ```
+
+---
+
+```sh
+#!/usr/bin/env sh
+set -euf
+NL="
+"
+
+text="1 Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+2 Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+3 Nostrud officia pariatur ut officia.
+4 Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+5 Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+"
+
+line1="$text"
+line1="${line1%"$NL"*"$NL"*"$NL"*"$NL"*"$NL"*}"
+line1="${line1#}"
+printf '%s\n' "$line1"
+
+echo "---"
+
+line2="$text"
+line2="${line2%"$NL"*"$NL"*"$NL"*"$NL"*}"
+line2="${line2#*"$NL"}"
+printf '%s\n' "$line2"
+
+echo "---"
+
+line3="$text"
+line3="${line3%"$NL"*"$NL"*"$NL"*}"
+line3="${line3#*"$NL"*"$NL"}"
+printf '%s\n' "$line3"
+
+echo "---"
+
+line4="$text"
+line4="${line4%"$NL"*"$NL"*}"
+line4="${line4#*"$NL"*"$NL"*"$NL"}"
+printf '%s\n' "$line4"
+
+echo "---"
+
+line5="$text"
+line5="${line5%"$NL"*}"
+line5="${line5#*"$NL"*"$NL"*"$NL"*"$NL"}"
+printf '%s\n' "$line5"
+```
+
+```
+1 Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+---
+2 Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+---
+3 Nostrud officia pariatur ut officia.
+---
+4 Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+---
+5 Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+```
