@@ -1,6 +1,6 @@
-# Printing inverted file path in Shell
+# Printing reversed file path in Shell
 
-`./invert_fpath` script:
+`./revert_fpath` script:
 
 ```sh
 #!/usr/bin/env sh
@@ -39,24 +39,24 @@ printf '%s\n' "$inv"
 ```
 
 ```sh
-./invert_fpath "."
-./invert_fpath ".."
-./invert_fpath "/"
-./invert_fpath "//"
-./invert_fpath "///"
-./invert_fpath "/."
-./invert_fpath "./"
-./invert_fpath "../"
-./invert_fpath "/.."
-./invert_fpath "./.."
-./invert_fpath "../.."
-./invert_fpath "bar"
-./invert_fpath "/bar"
-./invert_fpath "/foo/bar"
-./invert_fpath "./bar"
-./invert_fpath "foo/////bar"
-./invert_fpath "../../foo/..//bar/baz/../"
-./invert_fpath "/run/credentials/getty@tty1.service"
+./revert_fpath "."
+./revert_fpath ".."
+./revert_fpath "/"
+./revert_fpath "//"
+./revert_fpath "///"
+./revert_fpath "/."
+./revert_fpath "./"
+./revert_fpath "../"
+./revert_fpath "/.."
+./revert_fpath "./.."
+./revert_fpath "../.."
+./revert_fpath "bar"
+./revert_fpath "/bar"
+./revert_fpath "/foo/bar"
+./revert_fpath "./bar"
+./revert_fpath "foo/////bar"
+./revert_fpath "../../foo/..//bar/baz/../"
+./revert_fpath "/run/credentials/getty@tty1.service"
 ```
 
 Output:
